@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/SingleActivity"
+    android:orientation="vertical">
+
+    <FrameLayout style="@style/FrameTitleWhite">
+
+        <ImageView
+            android:id="@id/title_return"
+            style="@style/FrameTitleButtonLeft"
+            android:src="@drawable/btn_return_gray_bg" />
+
+        <TextView
+            style="@style/FrameTitleWhiteText"
+            android:text="每日任务" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ListView
+            android:id="@+id/daily_task_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@color/main_empty"
+            android:dividerHeight="5.0dip"
+            android:paddingTop="5.0dip" />
+
+        <include layout="@layout/frame_loading" />
+
+        <View style="@style/ShadowTitle" />
+    </FrameLayout>
+</LinearLayout>

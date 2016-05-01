@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_content"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_white"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_goods_image"
+        android:layout_width="126.0dip"
+        android:layout_height="126.0dip"
+        android:scaleType="centerCrop"
+        android:src="@drawable/goods_default" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingBottom="8.0dip"
+        android:paddingLeft="6.0dip"
+        android:paddingRight="6.0dip"
+        android:paddingTop="10.0dip">
+
+        <TextView
+            android:id="@+id/tv_goods_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:lines="2"
+            android:text="小米手机，挥泪转让啦。你值得拥有。"
+            android:textColor="@color/main_blackgray"
+            android:textSize="@dimen/font_bigmiddle" />
+
+        <TextView
+            android:id="@+id/userbought_state"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:gravity="bottom"
+            android:paddingBottom="5.0dip"
+            android:text="交易成功"
+            android:textColor="@color/main_gray"
+            android:textSize="@dimen/font_middlesmall" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_goods_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="6.0dip"
+                        android:text="￥99999"
+                        android:textColor="@color/main_red"
+                        android:textSize="@dimen/font_bigmiddle" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/userbought_chat"
+                android:layout_width="53.0dip"
+                android:layout_height="18.0dip"
+                android:text="联系卖家"
+                android:textColor="@color/main_red"
+                android:textSize="@dimen/font_s_tinysmall"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

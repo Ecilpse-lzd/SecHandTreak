@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_goods_tutorial"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:visibility="invisible">
+
+    <View
+        android:id="@+id/my_bgblack"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_deepalphablack"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/goods_selling_turtor"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/main_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10.0dip"
+            android:text="防骗须知"
+            android:textColor="@color/main_black"
+            android:textSize="@dimen/font_big" />
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15.0dip"
+            android:layout_marginRight="15.0dip"
+            android:layout_marginTop="10.0dip"
+            android:text="@string/goods_selling_info_turtor"
+            android:textColor="@color/main_black"
+            android:textSize="@dimen/font_tiny" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10.0dip"
+            android:text="交易流程"
+            android:textColor="@color/main_black"
+            android:textSize="@dimen/font_big" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11.0dip"
+            android:gravity="center|left"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32.0dip"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/GoodsSellingTurtorImg"
+                    android:src="@drawable/turtor_sellling_1" />
+
+                <ImageView
+                    style="@style/GoodsSellingInfoTurtorArraow"
+                    android:layout_weight="1.0" />
+
+                <ImageView
+                    style="@style/GoodsSellingTurtorImg"
+                    android:layout_marginLeft="32.0dip"
+                    android:src="@drawable/turtor_sellling_2" />
+
+                <ImageView style="@style/GoodsSellingInfoTurtorArraow" />
+
+                <ImageView
+                    style="@style/GoodsSellingTurtorImg"
+                    android:layout_marginLeft="32.0dip"
+                    android:src="@drawable/turtor_sellling_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="1.买家购买下单"
+                    android:textColor="@color/main_black"
+                    android:textSize="@dimen/font_middle" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="2.付款到贰货"
+                    android:textColor="@color/main_black"
+                    android:textSize="@dimen/font_middle" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="3.联系卖家发货"
+                    android:textColor="@color/main_black"
+                    android:textSize="@dimen/font_middle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32.0dip"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/GoodsSellingTurtorImg"
+                    android:src="@drawable/turtor_sellling_4" />
+
+                <ImageView
+                    style="@style/GoodsSellingInfoTurtorArraow"
+                    android:layout_weight="1.0" />
+
+                <ImageView
+                    style="@style/GoodsSellingTurtorImg"
+                    android:layout_marginLeft="32.0dip"
+                    android:src="@drawable/turtor_sellling_5" />
+
+                <ImageView style="@style/GoodsSellingInfoTurtorArraow" />
+
+                <ImageView
+                    style="@style/GoodsSellingTurtorImg"
+                    android:layout_marginLeft="32.0dip"
+                    android:src="@drawable/turtor_sellling_6" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="4.买家确认收货"
+                    android:textColor="@color/main_black"
+                    android:textSize="@dimen/font_middle" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="5.贰货付款到卖家"
+                    android:textColor="@color/main_black"
+                    android:textSize="@dimen/font_middle" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="6.卖家确认收货"
+                    android:textColor="@color/main_black"
+                    android:textSize="@dimen/font_middle" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tx_close"
+            android:layout_width="fill_parent"
+            android:layout_height="33.0dip"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="10.0dip"
+            android:background="@color/main_red"
+            android:gravity="center"
+            android:text="关闭"
+            android:textColor="@color/main_white"
+            android:textSize="@dimen/font_huge" />
+    </LinearLayout>
+</FrameLayout>

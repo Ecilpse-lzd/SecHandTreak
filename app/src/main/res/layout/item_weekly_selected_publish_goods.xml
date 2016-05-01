@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@id/item_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="3.0dip">
+
+        <ImageView
+            android:id="@id/iv_goods_image"
+            android:layout_width="fill_parent"
+            android:layout_height="142.0dip"
+            android:scaleType="centerCrop"
+            android:src="@drawable/goods_default" />
+
+        <FrameLayout
+            android:id="@+id/show_choose_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|right|top"
+            android:padding="3.0dip"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="20.0dip"
+                android:layout_height="20.0dip"
+                android:src="@drawable/weekly_selected_choose_goods" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10.0dip"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5.0dip"
+            android:orientation="horizontal"
+            android:paddingRight="5.0dip">
+
+            <TextView
+                android:id="@id/tv_goods_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_weight="1.0"
+                android:singleLine="true"
+                android:text="title"
+                android:textColor="@color/main_black"
+                android:textSize="@dimen/font_tinysmall" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:padding="5.0dip">
+
+            <TextView
+                android:id="@id/tv_goods_originprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:layout_weight="1.0"
+                android:text="￥ price"
+                android:textColor="@color/main_red"
+                android:textSize="@dimen/font_tinysmall" />
+
+            <TextView
+                android:id="@+id/tx_goods_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="9.0dip"
+                android:text="addressaaa"
+                android:textColor="@color/main_black"
+                android:textSize="@dimen/font_tinysmall"
+                android:visibility="gone" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

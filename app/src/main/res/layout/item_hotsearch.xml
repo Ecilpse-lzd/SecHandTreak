@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingLeft="5.0dip"
+    android:paddingRight="5.0dip">
+
+    <com.erhuoapp.erhuo.view.custom.EdgingButton
+        android:id="@+id/hot_search_keyword"
+        android:layout_width="wrap_content"
+        android:layout_height="24.0dip"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="12.0dip"
+        android:paddingRight="12.0dip"
+        android:text="手机"
+        android:textColor="@color/main_red"
+        android:textSize="@dimen/font_small"
+        app:edgeSize="1.0px"
+        app:roundSize="12.0dip" />
+</FrameLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_text_list1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_white"
+    android:padding="8.0dip">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/user" />
+
+    <TextView
+        android:id="@+id/school_name"
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10.0dip"
+        android:layout_weight="1.0"
+        android:gravity="center|left"
+        android:text="清华大学"
+        android:textColor="@color/font_red_lightred"
+        android:textSize="@dimen/font_small" />
+
+    <ImageView
+        android:layout_width="12.0dip"
+        android:layout_height="12.0dip"
+        android:layout_gravity="center"
+        android:src="@drawable/next_red" />
+</LinearLayout>

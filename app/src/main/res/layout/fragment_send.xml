@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/SingleActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <com.erhuoapp.erhuo.view.include.FrameTitle
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/title_height"
+            app:backEnable="true"
+            app:title="@string/title_send" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10.0dip"
+                        android:paddingLeft="16.0dip"
+                        android:paddingTop="10.0dip"
+                        android:text="选择快递公司"
+                        android:textColor="@color/main_gray"
+                        android:textSize="@dimen/font_middle" />
+
+                    <LinearLayout
+                        android:id="@+id/send_express_group"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="16.0dip"
+                        android:paddingRight="16.0dip">
+
+                        <LinearLayout style="@style/SendExpressLine">
+
+                            <TextView
+                                android:id="@+id/send_express_0"
+                                style="@style/SendExpressItem"
+                                android:text="申通快递" />
+
+                            <TextView
+                                android:id="@+id/send_express_1"
+                                style="@style/SendExpressItem"
+                                android:layout_marginLeft="10.0dip"
+                                android:text="中通快递" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/SendExpressLine"
+                            android:layout_marginTop="10.0dip">
+
+                            <TextView
+                                android:id="@+id/send_express_2"
+                                style="@style/SendExpressItem"
+                                android:text="韵达快递" />
+
+                            <TextView
+                                android:id="@+id/send_express_3"
+                                style="@style/SendExpressItem"
+                                android:layout_marginLeft="10.0dip"
+                                android:text="百世汇通" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/SendExpressLine"
+                            android:layout_marginTop="10.0dip">
+
+                            <TextView
+                                android:id="@+id/send_express_4"
+                                style="@style/SendExpressItem"
+                                android:text="天天快递" />
+
+                            <TextView
+                                android:id="@+id/send_express_5"
+                                style="@style/SendExpressItem"
+                                android:layout_marginLeft="10.0dip"
+                                android:text="顺丰速运" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/SendExpressLine"
+                            android:layout_marginTop="10.0dip">
+
+                            <TextView
+                                android:id="@+id/send_express_6"
+                                style="@style/SendExpressItem"
+                                android:text="EMS" />
+
+                            <TextView
+                                android:id="@+id/send_express_7"
+                                style="@style/SendExpressItem"
+                                android:layout_marginLeft="10.0dip"
+                                android:text="圆通速递" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/SendExpressLine"
+                            android:layout_marginTop="10.0dip">
+
+                            <TextView
+                                android:id="@+id/send_express_8"
+                                style="@style/SendExpressItem"
+                                android:text="全峰快递" />
+
+                            <TextView
+                                android:id="@+id/send_express_9"
+                                style="@style/SendExpressItem"
+                                android:layout_marginLeft="10.0dip"
+                                android:text="宅急送" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            style="@style/SendExpressLine"
+                            android:layout_marginTop="10.0dip">
+
+                            <TextView
+                                android:id="@+id/send_express_other"
+                                style="@style/SendExpressItem"
+                                android:text="其他快递" />
+
+                            <TextView
+                                style="@style/SendExpressItem"
+                                android:layout_marginLeft="10.0dip"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+
+                        <com.erhuoapp.erhuo.view.custom.EdgingFrame
+                            android:id="@+id/send_express_com_layout"
+                            android:layout_width="250.0dip"
+                            android:layout_height="30.0dip"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="10.0dip"
+                            android:visibility="gone">
+
+                            <EditText
+                                android:id="@+id/send_express_com"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:hint="请输入快递公司名称"
+                                android:paddingLeft="10.0dip"
+                                android:paddingRight="10.0dip"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/font_middle" />
+                        </com.erhuoapp.erhuo.view.custom.EdgingFrame>
+
+                        <com.erhuoapp.erhuo.view.custom.EdgingFrame
+                            android:layout_width="fill_parent"
+                            android:layout_height="38.0dip"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="30.0dip"
+                            app:edgeColor="@color/main_red"
+                            app:edgeSize="0.5dip"
+                            app:roundSize="0.0dip">
+
+                            <EditText
+                                android:id="@+id/send_express_id"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:hint="请输入快递公司单号"
+                                android:paddingLeft="6.0dip"
+                                android:paddingRight="6.0dip"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textColorHint="@color/main_brightgray"
+                                android:textSize="@dimen/font_middle" />
+                        </com.erhuoapp.erhuo.view.custom.EdgingFrame>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <View style="@style/ShadowTitle" />
+
+            <View style="@style/ShadowBottom" />
+        </FrameLayout>
+
+        <FrameLayout style="@style/FrameBottom">
+
+            <com.erhuoapp.erhuo.view.custom.RoundButton
+                android:id="@+id/send_express_send"
+                style="@style/PureButtonBigWide"
+                android:layout_gravity="center"
+                android:text="@string/confirm_send" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <include layout="@layout/frame_loading" />
+</FrameLayout>

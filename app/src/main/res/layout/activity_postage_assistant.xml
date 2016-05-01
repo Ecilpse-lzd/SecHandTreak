@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_bgcolor"
+    android:orientation="vertical">
+
+    <FrameLayout style="@style/FrameTitleWhite">
+
+        <ImageView
+            android:id="@+id/img_return"
+            style="@style/FrameTitleButtonLeft"
+            android:src="@drawable/left_arrow_gray" />
+
+        <TextView
+            style="@style/FrameTitleText"
+            android:text="邮费助手"
+            android:textColor="@color/main_gray" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="29.0dip"
+                android:layout_marginTop="5.0dip"
+                android:background="@color/main_white"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip"
+                    android:layout_gravity="center|left"
+                    android:layout_marginLeft="30.0dip"
+                    android:src="@drawable/star_2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="10.0dip"
+                    android:text="@string/postage_assisant_tip"
+                    android:textColor="@color/main_gray"
+                    android:textSize="@dimen/font_small" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="9.0"
+                android:orientation="vertical">
+
+                <LinearLayout style="@style/postage_assisant">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="15.0dip"
+                        android:src="@drawable/postage_setout" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10.0dip"
+                        android:text="寄出地"
+                        android:textColor="@color/main_gray"
+                        android:textSize="@dimen/font_middle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/postage_setout"
+                    style="@style/postage_assisant"
+                    android:layout_width="fill_parent">
+
+                    <TextView
+                        android:id="@+id/tx_postage_setout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="50.0dip"
+                        android:hint="点击填写寄出地址..."
+                        android:text="北京"
+                        android:textColor="@color/main_gray"
+                        android:textSize="@dimen/font_middle" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:layout_marginRight="15.0dip"
+                        android:src="@drawable/right_arrow_address" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/postage_assisant">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="15.0dip"
+                        android:src="@drawable/receive_address" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10.0dip"
+                        android:text="目的地"
+                        android:textColor="@color/main_gray"
+                        android:textSize="@dimen/font_middle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/postage_destinatiion"
+                    style="@style/postage_assisant"
+                    android:layout_width="fill_parent">
+
+                    <TextView
+                        android:id="@+id/tx_postage_destinatiion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="50.0dip"
+                        android:hint="点击填写寄出地址..."
+                        android:text="北京"
+                        android:textColor="@color/main_gray"
+                        android:textSize="@dimen/font_middle" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:layout_marginRight="15.0dip"
+                        android:src="@drawable/right_arrow_address" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/postage_assisant"
+                    android:layout_marginTop="15.0dip">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="15.0dip"
+                        android:src="@drawable/postage_weight" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10.0dip"
+                        android:text="物品重量"
+                        android:textColor="@color/main_gray"
+                        android:textSize="@dimen/font_middle" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/postage_weight"
+                    style="@style/postage_assisant">
+
+                    <com.erhuoapp.erhuo.view.custom.EdgingButton
+                        android:id="@+id/btn_postage_weight"
+                        android:layout_width="40.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_gravity="center|left"
+                        android:layout_marginLeft="15.0dip"
+                        android:clickable="false"
+                        android:padding="5.0dip"
+                        android:text="1"
+                        android:textColor="@color/font_brightgray_white_selectable"
+                        android:textSize="@dimen/font_middle"
+                        app:edgeColor="@color/main_red"
+                        app:edgeSize="1.0px"
+                        app:roundBackground="@color/main_white"
+                        app:roundSize="2.0dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="6.0dip"
+                        android:text="kg"
+                        android:textColor="@color/main_gray"
+                        android:textSize="@dimen/font_middle" />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:layout_marginRight="15.0dip"
+                        android:src="@drawable/right_arrow_address" />
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/postage_assisant"
+                    android:layout_marginTop="5.0dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10.0dip"
+                        android:text="费用估算："
+                        android:textColor="@color/main_gray"
+                        android:textSize="@dimen/font_middle" />
+
+                    <TextView
+                        android:id="@+id/postage_cost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:layout_marginRight="15.0dip"
+                        android:layout_weight="1.0"
+                        android:gravity="right"
+                        android:text="￥8.00"
+                        android:textColor="@color/main_gray"
+                        android:textSize="@dimen/font_middle" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/postage_assisant">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10.0dip"
+                        android:text="预计送达时长："
+                        android:textColor="@color/main_gray"
+                        android:textSize="@dimen/font_middle" />
+
+                    <TextView
+                        android:id="@+id/postage_send_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|right"
+                        android:layout_marginRight="15.0dip"
+                        android:layout_weight="1.0"
+                        android:gravity="right"
+                        android:text="1-2天"
+                        android:textColor="@color/main_gray"
+                        android:textSize="@dimen/font_middle" />
+                </LinearLayout>
+
+                <com.erhuoapp.erhuo.view.custom.EdgingFrame
+                    android:id="@+id/postage_commuinate"
+                    android:layout_width="320.0dip"
+                    android:layout_height="38.0dip"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="5.0dip"
+                    android:layout_marginTop="15.0dip"
+                    app:edgeColor="@color/main_red"
+                    app:roundBackground="@color/main_red"
+                    app:roundSize="2.0dip">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="-40.0dip"
+                        android:src="@drawable/postage_phone" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="-10.0dip"
+                        android:text="联系快递"
+                        android:textColor="@color/main_white"
+                        android:textSize="@dimen/font_middle" />
+                </com.erhuoapp.erhuo.view.custom.EdgingFrame>
+            </LinearLayout>
+        </LinearLayout>
+
+        <include layout="@layout/postage_assisant_numberpicker" />
+    </FrameLayout>
+</LinearLayout>

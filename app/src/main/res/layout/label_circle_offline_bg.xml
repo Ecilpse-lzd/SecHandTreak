@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.erhuoapp.erhuo.view.custom.EdgingButton xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/label_offline"
+    android:layout_width="15.0dip"
+    android:layout_height="15.0dip"
+    android:text="面"
+    android:textColor="@color/font_gray_white"
+    android:textSize="@dimen/font_s_tinysmall"
+    app:edgeColor="@color/font_gray_green"
+    app:edgeSize="1.0px"
+    app:roundBackground="@drawable/select_white_green"
+    app:roundSize="7.5dip" />

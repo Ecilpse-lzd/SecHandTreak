@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/SingleActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <com.erhuoapp.erhuo.view.include.FrameTitle
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/title_height"
+            app:backEnable="true"
+            app:title="物流跟踪" />
+
+        <View style="@style/ShadowTitle" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_white"
+            android:orientation="vertical"
+            android:padding="15.0dip">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="快递公司："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_middlesmall" />
+
+                <TextView
+                    android:id="@+id/express_com"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="磨人的小妖精"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_middlesmall" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6.0dip"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="快递单号："
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_middlesmall" />
+
+                <TextView
+                    android:id="@+id/express_id"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:text="1502512562154362"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_middlesmall" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.erhuoapp.erhuo.view.include.ErhuoSwitcher
+            android:id="@+id/express_switcher"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="20.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginRight="10.0dip">
+
+            <ListView
+                android:id="@+id/express_listview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:divider="@color/main_gray"
+                android:dividerHeight="0.0dip" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="300.0dip"
+                android:gravity="center"
+                android:padding="10.0dip"
+                android:text="物流暂无结果"
+                android:textColor="@color/main_blackgray"
+                android:textSize="@dimen/font_big"
+                android:visibility="gone" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="300.0dip"
+                android:gravity="center"
+                android:padding="10.0dip"
+                android:text="物流查询接口出错"
+                android:textColor="@color/main_blackgray"
+                android:textSize="@dimen/font_big"
+                android:visibility="gone" />
+        </com.erhuoapp.erhuo.view.include.ErhuoSwitcher>
+    </LinearLayout>
+
+    <include layout="@layout/frame_loading" />
+</FrameLayout>

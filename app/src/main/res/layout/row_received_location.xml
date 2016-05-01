@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingTop="13.0dip">
+
+    <LinearLayout
+        android:id="@+id/timeLine"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="1.0px"
+            android:layout_weight="1.0"
+            android:background="#ffefd2d1" />
+
+        <TextView
+            android:id="@+id/timestamp"
+            style="@style/chat_text_date_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="1.0px"
+            android:layout_weight="1.0"
+            android:background="#ffefd2d1" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.0dip">
+
+        <ImageView
+            android:id="@+id/iv_userhead"
+            android:layout_width="50.0dip"
+            android:layout_height="50.0dip"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5.0dip"
+            android:scaleType="fitXY"
+            android:src="@drawable/header_default" />
+
+        <ImageView
+            android:id="@+id/goodsselling_item_auth"
+            android:layout_width="29.0dip"
+            android:layout_height="20.0dip"
+            android:layout_alignBottom="@id/iv_userhead"
+            android:layout_alignLeft="@id/iv_userhead"
+            android:layout_gravity="bottom"
+            android:src="@drawable/userinfo_auth"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/row_rec_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:layout_toRightOf="@id/iv_userhead"
+            android:background="@drawable/chatfrom_bg">
+
+            <TextView
+                android:id="@+id/tv_location"
+                style="@style/chat_content_date_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/location_msg"
+                android:gravity="center"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_userid"
+            style="@style/chat_text_name_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/iv_userhead"
+            android:layout_toLeftOf="@id/row_rec_location" />
+    </RelativeLayout>
+</LinearLayout>

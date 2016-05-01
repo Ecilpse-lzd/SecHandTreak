@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_bgcolor"
+    android:orientation="vertical"
+    android:paddingTop="10.0dip">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+
+        <GridView
+            android:id="@+id/gridGallery"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginBottom="-10.0dip"
+            android:layout_marginLeft="-10.0dip"
+            android:layout_marginRight="-10.0dip"
+            android:layout_marginTop="-10.0dip"
+            android:horizontalSpacing="-15.0dip"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="3"
+            android:padding="0.0dip"
+            android:verticalSpacing="-15.0dip" />
+
+        <ImageView
+            android:id="@+id/imgNoMedia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:adjustViewBounds="true"
+            android:src="@drawable/no_media" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/llBottomContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_white"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="5.0dip"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip"
+        android:paddingTop="5.0dip">
+
+        <TextView
+            android:id="@+id/tvCount"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1.0"
+            android:gravity="center_vertical"
+            android:text="已选 0 张图片"
+            android:textColor="@color/main_red"
+            android:textSize="@dimen/font_middle" />
+
+        <Button
+            android:id="@+id/btnGalleryOk"
+            android:layout_width="84.0dip"
+            android:layout_height="33.0dip"
+            android:background="@drawable/btn_gallery_next_bg"
+            android:gravity="center"
+            android:text="确定"
+            android:textColor="@color/main_white"
+            android:textSize="@dimen/font_middle" />
+    </LinearLayout>
+</LinearLayout>

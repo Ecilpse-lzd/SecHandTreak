@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/trineaandroidcommon/build/intermediates/res/merged/androidTest/debug/layout/drop_down_list_header.xml",
+        "source": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/trineaandroidcommon/build/intermediates/bundles/debug/res/layout/drop_down_list_header.xml"
+    },
+    {
+        "merged": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/trineaandroidcommon/build/intermediates/res/merged/androidTest/debug/layout/drop_down_list_footer.xml",
+        "source": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/trineaandroidcommon/build/intermediates/bundles/debug/res/layout/drop_down_list_footer.xml"
+    }
+]

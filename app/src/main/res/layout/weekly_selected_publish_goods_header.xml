@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_white"
+    android:clickable="false">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="121.0dip"
+        android:background="@drawable/weekly_select_choose_goods_bg">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="21.0dip"
+            android:gravity="center"
+            android:text="@string/weekly_selected_rules"
+            android:textColor="@color/main_white"
+            android:textSize="@dimen/font_small" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/publish_new_goods"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_marginTop="96.0dip"
+        android:src="@drawable/publish_goods_new" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_marginBottom="10.0dip"
+        android:layout_marginTop="175.0dip"
+        android:text="发布新的报名宝贝"
+        android:textColor="@color/main_red"
+        android:textSize="@dimen/font_small" />
+</FrameLayout>

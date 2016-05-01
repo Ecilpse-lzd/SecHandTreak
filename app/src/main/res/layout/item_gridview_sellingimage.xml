@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/selling_goods"
+        android:layout_width="@dimen/image_selling_size"
+        android:layout_height="@dimen/image_selling_size"
+        android:layout_marginRight="12.0dip"
+        android:layout_marginTop="12.0dip">
+
+        <ImageView
+            android:id="@+id/selling_image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/selling_image_home"
+            android:layout_width="fill_parent"
+            android:layout_height="20.0dip"
+            android:layout_gravity="bottom|center"
+            android:alpha="0.0"
+            android:background="@color/main_alpha_red"
+            android:gravity="center"
+            android:text="封面"
+            android:textColor="@color/main_white"
+            android:textSize="@dimen/font_middle" />
+
+        <TextView
+            android:id="@+id/selling_loading"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:alpha="0.7"
+            android:background="@color/main_black"
+            android:gravity="center"
+            android:textColor="@color/main_white"
+            android:textSize="@dimen/font_middle" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/iv_image_delete"
+        android:layout_width="24.0dip"
+        android:layout_height="24.0dip"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:padding="4.0dip"
+        android:src="@drawable/selling_image_delete"
+        android:visibility="visible" />
+</FrameLayout>

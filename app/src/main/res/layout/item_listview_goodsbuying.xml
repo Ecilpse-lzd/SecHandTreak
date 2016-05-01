@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_goods_info"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0.0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.0"
+        android:orientation="vertical"
+        android:padding="10.0dip">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.erhuoapp.erhuo.view.custom.RoundImageView
+                    android:layout_width="32.0dip"
+                    android:layout_height="32.0dip"
+                    android:layout_marginBottom="4.0dip"
+                    android:src="@color/main_red"
+                    app:roundSize="16.0dip" />
+
+                <com.erhuoapp.erhuo.view.custom.RoundImageView
+                    android:id="@+id/iv_goods_header"
+                    android:layout_width="30.0dip"
+                    android:layout_height="30.0dip"
+                    android:layout_margin="1.0dip"
+                    android:src="@drawable/header_default"
+                    app:roundSize="15.0dip" />
+
+                <ImageView
+                    android:id="@+id/ll_goods_authinfo"
+                    android:layout_width="29.0dip"
+                    android:layout_height="20.0dip"
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/userinfo_auth"
+                    android:visibility="visible" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_goods_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8.0dip"
+                android:singleLine="true"
+                android:text="标题标题标题标题标题标题标题标题"
+                android:textColor="@color/main_red"
+                android:textSize="@dimen/font_large" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_goods_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8.0dip"
+            android:text="描述"
+            android:textColor="@color/main_gray"
+            android:textSize="@dimen/font_middle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_margin="10.0dip"
+        android:gravity="right"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_goods_price"
+            android:layout_width="wrap_content"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:paddingBottom="8.0dip"
+            android:paddingTop="8.0dip"
+            android:singleLine="true"
+            android:text="￥60000"
+            android:textColor="@color/main_red"
+            android:textSize="@dimen/font_bigmiddle" />
+
+        <TextView
+            android:id="@+id/tv_goods_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10分钟前"
+            android:textColor="@color/main_gray"
+            android:textSize="@dimen/font_tiny" />
+
+        <TextView
+            android:id="@+id/tv_goods_dist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="300m"
+            android:textColor="@color/main_gray"
+            android:textSize="@dimen/font_tiny" />
+    </LinearLayout>
+</LinearLayout>

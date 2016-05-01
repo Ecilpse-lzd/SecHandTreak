@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/SingleActivity"
+    android:background="@color/main_white">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <FrameLayout
+            android:id="@+id/erhuo_title"
+            style="@style/FrameTitleWhite">
+
+            <ImageButton
+                android:id="@+id/ib_school_return"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center|left"
+                android:background="@android:color/transparent"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="20.0dip"
+                android:src="@drawable/btn_return_red_bg" />
+
+            <TextView
+                android:id="@+id/tv_school_title"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/title_select_school_name"
+                android:textColor="@color/main_red"
+                android:textSize="@dimen/font_title" />
+
+            <TextView
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|right"
+                android:layout_marginRight="10.0dip"
+                android:text="添加"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/my_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/erhuo_title"
+            android:background="@color/main_red">
+
+            <com.erhuoapp.erhuo.view.custom.RoundImageView
+                android:layout_width="fill_parent"
+                android:layout_height="29.0dip"
+                android:layout_marginBottom="8.0dip"
+                android:layout_marginLeft="8.0dip"
+                android:layout_marginRight="8.0dip"
+                android:layout_marginTop="8.0dip"
+                android:src="@color/main_white"
+                app:roundSize="5.0dip" />
+
+            <AutoCompleteTextView
+                android:id="@+id/edt_school_name"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@null"
+                android:completionThreshold="1"
+                android:dropDownHeight="fill_parent"
+                android:dropDownVerticalOffset="0.0dip"
+                android:dropDownWidth="fill_parent"
+                android:hint="请输入学校名称、拼音或首字母"
+                android:inputType="text"
+                android:paddingBottom="8.0dip"
+                android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip"
+                android:paddingTop="8.0dip"
+                android:textColor="@color/black"
+                android:textColorHint="@color/main_darkwhite"
+                android:textSize="@dimen/font_middle" />
+
+            <ImageView
+                android:id="@+id/my_edit_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|right"
+                android:layout_marginRight="20.0dip"
+                android:src="@drawable/edit_delete"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/handle_hand"
+            android:layout_width="fill_parent"
+            android:layout_height="35.0dip"
+            android:layout_below="@+id/my_content"
+            android:background="@color/main_white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="35.0dip"
+                android:gravity="center"
+                android:text="未搜索到?"
+                android:textSize="13.0dip" />
+
+            <TextView
+                android:id="@+id/add_school_inperson"
+                android:layout_width="wrap_content"
+                android:layout_height="35.0dip"
+                android:gravity="center"
+                android:text="快去添加霸气的母校"
+                android:textColor="#ffcc1133"
+                android:textSize="13.0dip" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_default_schools"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/handle_hand">
+
+            <ListView
+                android:id="@+id/list_default_schools"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9.0dip">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_home_focus"
+            android:layout_width="fill_parent"
+            android:layout_height="153.0dip" />
+
+        <LinearLayout
+            android:id="@+id/ll_focus_points"
+            android:layout_width="fill_parent"
+            android:layout_height="5.0dip"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="8.0dip"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" />
+    </FrameLayout>
+
+    <com.erhuoapp.erhuo.view.custom.CustomGallery
+        android:id="@+id/gallery_classify"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_white"
+        android:fadingEdge="horizontal"
+        android:listSelector="#00000000"
+        android:paddingBottom="15.0dip"
+        android:paddingTop="1.0dip"
+        android:scrollbars="none"
+        android:unselectedAlpha="1.0"
+        android:visibility="visible" />
+
+    <FrameLayout
+        android:id="@+id/fragment_parent"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.0dip"
+        android:paddingLeft="2.0dip"
+        android:paddingRight="2.0dip" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="50.0dip"
+        android:layout_marginBottom="5.0dip"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip"
+        android:scaleType="fitCenter"
+        android:src="@drawable/home_advertisement" />
+</LinearLayout>

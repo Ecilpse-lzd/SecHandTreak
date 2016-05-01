@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/menu"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView
+        android:id="@id/menu_go_top"
+        android:layout_width="36.0dip"
+        android:layout_height="36.0dip"
+        android:layout_gravity="bottom|center|right"
+        android:layout_margin="20.0dip"
+        android:src="@drawable/goods_list_top"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@id/menu_black"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/main_alphablack" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@id/menu_top"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="35.0dip"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:id="@id/menu_item_0"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:background="@color/main_white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="分类"
+                        android:textColor="@color/font_blackgray_red_selectable"
+                        android:textSize="@dimen/font_middle" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.0dip"
+                        android:src="@drawable/menu_right_down_bg" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/main_brightgray" />
+
+                <LinearLayout
+                    android:id="@id/menu_item_1"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:background="@color/main_white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="排序"
+                        android:textColor="@color/font_blackgray_red_selectable"
+                        android:textSize="@dimen/font_middle" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.0dip"
+                        android:src="@drawable/menu_right_down_bg" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1.0px"
+                    android:layout_height="fill_parent"
+                    android:background="@color/main_brightgray" />
+
+                <LinearLayout
+                    android:id="@id/menu_item_2"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:background="@color/main_white"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="筛选"
+                        android:textColor="@color/font_blackgray_red_selectable"
+                        android:textSize="@dimen/font_middle" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3.0dip"
+                        android:src="@drawable/menu_right_down_bg" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:background="@color/main_brightgray" />
+        </LinearLayout>
+
+        <com.erhuoapp.erhuo.view.include.ErhuoSwitcher
+            android:id="@id/menu_switcher"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36.0dip">
+
+            <ListView
+                android:id="@id/menu_classify"
+                android:layout_width="fill_parent"
+                android:layout_height="200.0dip"
+                android:background="@color/main_brightgray"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:id="@id/menu_order"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/main_brightgray"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="36.0dip"
+                    android:background="@drawable/select_white_empty"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10.0dip"
+                    android:text="默认排序"
+                    android:textColor="@color/font_dimgray_red_selectable"
+                    android:textSize="@dimen/font_middle" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="36.0dip"
+                    android:layout_marginTop="1.0px"
+                    android:background="@drawable/select_white_empty"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10.0dip"
+                    android:text="最新发布"
+                    android:textColor="@color/font_dimgray_red_selectable"
+                    android:textSize="@dimen/font_middle" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="36.0dip"
+                    android:layout_marginTop="1.0px"
+                    android:background="@drawable/select_white_empty"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10.0dip"
+                    android:text="离我最近"
+                    android:textColor="@color/font_dimgray_red_selectable"
+                    android:textSize="@dimen/font_middle" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="36.0dip"
+                    android:layout_marginTop="1.0px"
+                    android:background="@drawable/select_white_empty"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10.0dip"
+                    android:text="价格最低"
+                    android:textColor="@color/font_dimgray_red_selectable"
+                    android:textSize="@dimen/font_middle" />
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="36.0dip"
+                    android:layout_marginTop="1.0px"
+                    android:background="@drawable/select_white_empty"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="10.0dip"
+                    android:text="价格最高"
+                    android:textColor="@color/font_dimgray_red_selectable"
+                    android:textSize="@dimen/font_middle" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5.0dip"
+                    android:background="@color/main_brightgray" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/main_white"
+                    android:orientation="vertical"
+                    android:paddingBottom="8.0dip">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="25.0dip"
+                        android:gravity="bottom"
+                        android:paddingLeft="10.0dip"
+                        android:text="类型："
+                        android:textColor="@color/main_gray"
+                        android:textSize="@dimen/font_small" />
+
+                    <LinearLayout
+                        android:id="@id/menu_filter_type"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.erhuoapp.erhuo.view.custom.EdgingButton
+                            android:layout_width="80.0dip"
+                            android:layout_height="34.0dip"
+                            android:padding="5.0dip"
+                            android:text="认证用户"
+                            android:textColor="@color/font_brightgray_white_selectable"
+                            android:textSize="@dimen/font_middle"
+                            app:edgeColor="@color/font_brightgray_red_selectable"
+                            app:edgeSize="1.0px"
+                            app:roundBackground="@drawable/select_white_red"
+                            app:roundSize="2.0dip" />
+
+                        <com.erhuoapp.erhuo.view.custom.EdgingButton
+                            android:layout_width="80.0dip"
+                            android:layout_height="34.0dip"
+                            android:layout_marginLeft="32.0dip"
+                            android:padding="5.0dip"
+                            android:text="同校物品"
+                            android:textColor="@color/font_brightgray_white_selectable"
+                            android:textSize="@dimen/font_middle"
+                            app:edgeColor="@color/font_brightgray_red_selectable"
+                            app:edgeSize="1.0px"
+                            app:roundBackground="@drawable/select_white_red"
+                            app:roundSize="2.0dip" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@id/menu_filter_label_label"
+                        android:layout_width="fill_parent"
+                        android:layout_height="25.0dip"
+                        android:gravity="bottom"
+                        android:paddingLeft="10.0dip"
+                        android:text="标签："
+                        android:textColor="@color/main_gray"
+                        android:textSize="@dimen/font_small" />
+
+                    <LinearLayout
+                        android:id="@id/menu_filter_label"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="5.0dip">
+
+                            <include layout="@layout/label_circle_new_bg" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="7.0dip"
+                                android:text="全新"
+                                android:textColor="@color/font_gray_red_selectable"
+                                android:textSize="@dimen/font_middle" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="5.0dip">
+
+                            <include layout="@layout/label_circle_bargin_bg" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="7.0dip"
+                                android:text="可议价"
+                                android:textColor="@color/font_gray_yellow"
+                                android:textSize="@dimen/font_middle" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="5.0dip">
+
+                            <include layout="@layout/label_circle_free_bg" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="7.0dip"
+                                android:text="免费送"
+                                android:textColor="@color/font_gray_yellow"
+                                android:textSize="@dimen/font_middle" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="5.0dip">
+
+                            <include layout="@layout/label_circle_offline_bg" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="7.0dip"
+                                android:text="当面交易"
+                                android:textColor="@color/font_gray_green"
+                                android:textSize="@dimen/font_middle" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5.0dip"
+                    android:background="@color/main_brightgray" />
+
+                <LinearLayout
+                    android:id="@id/menu_filter_price"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70.0dip"
+                    android:background="@color/main_white"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="35.0dip"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10.0dip"
+                        android:text="价格区间（元）："
+                        android:textColor="@color/main_gray"
+                        android:textSize="@dimen/font_middlesmall" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.erhuoapp.erhuo.view.custom.EdgingFrame
+                            android:layout_width="96.0dip"
+                            android:layout_height="24.0dip"
+                            app:edgeColor="@color/main_brightgray"
+                            app:edgeSize="1.0px"
+                            app:roundSize="0.0dip">
+
+                            <EditText
+                                android:id="@id/menu_filter_price_from"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:gravity="center"
+                                android:hint="最低价"
+                                android:inputType="number"
+                                android:singleLine="true"
+                                android:textColorHint="@color/main_brightgray"
+                                android:textSize="@dimen/font_middle" />
+                        </com.erhuoapp.erhuo.view.custom.EdgingFrame>
+
+                        <View
+                            android:layout_width="50.0dip"
+                            android:layout_height="1.0px"
+                            android:layout_margin="10.0dip"
+                            android:background="@color/main_brightgray" />
+
+                        <com.erhuoapp.erhuo.view.custom.EdgingFrame
+                            android:layout_width="96.0dip"
+                            android:layout_height="24.0dip"
+                            app:edgeColor="@color/main_brightgray"
+                            app:edgeSize="1.0px"
+                            app:roundSize="0.0dip">
+
+                            <EditText
+                                android:id="@id/menu_filter_price_to"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@null"
+                                android:gravity="center"
+                                android:hint="最高价"
+                                android:inputType="number"
+                                android:singleLine="true"
+                                android:textColorHint="@color/main_brightgray"
+                                android:textSize="@dimen/font_middle" />
+                        </com.erhuoapp.erhuo.view.custom.EdgingFrame>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="5.0dip"
+                    android:background="@color/main_brightgray" />
+
+                <LinearLayout
+                    android:id="@id/menu_filter_button"
+                    android:layout_width="fill_parent"
+                    android:layout_height="54.0dip"
+                    android:background="@color/main_white"
+                    android:gravity="center|right"
+                    android:orientation="horizontal">
+
+                    <com.erhuoapp.erhuo.view.custom.RoundButton
+                        android:layout_width="98.0dip"
+                        android:layout_height="30.0dip"
+                        android:text="重置"
+                        android:textColor="@color/main_white"
+                        android:textSize="@dimen/font_bigmiddle"
+                        app:roundBackground="@drawable/select_lightred_red"
+                        app:roundSize="2.0dip" />
+
+                    <com.erhuoapp.erhuo.view.custom.RoundButton
+                        android:layout_width="98.0dip"
+                        android:layout_height="30.0dip"
+                        android:layout_marginLeft="18.0dip"
+                        android:layout_marginRight="25.0dip"
+                        android:text="完成"
+                        android:textColor="@color/main_white"
+                        android:textSize="@dimen/font_bigmiddle"
+                        app:roundBackground="@color/main_red"
+                        app:roundSize="2.0dip" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.erhuoapp.erhuo.view.include.ErhuoSwitcher>
+    </FrameLayout>
+
+    <TextView
+        android:id="@id/menu_notice"
+        android:layout_width="fill_parent"
+        android:layout_height="25.0dip"
+        android:alpha="0.0"
+        android:background="@color/main_blackgray"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/main_white"
+        android:textSize="@dimen/font_tiny" />
+</FrameLayout>

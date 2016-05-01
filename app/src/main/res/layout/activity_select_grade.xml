@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/SingleActivity"
+    android:orientation="vertical">
+
+    <FrameLayout style="@style/FrameTitleWhite">
+
+        <ImageButton
+            android:id="@+id/ib_grade_return"
+            style="@style/FrameTitleButtonLeft"
+            android:background="@null"
+            android:src="@drawable/btn_return_red_bg" />
+
+        <TextView
+            android:id="@+id/tv_grade_title"
+            style="@style/FrameTitleWhiteText"
+            android:text="@string/title_select_grade" />
+
+        <TextView
+            android:id="@+id/tv_grade_select_ok"
+            style="@style/FrameTitleWhiteButtonTextRight"
+            android:text="@string/yes"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+    <View style="@style/ShadowTitle" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:background="@color/main_white"
+            android:orientation="horizontal"
+            android:paddingBottom="20.0dip"
+            android:paddingTop="20.0dip">
+
+            <com.erhuoapp.erhuo.view.custom.ErhuoPicker
+                android:id="@+id/np_grade_select_year"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:descendantFocusability="blocksDescendants" />
+
+            <com.erhuoapp.erhuo.view.custom.ErhuoPicker
+                android:id="@+id/np_grade_select_type"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:descendantFocusability="blocksDescendants" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_school_info_display"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2.0dip"
+            android:background="@color/main_white"
+            android:gravity="center"
+            android:paddingBottom="10.0dip"
+            android:paddingTop="10.0dip"
+            android:text="北京信息科技大学 2012年入学 大学生"
+            android:textColor="@color/main_gray"
+            android:textSize="@dimen/font_big" />
+
+        <com.erhuoapp.erhuo.view.custom.RoundButton
+            android:id="@+id/btn_grade_select_ok"
+            style="@style/PureButtonBigWide"
+            android:layout_gravity="center"
+            android:layout_marginTop="11.0dip"
+            android:text="确   定" />
+    </LinearLayout>
+</LinearLayout>

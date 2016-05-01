@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="80.0dip"
+    android:layout_marginLeft="30.0dip"
+    android:layout_marginRight="30.0dip"
+    android:layout_marginTop="80.0dip"
+    android:background="@color/main_bgcolor">
+
+    <com.erhuoapp.erhuo.view.custom.MyViewPager
+        android:id="@+id/start_window_view_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="500.0dip"
+        android:background="@color/main_bgcolor" />
+
+    <LinearLayout
+        android:id="@+id/ll_focus_points"
+        android:layout_width="fill_parent"
+        android:layout_height="5.0dip"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="160.0dip"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" />
+</FrameLayout>

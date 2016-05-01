@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/SingleActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            style="@style/FrameTitle"
+            android:background="@color/main_red">
+
+            <ImageView
+                android:id="@+id/img_return"
+                style="@style/FrameTitleButtonLeft"
+                android:src="@drawable/left_arrow_white" />
+
+            <TextView
+                style="@style/FrameTitleText"
+                android:text="提现"
+                android:textColor="@color/main_white"
+                android:textSize="@dimen/font_huge" />
+
+            <TextView
+                android:id="@+id/change_bind_alipay"
+                style="@style/FrameTitleButtonRight"
+                android:gravity="center|right"
+                android:text="更改"
+                android:textColor="@color/main_white"
+                android:textSize="@dimen/font_bigmiddle" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:background="@color/main_bgcolor">
+
+            <ScrollView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/alipayid"
+                        style="@style/InputVerticalLabel"
+                        android:background="@color/main_white"
+                        android:gravity="center"
+                        android:text="当前绑定的支付宝账号"
+                        android:textColor="@color/main_blackgray"
+                        android:textSize="@dimen/font_small" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:background="@color/main_bgcolor" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="88.0dip"
+                        android:background="@color/main_white"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="100.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|left"
+                            android:layout_marginLeft="15.0dip"
+                            android:text="钱包余额"
+                            android:textColor="@color/main_blackgray"
+                            android:textSize="@dimen/font_bigmiddle" />
+
+                        <TextView
+                            android:id="@+id/wallet_balance"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center|right"
+                            android:layout_marginRight="15.0dip"
+                            android:gravity="center|right"
+                            android:text="￥余额"
+                            android:textColor="#ffff5400"
+                            android:textSize="@dimen/font_bigmiddle" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:background="@color/main_bgcolor" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/main_white"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="100.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15.0dip"
+                            android:text="提现金额"
+                            android:textColor="@color/main_blackgray"
+                            android:textSize="@dimen/font_middle" />
+
+                        <EditText
+                            android:id="@+id/withdraw_price"
+                            style="@style/InputVerticalEdit"
+                            android:layout_height="30.0dip"
+                            android:background="@null"
+                            android:hint="提现金额不能低于0.00元"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/main_blackgray"
+                            android:textSize="@dimen/font_middle" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0dip"
+                        android:background="@color/main_bgcolor" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="36.0dip"
+                        android:background="@color/main_white"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="100.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="15.0dip"
+                            android:text="用户密码"
+                            android:textColor="@color/main_blackgray"
+                            android:textSize="@dimen/font_middle" />
+
+                        <EditText
+                            android:id="@+id/withdraw_pwd"
+                            style="@style/InputVerticalEdit"
+                            android:layout_height="30.0dip"
+                            android:background="@null"
+                            android:hint="请输入当前用户的密码"
+                            android:inputType="textPassword" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <View style="@style/ShadowTitle" />
+
+            <View style="@style/ShadowBottom" />
+        </FrameLayout>
+
+        <FrameLayout style="@style/FrameBottom">
+
+            <LinearLayout style="@style/OrderinfoOperationBottom">
+
+                <com.erhuoapp.erhuo.view.custom.RoundButton
+                    android:id="@+id/withdraw_ok"
+                    style="@style/PureButtonBigWide"
+                    android:text="@string/yes" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <include layout="@layout/frame_loading" />
+</FrameLayout>

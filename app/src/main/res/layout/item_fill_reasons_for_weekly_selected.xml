@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10.0dip"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="153.0dip"
+        android:layout_height="153.0dip"
+        android:background="@color/main_white"
+        android:padding="5.0dip">
+
+        <ImageView
+            android:id="@+id/item_img"
+            android:layout_width="143.0dip"
+            android:layout_height="143.0dip"
+            android:scaleType="centerCrop"
+            android:src="@drawable/goods_default" />
+
+        <ImageView
+            android:id="@+id/item_delete"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_gravity="center|right|top"
+            android:paddingLeft="5.0dip"
+            android:paddingRight="10.0dip"
+            android:src="@drawable/edit_delete" />
+    </FrameLayout>
+
+    <EditText
+        android:id="@+id/item_reason"
+        android:layout_width="fill_parent"
+        android:layout_height="153.0dip"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="5.0dip"
+        android:background="@drawable/rect_white"
+        android:editable="true"
+        android:focusable="true"
+        android:gravity="top"
+        android:hint="输入上榜理由,字数为20-40字"
+        android:padding="5.0dip"
+        android:textColor="@color/main_gray"
+        android:textSize="@dimen/font_bigmiddle" />
+</LinearLayout>

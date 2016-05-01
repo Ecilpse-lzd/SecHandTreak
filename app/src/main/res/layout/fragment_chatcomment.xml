@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/SingleActivity"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/erhuo_title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/main_title_white">
+
+        <com.erhuoapp.erhuo.view.custom.EdgingFrame
+            android:id="@+id/ll_userinfo_tabs"
+            android:layout_width="180.0dip"
+            android:layout_height="34.0dip"
+            android:layout_gravity="center"
+            android:layout_marginBottom="3.0dip"
+            android:layout_marginTop="3.0dip"
+            app:edgeSize="1.0dip"
+            app:roundSize="2.0dip">
+
+            <LinearLayout
+                android:id="@+id/linearlayout_board_1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_margin="1.0dip"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textview_board_1"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/select_white_red"
+                    android:gravity="center"
+                    android:text="聊天"
+                    android:textColor="@color/font_red_white"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:id="@+id/textview_board_2"
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:background="@drawable/select_white_red"
+                    android:gravity="center"
+                    android:text="留言"
+                    android:textColor="@color/font_red_white"
+                    android:textSize="14.0sp" />
+            </LinearLayout>
+        </com.erhuoapp.erhuo.view.custom.EdgingFrame>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/comment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <View style="@style/ShadowTitle" />
+    </FrameLayout>
+</LinearLayout>

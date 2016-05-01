@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_bg_light_gray"
+    android:orientation="vertical">
+
+    <FrameLayout style="@style/FrameTitleWhite">
+
+        <ImageView
+            android:id="@+id/img_return"
+            style="@style/FrameTitleButtonLeft"
+            android:src="@drawable/left_arrow_gray" />
+
+        <TextView
+            style="@style/FrameTitleText"
+            android:text="举报"
+            android:textColor="@color/main_gray" />
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="30.0dip"
+        android:layout_gravity="center|top"
+        android:gravity="center"
+        android:text="您为什么要举报？"
+        android:textColor="@color/main_gray"
+        android:textSize="@dimen/font_small" />
+
+    <EditText
+        android:id="@+id/reason_detail"
+        android:layout_width="fill_parent"
+        android:layout_height="100.0dip"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginRight="5.0dip"
+        android:background="@drawable/rect_white"
+        android:hint="详细描述举报原因（选填）"
+        android:textColor="@color/main_gray" />
+
+    <com.erhuoapp.erhuo.view.custom.NoScrollListView
+        android:id="@+id/reason_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5.0dip"
+        android:layout_weight="1.0"
+        android:divider="@color/main_bg_light_gray"
+        android:dividerHeight="5.0dip" />
+
+    <com.erhuoapp.erhuo.view.custom.RoundButton
+        android:id="@+id/commit"
+        style="@style/PureButtonBigWide"
+        android:layout_gravity="center"
+        android:layout_marginTop="20.0dip"
+        android:text="提交" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20.0dip"
+        android:gravity="center"
+        android:text="@string/activity_report_tip"
+        android:textColor="@color/main_gray"
+        android:textSize="@dimen/font_small" />
+</LinearLayout>

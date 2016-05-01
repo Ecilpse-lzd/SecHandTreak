@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/conversation_header_system"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="8.0dip"
+        android:paddingLeft="10.0dip"
+        android:paddingTop="8.0dip">
+
+        <com.erhuoapp.erhuo.view.custom.EdgingFrame
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            app:roundBackground="@drawable/pure_main_red"
+            app:roundSize="5.0dip">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="5.0dip"
+                android:src="@drawable/logo_register" />
+        </com.erhuoapp.erhuo.view.custom.EdgingFrame>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:text="系统通知"
+            android:textSize="@dimen/font_middle" />
+
+        <com.erhuoapp.erhuo.view.custom.RoundButton
+            android:id="@+id/conversation_system_unread"
+            android:layout_width="18.0dip"
+            android:layout_height="18.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:text="1"
+            android:textColor="@color/main_white"
+            android:textSize="@dimen/font_middle"
+            app:roundBackground="@drawable/pure_main_red"
+            app:roundSize="9.0dip" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/conversation_header_order"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1.0px"
+        android:background="@color/main_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="8.0dip"
+        android:paddingLeft="10.0dip"
+        android:paddingTop="8.0dip">
+
+        <ImageView
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip"
+            android:src="@drawable/logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:text="订单通知"
+            android:textColor="@color/main_red"
+            android:textSize="@dimen/font_middle" />
+
+        <com.erhuoapp.erhuo.view.custom.RoundButton
+            android:id="@+id/conversation_order_unread"
+            android:layout_width="18.0dip"
+            android:layout_height="18.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:text="1"
+            android:textColor="@color/main_white"
+            android:textSize="@dimen/font_middle"
+            app:roundBackground="@drawable/pure_main_red"
+            app:roundSize="9.0dip" />
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="1.0dip"
+            android:layout_weight="1.0" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/conversation_header_service"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1.0px"
+        android:background="@color/main_white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="8.0dip"
+        android:paddingLeft="10.0dip"
+        android:paddingTop="8.0dip">
+
+        <FrameLayout
+            android:layout_width="40.0dip"
+            android:layout_height="40.0dip">
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="2.0dip"
+                android:background="@drawable/circle_red_active"
+                android:paddingLeft="1.0dip"
+                android:paddingRight="1.0dip">
+
+                <com.erhuoapp.erhuo.view.custom.RoundImageView
+                    android:id="@+id/iv_other_header"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_margin="1.0dip"
+                    android:src="@drawable/erhuo"
+                    app:roundSize="20.0dip" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/iv_other_auth"
+                android:layout_width="30.0dip"
+                android:layout_height="30.0dip"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="-5.0dip"
+                android:src="@drawable/userinfo_auth"
+                android:visibility="visible" />
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:text="客服兔小贰"
+            android:textColor="@color/main_red"
+            android:textSize="@dimen/font_middle" />
+
+        <com.erhuoapp.erhuo.view.custom.RoundButton
+            android:id="@+id/conversation_service_unread"
+            android:layout_width="18.0dip"
+            android:layout_height="18.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:text="1"
+            android:textColor="@color/main_white"
+            android:textSize="@dimen/font_middle"
+            app:roundBackground="@drawable/pure_main_red"
+            app:roundSize="9.0dip" />
+
+        <View
+            android:layout_width="0.0dip"
+            android:layout_height="1.0dip"
+            android:layout_weight="1.0" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@color/main_bgcolor" />
+</LinearLayout>

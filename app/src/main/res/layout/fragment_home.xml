@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:listViewAttr="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_home_content"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <FrameLayout style="@style/FrameTitleRed">
+
+        <ImageView
+            android:id="@+id/char_logo_erhuo"
+            android:layout_width="40.0dip"
+            android:layout_height="26.0dip"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:src="@drawable/logo_register" />
+
+        <ImageView
+            android:id="@+id/ib_home_search"
+            style="@style/FrameTitleButtonRight"
+            android:src="@drawable/home_search_bg" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <cn.trinea.android.common.view.DropDownListView
+            android:id="@+id/home_pull"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="false"
+            listViewAttr:isAutoLoadOnBottom="true"
+            listViewAttr:isDropDownStyle="true"
+            listViewAttr:isOnBottomStyle="true" />
+
+        <include layout="@layout/frame_loading" />
+
+
+        <View style="@style/ShadowTitle" />
+    </FrameLayout>
+</LinearLayout>

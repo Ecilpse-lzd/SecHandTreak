@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/picker_wrapper"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_transparent_white"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="80.0dip"
+    android:paddingRight="80.0dip"
+    android:visibility="invisible">
+
+    <com.erhuoapp.erhuo.view.custom.ErhuoPicker
+        android:id="@+id/picker"
+        android:layout_width="320.0dip"
+        android:layout_height="wrap_content"
+        android:background="@color/main_white"
+        android:descendantFocusability="blocksDescendants" />
+
+    <com.erhuoapp.erhuo.view.custom.RoundButton
+        android:id="@+id/btn_ok"
+        style="@style/PureButtonBigWide"
+        android:layout_gravity="center"
+        android:layout_marginTop="30.0dip"
+        android:text="确   定" />
+</LinearLayout>

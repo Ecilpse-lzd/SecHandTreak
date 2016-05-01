@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_container"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <FrameLayout style="@style/FrameTitleWhite">
+
+        <ImageView
+            android:id="@+id/ib_other_return"
+            style="@style/FrameTitleButtonLeft"
+            android:src="@drawable/btn_return_gray_bg" />
+
+        <TextView
+            android:id="@+id/tv_other_title"
+            style="@style/FrameTitleWhiteText"
+            android:text="个人主页" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="90.0dip">
+
+        <LinearLayout
+            android:id="@+id/fl_other_info"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/bitmap_userinfo"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="15.0dip"
+            android:paddingRight="24.0dip">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <FrameLayout
+                    android:layout_width="@dimen/size_header_middle"
+                    android:layout_height="@dimen/size_header_middle"
+                    android:layout_marginBottom="5.0dip"
+                    android:background="@drawable/circle_red_active">
+
+                    <com.erhuoapp.erhuo.view.custom.RoundImageView
+                        android:id="@+id/iv_other_header"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="1.0dip"
+                        android:src="@drawable/header_default"
+                        app:roundSize="@dimen/round_header_middle" />
+                </FrameLayout>
+
+                <ImageView
+                    android:id="@+id/iv_other_auth"
+                    android:layout_width="@dimen/width_auth_big"
+                    android:layout_height="@dimen/height_auth_big"
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/userinfo_auth" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.0dip"
+                android:layout_weight="1.0"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_other_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="王尼玛"
+                    android:textColor="@color/main_white"
+                    android:textSize="@dimen/font_huge" />
+
+                <TextView
+                    android:id="@+id/tv_other_school"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8.0dip"
+                    android:text="清华大学"
+                    android:textColor="@color/main_white"
+                    android:textSize="@dimen/font_middlesmall"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_other_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3.0dip"
+                    android:text="2013"
+                    android:textColor="@color/main_yellow"
+                    android:textSize="@dimen/font_middlesmall" />
+            </LinearLayout>
+
+            <com.erhuoapp.erhuo.view.custom.RoundButton
+                android:id="@+id/ib_other_chat"
+                android:layout_width="64.0dip"
+                android:layout_height="34.0dip"
+                android:text="聊一聊"
+                android:textColor="@color/main_red"
+                android:textSize="@dimen/font_middle"
+                app:roundSize="2.0dip" />
+        </LinearLayout>
+
+        <View style="@style/ShadowTitle" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_white">
+
+        <LinearLayout
+            android:id="@+id/tv_other_selling"
+            style="@style/UserinfoBoard">
+
+            <ImageView
+                style="@style/UserinfoBoardImage"
+                android:src="@drawable/userinfo_sell_bg" />
+
+            <LinearLayout
+                android:id="@+id/tv_other_selling_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/UserinfoBoardText"
+                    android:text="在售的" />
+
+                <TextView
+                    android:id="@+id/tv_other_sellingnum"
+                    style="@style/UserinfoBoardText"
+                    android:layout_marginLeft="3.0dip"
+                    android:text="0" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tv_other_sold"
+            style="@style/UserinfoBoard">
+
+            <ImageView
+                style="@style/UserinfoBoardImage"
+                android:background="@drawable/userinfo_sold_bg" />
+
+            <LinearLayout
+                android:id="@+id/tv_other_sold_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/UserinfoBoardText"
+                    android:text="卖出的" />
+
+                <TextView
+                    android:id="@+id/tv_other_soldnum"
+                    style="@style/UserinfoBoardText"
+                    android:layout_marginLeft="3.0dip"
+                    android:text="0" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tv_other_buying"
+            style="@style/UserinfoBoard">
+
+            <ImageView
+                style="@style/UserinfoBoardImage"
+                android:src="@drawable/userinfo_buying_bg" />
+
+            <LinearLayout
+                android:id="@+id/tv_other_buying_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/UserinfoBoardText"
+                    android:text="求购的" />
+
+                <TextView
+                    android:id="@+id/tv_other_buyingnum"
+                    style="@style/UserinfoBoardText"
+                    android:layout_marginLeft="3.0dip"
+                    android:text="0" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="3.0">
+
+        <ImageView
+            android:id="@+id/view_translation_process_bar"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:src="@drawable/trans_bar_other" />
+    </LinearLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_other_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/main_bgcolor"
+        android:paddingTop="2.0dip" />
+</LinearLayout>

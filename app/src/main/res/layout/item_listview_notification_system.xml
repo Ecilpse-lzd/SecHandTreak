@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@id/notification"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/main_white"
+    android:orientation="vertical"
+    android:padding="5.0dip">
+
+    <TextView
+        android:id="@id/notification_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5.0dip"
+        android:singleLine="true"
+        android:text="系统消息标题"
+        android:textColor="@color/main_blackgray"
+        android:textSize="@dimen/font_big" />
+
+    <TextView
+        android:id="@id/notification_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5.0dip"
+        android:text="系统消息内容系统消息内容系统消息内容系统消息内容系统消息内容系统消息内容"
+        android:textColor="@color/main_blackgray"
+        android:textSize="@dimen/font_middle" />
+
+    <TextView
+        android:id="@id/notification_time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:padding="5.0dip"
+        android:text="1天前"
+        android:textColor="@color/main_gray"
+        android:textSize="@dimen/font_small" />
+</LinearLayout>

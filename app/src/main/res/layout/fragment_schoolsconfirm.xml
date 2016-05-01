@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/SingleActivity">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <FrameLayout style="@style/FrameTitleWhite">
+
+            <ImageView
+                android:id="@+id/ib_school_confirm_return"
+                style="@style/FrameTitleButtonLeft"
+                android:background="@null"
+                android:src="@drawable/btn_return_red_bg"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/tv_register_title"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="完善个人信息"
+                android:textColor="@color/main_red"
+                android:textSize="@dimen/font_title" />
+
+            <TextView
+                android:id="@+id/tv_school_skip"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center|right"
+                android:gravity="center"
+                android:paddingLeft="15.0dip"
+                android:paddingRight="15.0dip"
+                android:text="@string/title_right_skip"
+                android:textColor="@color/font_red_dimred"
+                android:textSize="@dimen/font_middle"
+                android:visibility="invisible" />
+        </FrameLayout>
+
+        <View
+            android:id="@+id/view_divider"
+            style="@style/ShadowTitle"
+            android:layout_below="@id/erhuo_title" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/view_divider"
+            android:layout_marginTop="10.0dip"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/school_blank_top"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip" />
+
+            <LinearLayout
+                android:id="@+id/btn_school_select"
+                android:layout_width="fill_parent"
+                android:layout_height="44.0dip"
+                android:background="@color/main_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip">
+
+                <TextView
+                    android:id="@+id/fill_schoolname_auto"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:hint="@string/hint_select_school_name"
+                    android:textColor="@color/main_gray"
+                    android:textColorHint="@color/main_brightgray"
+                    android:textSize="@dimen/font_big" />
+
+                <ImageView
+                    android:layout_width="12.0dip"
+                    android:layout_height="22.0dip"
+                    android:src="@drawable/right_arrow_brightgray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btn_grade_select"
+                android:layout_width="fill_parent"
+                android:layout_height="44.0dip"
+                android:layout_marginTop="5.0dip"
+                android:background="@color/main_white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="16.0dip"
+                android:paddingRight="16.0dip">
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:hint="@string/hint_select_grade"
+                    android:textColor="@color/main_gray"
+                    android:textColorHint="@color/main_brightgray"
+                    android:textSize="@dimen/font_big" />
+
+                <ImageView
+                    android:layout_width="12.0dip"
+                    android:layout_height="22.0dip"
+                    android:src="@drawable/right_arrow_brightgray" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/school_auth"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/school_auth_height"
+                android:layout_weight="1.0"
+                android:background="@color/main_bgcolor"
+                android:gravity="center|top"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="70.0dip"
+                    android:gravity="center"
+                    android:text="请拍摄带有个人信息（姓名，学校等）的\n学生证或IC卡"
+                    android:textColor="@color/main_gray"
+                    android:textSize="@dimen/font_big" />
+
+                <ImageView
+                    android:id="@+id/school_auth_scan"
+                    android:layout_width="131.0dip"
+                    android:layout_height="131.0dip"
+                    android:src="@drawable/auth_plus" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="27.0dip"
+                    android:layout_marginTop="10.0dip"
+                    android:text="个人信息仅作认证使用，不会泄露"
+                    android:textColor="@color/main_red"
+                    android:textSize="@dimen/font_big" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/ll_pic_left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="27.0dip"
+                            android:layout_marginTop="10.0dip"
+                            android:text="示例一："
+                            android:textColor="@color/main_gray"
+                            android:textSize="@dimen/font_big" />
+
+                        <ImageView
+                            android:id="@+id/ic_left"
+                            android:layout_width="wrap_content"
+                            android:layout_height="64.0dip"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/default_image" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_pic_right"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="27.0dip"
+                            android:layout_marginTop="10.0dip"
+                            android:text="示例二："
+                            android:textColor="@color/main_gray"
+                            android:textSize="@dimen/font_big" />
+
+                        <ImageView
+                            android:id="@+id/ic_right"
+                            android:layout_width="wrap_content"
+                            android:layout_height="64.0dip"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/default_image" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.erhuoapp.erhuo.view.custom.RoundButton
+                android:id="@+id/btn_school_confirm_next"
+                style="@style/PureButtonBigWide"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20.0dip"
+                android:layout_marginTop="20.0dip"
+                android:background="@color/main_bgcolor"
+                android:text="确定" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/school_confirm_fragment"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/view_divider" />
+    </RelativeLayout>
+
+    <include layout="@layout/frame_waiting" />
+
+    <FrameLayout
+        android:id="@+id/school_dialog"
+        style="@style/DialogBackground">
+
+        <include layout="@layout/activity_dialog_confirm" />
+    </FrameLayout>
+</FrameLayout>

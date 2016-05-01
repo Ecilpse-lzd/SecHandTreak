@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.erhuoapp.erhuo.view.refresh.PullToRefreshListView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/listview"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginBottom="4.0dip"
+    android:layout_marginLeft="4.0dip"
+    android:layout_marginRight="4.0dip"
+    android:layout_marginTop="4.0dip"
+    android:background="@color/main_bgcolor"
+    android:clickable="true"
+    android:divider="@android:color/transparent"
+    android:dividerHeight="2.0dip"
+    android:fadingEdgeLength="0.0dip" />

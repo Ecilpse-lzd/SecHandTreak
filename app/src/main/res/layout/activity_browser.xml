@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/SingleActivity">
+
+    <FrameLayout
+        android:id="@+id/erhuo_title"
+        style="@style/FrameTitleWhite">
+
+        <ImageView
+            android:id="@+id/ib_browser_return"
+            style="@style/FrameTitleButtonLeft"
+            android:src="@drawable/btn_return_gray_bg" />
+
+        <TextView
+            android:id="@+id/tv_browser_title"
+            style="@style/FrameTitleWhiteText"
+            android:text="贰货" />
+
+        <include
+            android:id="@+id/webview_more"
+            layout="@layout/title_more" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_browser_result"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/erhuo_title">
+
+        <WebView
+            android:id="@+id/wv_browser_webview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <View style="@style/ShadowTitle" />
+    </FrameLayout>
+</RelativeLayout>

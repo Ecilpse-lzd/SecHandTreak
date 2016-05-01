@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/SingleActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/erhuo_title"
+            style="@style/FrameTitleRed">
+
+            <ImageView
+                android:id="@+id/ib_infodata_return"
+                style="@style/FrameTitleButtonLeft"
+                android:src="@drawable/btn_return_white_bg" />
+
+            <TextView
+                style="@style/FrameTitleRedText"
+                android:text="个人信息" />
+
+            <TextView
+                android:id="@+id/tv_infodata_ok"
+                style="@style/FrameTitleRedButtonTextRight"
+                android:text="保存" />
+        </FrameLayout>
+
+        <View style="@style/ShadowTitle" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/main_bgcolor">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <LinearLayout
+                    android:id="@+id/ll_infodata_actions"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/fl_infodata_header"
+                        style="@style/InfodataRowItem">
+
+                        <ImageView
+                            style="@style/LabelIconLeft"
+                            android:src="@drawable/infodata_header" />
+
+                        <TextView
+                            style="@style/InfodataRowLabel"
+                            android:text="用户头像" />
+
+                        <com.erhuoapp.erhuo.view.custom.EdgingFrame
+                            android:layout_width="60.0dip"
+                            android:layout_height="60.0dip"
+                            android:layout_marginLeft="20.0dip"
+                            app:edgeColor="@color/main_empty"
+                            app:edgeSize="0.0dip"
+                            app:roundBackground="@color/main_red"
+                            app:roundSize="30.0dip">
+
+                            <com.erhuoapp.erhuo.view.custom.RoundImageView
+                                android:id="@+id/iv_infodata_header"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:layout_margin="1.5dip"
+                                android:src="@drawable/header_default"
+                                app:roundSize="@dimen/round_header_middle" />
+                        </com.erhuoapp.erhuo.view.custom.EdgingFrame>
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/InfodataRowItem">
+
+                        <ImageView
+                            style="@style/LabelIconLeft"
+                            android:src="@drawable/infodata_username" />
+
+                        <TextView
+                            style="@style/InfodataRowLabel"
+                            android:text="用户昵称" />
+
+                        <EditText
+                            android:id="@+id/et_infodata_nickname"
+                            style="@style/InfodataRowEdit" />
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/InfodataRowItem">
+
+                        <ImageView
+                            style="@style/LabelIconLeft"
+                            android:src="@drawable/infodata_gender" />
+
+                        <TextView
+                            style="@style/InfodataRowLabel"
+                            android:text="性　　别" />
+
+                        <LinearLayout
+                            android:id="@+id/tv_infodata_male"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10.0dip"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10.0dip"
+                            android:paddingRight="10.0dip">
+
+                            <ImageView
+                                android:layout_width="16.0dip"
+                                android:layout_height="16.0dip"
+                                android:src="@drawable/radio_bg" />
+
+                            <ImageView
+                                android:layout_width="28.0dip"
+                                android:layout_height="28.0dip"
+                                android:layout_marginLeft="10.0dip"
+                                android:src="@drawable/infodata_male_bg" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/tv_infodata_female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:paddingLeft="10.0dip"
+                            android:paddingRight="10.0dip">
+
+                            <ImageView
+                                android:layout_width="16.0dip"
+                                android:layout_height="16.0dip"
+                                android:src="@drawable/radio_bg" />
+
+                            <ImageView
+                                android:layout_width="28.0dip"
+                                android:layout_height="28.0dip"
+                                android:layout_marginLeft="10.0dip"
+                                android:src="@drawable/infodata_female_bg" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/InfodataRowItem">
+
+                        <ImageView
+                            style="@style/LabelIconLeft"
+                            android:src="@drawable/infodata_place" />
+
+                        <TextView
+                            style="@style/InfodataRowLabel"
+                            android:text="联系地址" />
+
+                        <EditText
+                            android:id="@+id/et_infodata_address"
+                            style="@style/InfodataRowEdit" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="17.0dip"
+                            android:src="@drawable/right_arrow_red_small"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/infodata_auth"
+                        style="@style/InfodataRowItem">
+
+                        <ImageView
+                            style="@style/LabelIconLeft"
+                            android:src="@drawable/infodata_auth" />
+
+                        <TextView
+                            style="@style/InfodataRowLabel"
+                            android:text="认证用户" />
+
+                        <FrameLayout
+                            android:layout_width="0.0dip"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20.0dip"
+                            android:layout_marginRight="10.0dip"
+                            android:layout_weight="1.0">
+
+                            <ImageView
+                                android:id="@+id/iv_infodata_authyes"
+                                android:layout_width="48.0dip"
+                                android:layout_height="32.0dip"
+                                android:src="@drawable/userinfo_auth" />
+
+                            <FrameLayout
+                                android:id="@+id/fl_infodata_auth_no"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical">
+
+                                <ImageView
+                                    android:id="@+id/iv_infodata_authno"
+                                    android:layout_width="48.0dip"
+                                    android:layout_height="32.0dip"
+                                    android:src="@drawable/userinfo_auth_no" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center|right"
+                                    android:gravity="center_vertical">
+
+                                    <TextView
+                                        android:id="@+id/tv_infodata_auth"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_vertical"
+                                        android:gravity="center_vertical"
+                                        android:text="立即认证"
+                                        android:textColor="@color/main_red"
+                                        android:textSize="@dimen/font_bigmiddle" />
+                                </LinearLayout>
+                            </FrameLayout>
+                        </FrameLayout>
+
+                        <ImageView
+                            android:id="@+id/infodata_auth_clickable"
+                            android:layout_width="wrap_content"
+                            android:layout_height="17.0dip"
+                            android:src="@drawable/right_arrow_red_small" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/set_school"
+                        style="@style/InfodataRowItem"
+                        android:visibility="gone">
+
+                        <ImageView
+                            style="@style/LabelIconLeft"
+                            android:src="@drawable/infodata_school" />
+
+                        <TextView
+                            style="@style/InfodataRowLabel"
+                            android:text="学校院系" />
+
+                        <TextView
+                            android:id="@+id/tv_infodata_school"
+                            style="@style/InfodataRowEdit" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="17.0dip"
+                            android:src="@drawable/right_arrow_red_small" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/set_grade"
+                        style="@style/InfodataRowItem"
+                        android:visibility="gone">
+
+                        <ImageView
+                            style="@style/LabelIconLeft"
+                            android:src="@drawable/infodata_grade" />
+
+                        <TextView
+                            style="@style/InfodataRowLabel"
+                            android:text="年　　级" />
+
+                        <TextView
+                            android:id="@+id/tv_infodata_grade"
+                            style="@style/InfodataRowEdit" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="17.0dip"
+                            android:src="@drawable/right_arrow_red_small" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/infodata_phonebind"
+                        style="@style/InfodataRowItem">
+
+                        <ImageView
+                            style="@style/LabelIconLeft"
+                            android:src="@drawable/infodata_phone" />
+
+                        <TextView
+                            style="@style/InfodataRowLabel"
+                            android:text="手　　机" />
+
+                        <TextView
+                            android:id="@+id/tv_infodata_phone"
+                            style="@style/InfodataRowEdit"
+                            android:hint="点击绑定手机号"
+                            android:textColorHint="@color/main_brightgray" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="17.0dip"
+                            android:src="@drawable/right_arrow_red_small" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_infodata_time"
+                    android:layout_width="fill_parent"
+                    android:layout_height="60.0dip"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginTop="20.0dip"
+                    android:gravity="center"
+                    android:maxLines="2"
+                    android:paddingTop="10.0dip"
+                    android:text="time"
+                    android:textColor="@color/main_gray"
+                    android:textSize="@dimen/font_tiny" />
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/infodata_fragment"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <include layout="@layout/frame_waiting" />
+
+    <FrameLayout
+        android:id="@+id/address_edit_confirm"
+        style="@style/DialogUserInfo">
+
+        <include layout="@layout/activity_dialog_confirm" />
+    </FrameLayout>
+</FrameLayout>

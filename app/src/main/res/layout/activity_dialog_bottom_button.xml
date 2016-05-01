@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="65.0dip"
+        android:background="@null"
+        android:orientation="horizontal"
+        android:padding="10.0dip">
+
+        <TextView
+            android:id="@+id/dialog_cancel"
+            android:layout_width="0.0dip"
+            android:layout_height="45.0dip"
+            android:layout_weight="1.0"
+            android:background="@drawable/round_box"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/main_red"
+            android:textSize="@dimen/font_large"/>
+
+        <TextView
+            android:id="@+id/dialog_ok"
+            android:layout_width="0.0dip"
+            android:layout_height="45.0dip"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="1.0"
+            android:background="@color/main_red"
+            android:gravity="center"
+            android:text="@string/yes"
+            android:textColor="@color/main_white"
+            android:textSize="@dimen/font_large" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/SingleActivity"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+
+    <FrameLayout style="@style/FrameTitleRed">
+
+        <ImageView
+            android:id="@+id/ib_register_return"
+            style="@style/FrameTitleButtonLeft"
+            android:src="@drawable/btn_return_white_bg" />
+
+        <TextView
+            android:id="@+id/tv_register_title"
+            style="@style/FrameTitleRedText"
+            android:text="注 册" />
+    </FrameLayout>
+
+    <View style="@style/ShadowTitle" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="62.0dip"
+                android:layout_height="42.0dip"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="57.0dip"
+                android:src="@drawable/erhuo_login" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36.0dip"
+                android:orientation="vertical">
+
+                <FrameLayout style="@style/RegisterInputFrameLong">
+
+                    <ImageView
+                        style="@style/RegisterInputIconLeft"
+                        android:src="@drawable/user_gray" />
+
+                    <EditText
+                        android:id="@+id/et_register_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@null"
+                        android:hint="用户名（4-20位字符）"
+                        android:paddingLeft="48.0dip"
+                        android:paddingRight="18.0dip"
+                        android:textColor="@color/main_gray"
+                        android:textColorHint="@color/main_brightgray"
+                        android:textSize="@dimen/font_middle" />
+                </FrameLayout>
+
+                <FrameLayout
+                    style="@style/RegisterInputFrameLong"
+                    android:layout_marginTop="5.0dip">
+
+                    <ImageView
+                        style="@style/RegisterInputIconLeft"
+                        android:src="@drawable/lock" />
+
+                    <EditText
+                        android:id="@+id/et_register_password1"
+                        style="@style/RegisterInputEdit"
+                        android:hint="密码（6-20字符）"
+                        android:inputType="textPassword" />
+
+                    <ImageView
+                        android:id="@+id/is_register_show_password"
+                        android:layout_width="35.0dip"
+                        android:layout_height="35.0dip"
+                        android:layout_gravity="center|right"
+                        android:layout_marginRight="12.0dip"
+                        android:padding="10.0dip"
+                        android:src="@drawable/bt_password" />
+                </FrameLayout>
+
+                <FrameLayout
+                    style="@style/RegisterInputFrameLong"
+                    android:layout_marginTop="5.0dip">
+
+                    <ImageView
+                        style="@style/RegisterInputIconLeft"
+                        android:src="@drawable/lock" />
+
+                    <EditText
+
+                        android:id="@+id/et_register_password_again"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:background="@null"
+                        android:inputType="textPassword"
+                        android:hint="请再次输入密码"
+                        android:paddingLeft="48.0dip"
+                        android:textColor="@color/main_gray"
+                        android:textColorHint="@color/main_brightgray"
+                        android:textSize="@dimen/font_middle" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15.0dip"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="11.0dip">
+
+                    <CheckBox
+                        android:id="@+id/cb_register_rule"
+                        android:layout_width="18.0dip"
+                        android:layout_height="18.0dip"
+                        android:background="@drawable/check_bg"
+                        android:button="@null"
+                        android:checked="true" />
+
+                    <TextView
+                        android:id="@+id/tx_register_protocol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:text="同意贰货APP用户注册和使用协议"
+                        android:textColor="@color/main_brightgray"
+                        android:textSize="@dimen/font_middle" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_register_next"
+                style="@style/PureButtonBigWide"
+                android:layout_gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20.0dip"
+                android:text="注册" />
+        </LinearLayout>
+    </ScrollView>
+
+
+    <include layout="@layout/frame_waiting" />
+</LinearLayout>

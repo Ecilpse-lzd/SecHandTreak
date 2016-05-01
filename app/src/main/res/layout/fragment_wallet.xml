@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/SingleActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <com.erhuoapp.erhuo.view.include.FrameTitle
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/title_height"
+            app:backEnable="true"
+            app:styleRed="true"
+            app:title="我的钱包" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+
+            <include layout="@layout/linear_wallet" />
+
+            <View style="@style/ShadowTitle" />
+
+            <View style="@style/ShadowBottom" />
+        </FrameLayout>
+
+        <FrameLayout style="@style/FrameBottom">
+
+            <com.erhuoapp.erhuo.view.custom.RoundButton
+                android:id="@+id/wallet_withdraw"
+                style="@style/PureButtonBigWide"
+                android:layout_gravity="center"
+                android:text="提现" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <include layout="@layout/frame_loading" />
+</FrameLayout>

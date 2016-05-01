@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300.0dip"
+    android:layout_height="wrap_content"
+    android:background="@color/main_white"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="20.0dip"
+        android:src="@drawable/img_dialog_update_version" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="130.0dip"
+        android:layout_marginLeft="30.0dip"
+        android:onClick="ok"
+        android:src="@drawable/bt_update_version" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|right|top"
+        android:layout_marginRight="0.0dip"
+        android:layout_marginTop="55.0dip"
+        android:onClick="cancel"
+        android:src="@drawable/close_ck_update" />
+
+    <TextView
+        android:id="@id/alert_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="40.0dip"
+        android:text="发现新版本2.X.XX，请点击确定下载更新！"
+        android:textColor="#ff333333"
+        android:textSize="18.0sp" />
+</FrameLayout>

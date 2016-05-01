@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ff393d46"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/umeng_socialize_title"
+        layout="@layout/umeng_socialize_titile_bar" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/umeng_socialize_share_info"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:paddingLeft="26.0dip"
+            android:text="分享到"
+            android:textColor="#ff84898f"
+            android:textSize="16.0sp" />
+
+        <ListView
+            android:id="@+id/umeng_socialize_platforms_lv"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginRight="12.0dip"
+            android:layout_marginTop="8.0dip"
+            android:background="@drawable/umeng_socialize_shape_solid_grey"
+            android:cacheColorHint="@null"
+            android:clickable="false"
+            android:divider="#ff000000"
+            android:dividerHeight="0.5dip"
+            android:focusable="false"
+            android:footerDividersEnabled="false"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none" />
+
+        <ListView
+            android:id="@+id/umeng_socialize_platforms_lv_second"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12.0dip"
+            android:layout_marginRight="12.0dip"
+            android:layout_marginTop="12.0dip"
+            android:background="@drawable/umeng_socialize_shape_solid_grey"
+            android:cacheColorHint="@null"
+            android:clickable="false"
+            android:divider="#ff000000"
+            android:dividerHeight="0.5dip"
+            android:focusable="false"
+            android:footerDividersEnabled="false"
+            android:listSelector="@android:color/transparent"
+            android:scrollbars="none" />
+    </LinearLayout>
+</LinearLayout>

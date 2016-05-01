@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/notification_time"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="5.0dip"
+        android:text="2015年11月11日"
+        android:textColor="@color/main_gray"
+        android:textSize="@dimen/font_small" />
+
+    <LinearLayout
+        android:id="@+id/notification"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/notification_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_white"
+            android:padding="5.0dip"
+            android:text="订单标题"
+            android:textColor="@color/main_blackgray"
+            android:textSize="@dimen/font_middle" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_white"
+            android:orientation="horizontal"
+            android:padding="5.0dip">
+
+            <ImageView
+                android:id="@+id/notification_img"
+                android:layout_width="60.0dip"
+                android:layout_height="60.0dip"
+                android:scaleType="centerCrop"
+                android:src="@drawable/goods_default" />
+
+            <TextView
+                android:id="@+id/notification_content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:padding="5.0dip"
+                android:text="订单通知描述"
+                android:textColor="@color/main_gray"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1.0px"
+            android:background="@color/main_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="5.0dip">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="查看详情" />
+
+            <ImageView
+                android:layout_width="10.0dip"
+                android:layout_height="18.0dip"
+                android:src="@drawable/right_arrow_brightgray" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

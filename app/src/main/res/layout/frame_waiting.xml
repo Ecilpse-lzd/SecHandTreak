@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearlayout_frame_waiting"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_loadingbg"
+    android:clickable="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <ImageView
+        android:layout_width="117.0dip"
+        android:layout_height="188.0dip"
+        android:src="@anim/frame_loading_new" />
+
+    <TextView
+        android:id="@+id/textview_frame_waiting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20.0dip"
+        android:text="兔小贰正在努力中.."
+        android:textColor="@color/main_white" />
+</LinearLayout>

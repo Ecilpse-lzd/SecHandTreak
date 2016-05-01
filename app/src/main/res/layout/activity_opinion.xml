@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_bgcolor"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/erhuo_title"
+        style="@style/FrameTitleRed">
+
+        <ImageButton
+            android:id="@+id/ib_opinion_return"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center|left"
+            android:background="@android:color/transparent"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="20.0dip"
+            android:src="@drawable/left_arrow_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="意见反馈"
+            android:textColor="@color/main_white"
+            android:textSize="@dimen/font_title" />
+    </FrameLayout>
+
+    <View
+        android:id="@+id/view_opinion_divider"
+        style="@style/ShadowTitle" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="285.0dip"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="10.0dip"
+        android:background="@drawable/rect_white">
+
+        <EditText
+            android:id="@+id/et_opinion_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="4.0dip"
+            android:background="@color/main_white"
+            android:gravity="start"
+            android:hint="您的意见是小贰前进的动力..."
+            android:inputType="textMultiLine"
+            android:textColor="@color/main_gray"
+            android:textColorHint="@color/main_brightgray"
+            android:textSize="@dimen/font_tiny" />
+    </LinearLayout>
+
+    <com.erhuoapp.erhuo.view.custom.RoundButton
+        android:id="@+id/tv_opinion_submit"
+        android:layout_width="85.0dip"
+        android:layout_height="33.0dip"
+        android:layout_gravity="center|right"
+        android:layout_marginRight="10.0dip"
+        android:layout_marginTop="10.0dip"
+        android:text="提交"
+        android:textColor="@color/main_white"
+        android:textSize="@dimen/font_huge"
+        app:roundBackground="@color/main_red"
+        app:roundSize="2.0dip" />
+
+    <View
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0" />
+
+    <TextView
+        android:id="@+id/communicate_erhuo_service"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="15.0dip"
+        android:text="畅聊小贰"
+        android:textColor="@color/main_red"
+        android:textSize="@dimen/font_small" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="15.0dip"
+        android:text="小贰电话  01082433123"
+        android:textColor="@color/main_red"
+        android:textSize="@dimen/font_small" />
+</LinearLayout>

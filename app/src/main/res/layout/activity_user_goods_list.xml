@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/SingleActivity"
+    android:orientation="vertical">
+
+    <FrameLayout
+        style="@style/FrameTitleWhite"
+        android:background="@color/main_red">
+
+        <TextView
+            style="@style/FrameTitleWhiteText"
+            android:text="@string/title_userinfo"
+            android:textColor="@color/main_white" />
+
+        <ImageView
+            android:id="@+id/img_return"
+            style="@style/FrameTitleButtonLeft"
+            android:src="@drawable/left_arrow_white" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_userinfo_tabs"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_white">
+
+        <LinearLayout
+            android:id="@+id/userinfo_board_selling"
+            style="@style/UserinfoBoard">
+
+            <ImageView
+                style="@style/UserinfoBoardImage"
+                android:src="@drawable/userinfo_sell_bg" />
+
+            <TextView
+                style="@style/UserinfoBoardText"
+                android:text="在售的" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/userinfo_board_sold"
+            style="@style/UserinfoBoard">
+
+            <ImageView
+                style="@style/UserinfoBoardImage"
+                android:src="@drawable/userinfo_sold_bg" />
+
+            <TextView
+                style="@style/UserinfoBoardText"
+                android:text="卖出的" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/userinfo_board_bought"
+            style="@style/UserinfoBoard">
+
+            <ImageView
+                style="@style/UserinfoBoardImage"
+                android:src="@drawable/userinfo_bought_bg" />
+
+            <TextView
+                style="@style/UserinfoBoardText"
+                android:text="已购的" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/userinfo_board_buying"
+            style="@style/UserinfoBoard">
+
+            <ImageView
+                style="@style/UserinfoBoardImage"
+                android:src="@drawable/userinfo_buying_bg" />
+
+            <TextView
+                style="@style/UserinfoBoardText"
+                android:text="求购的" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/userinfo_board_favorite"
+            style="@style/UserinfoBoard">
+
+            <ImageView
+                style="@style/UserinfoBoardImage"
+                android:src="@drawable/userinfo_favorite_bg" />
+
+            <TextView
+                style="@style/UserinfoBoardText"
+                android:text="收藏的" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/my_linelayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_white"
+        android:weightSum="5.0">
+
+        <ImageView
+            android:id="@+id/view_translation_process_bar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:src="@drawable/trans_bar_mine" />
+    </LinearLayout>
+
+    <com.erhuoapp.erhuo.view.custom.MyViewPager
+        android:id="@+id/vp_userinfo_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/main_bgcolor"
+        android:paddingTop="2.0dip" />
+
+    <View style="@style/DivideLineSmallRed" />
+</LinearLayout>

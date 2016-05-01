@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/main_bgcolor"
+        android:orientation="vertical">
+
+        <com.erhuoapp.erhuo.view.include.ErhuoSwitcher
+            android:id="@+id/switcher_main"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+
+            <fragment
+                android:name="com.erhuoapp.erhuo.fragment.fragment_bottom_label.FragmentHome"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:tag="main_fragment_0" />
+
+            <fragment
+                android:name="com.erhuoapp.erhuo.fragment.fragment_bottom_label.FragmentGoodsBuying"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:tag="main_fragment_1" />
+
+            <fragment
+                android:name="com.erhuoapp.erhuo.fragment.fragment_bottom_label.FragmentChatComment"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:tag="main_fragment_2" />
+
+            <fragment
+                android:name="com.erhuoapp.erhuo.fragment.fragment_bottom_label.FragmentUserInfo"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:tag="main_fragment_3" />
+        </com.erhuoapp.erhuo.view.include.ErhuoSwitcher>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="55.0dip"
+            android:layout_gravity="bottom"
+            android:background="@color/main_white">
+
+            <LinearLayout
+                android:id="@+id/linearlayout_main_board_1"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageview_main_board_1"
+                    android:layout_width="@dimen/size_main_borad"
+                    android:layout_height="@dimen/size_main_borad"
+                    android:src="@drawable/main_board_1_bg" />
+
+                <TextView
+                    android:id="@+id/textview_main_board_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2.0dip"
+                    android:text="首页"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_tiny" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayout_main_board_2"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageview_main_board_2"
+                    android:layout_width="@dimen/size_main_borad"
+                    android:layout_height="@dimen/size_main_borad"
+                    android:src="@drawable/main_board_2_bg" />
+
+                <TextView
+                    android:id="@+id/textview_main_board_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2.0dip"
+                    android:text="求购"
+                    android:textColor="@color/main_black"
+                    android:textSize="@dimen/font_tiny" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="68.0dip"
+                android:layout_height="fill_parent" />
+
+            <FrameLayout
+                android:id="@+id/linearlayout_main_board_temp"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0">
+
+                <LinearLayout
+                    android:id="@+id/linearlayout_main_board_3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageview_main_board_3"
+                        android:layout_width="@dimen/size_main_borad"
+                        android:layout_height="@dimen/size_main_borad"
+                        android:src="@drawable/main_board_3_bg" />
+
+                    <TextView
+                        android:id="@+id/textview_main_board_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2.0dip"
+                        android:text="消息"
+                        android:textColor="@color/main_black"
+                        android:textSize="@dimen/font_tiny" />
+                </LinearLayout>
+
+                <com.erhuoapp.erhuo.view.include.ErhuoSwitcher
+                    android:id="@+id/main_unread"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:layout_width="10.0dip"
+                        android:layout_height="10.0dip"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="15.0dip"
+                        android:layout_marginLeft="15.0dip"
+                        android:gravity="center"
+                        android:src="@drawable/unread_count_bg" />
+
+                    <com.erhuoapp.erhuo.view.custom.RoundButton
+                        android:layout_width="16.0dip"
+                        android:layout_height="16.0dip"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="15.0dip"
+                        android:layout_marginLeft="15.0dip"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/font_s_tinysmall"
+                        app:roundBackground="@drawable/pure_main_red"
+                        app:roundSize="8.0dip" />
+                </com.erhuoapp.erhuo.view.include.ErhuoSwitcher>
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/linearlayout_main_board_4"
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageview_main_board_4"
+                    android:layout_width="@dimen/size_main_borad"
+                    android:layout_height="@dimen/size_main_borad"
+                    android:src="@drawable/main_board_4_bg" />
+
+                <TextView
+                    android:id="@+id/textview_main_board_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2.0dip"
+                    android:text="我的"
+                    android:textColor="@color/main_black"
+                    android:textSize="@dimen/font_tiny" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="5.0dip"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="55.0dip"
+        android:background="@drawable/shadow_bottom_tabs" />
+
+    <FrameLayout
+        android:id="@+id/linearlayout_main_board_5"
+        android:layout_width="68.0dip"
+        android:layout_height="68.0dip"
+        android:layout_gravity="bottom|center">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/main_board_center_bg" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:padding="5.0dip"
+            android:src="@drawable/main_board_center_plus" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/selling_confirm"
+        style="@style/DialogUserInfo">
+
+        <include layout="@layout/activity_dialog_confirm" />
+    </FrameLayout>
+</FrameLayout>

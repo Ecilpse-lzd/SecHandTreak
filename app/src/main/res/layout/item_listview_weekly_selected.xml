@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center|top"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5.0dip"
+        android:layout_marginRight="5.0dip"
+        android:layout_marginTop="5.0dip"
+        android:background="@color/main_white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/wrapper"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="@dimen/size_header_middle"
+                    android:layout_height="@dimen/size_header_middle"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:background="@drawable/circle_red_active">
+
+                    <com.erhuoapp.erhuo.view.custom.RoundImageView
+                        android:id="@+id/header"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_margin="1.0dip"
+                        android:src="@drawable/header_default"
+                        app:roundSize="@dimen/round_header_middle" />
+
+                    <ImageView
+                        android:id="@+id/img_auth"
+                        android:layout_width="@dimen/width_auth_small"
+                        android:layout_height="@dimen/height_auth_small"
+                        android:layout_gravity="bottom"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/userinfo_auth"
+                        android:visibility="visible" />
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_header_middle"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="10.0dip"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tx_nickname"
+                        android:layout_width="100.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10.0dip"
+                        android:singleLine="true"
+                        android:text="name"
+                        android:textColor="@color/main_light_black"
+                        android:textSize="@dimen/font_middle" />
+
+                    <TextView
+                        android:id="@+id/tx_school_or_distance"
+                        android:layout_width="100.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="15.0dip"
+                        android:singleLine="true"
+                        android:text="学校"
+                        android:textColor="@color/main_light_gray"
+                        android:textSize="@dimen/font_middle" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.0dip"
+                    android:layout_height="0.0dip"
+                    android:layout_weight="1.0" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_header_middle">
+
+                    <LinearLayout
+                        android:id="@+id/weekly_price_parent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/size_header_middle"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="10.0dip"
+                        android:gravity="right"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:id="@+id/tx_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10.0dip"
+                            android:text="￥400"
+                            android:textColor="@color/main_red"
+                            android:textSize="@dimen/font_middle" />
+
+                        <TextView
+                            android:id="@+id/tx_origin_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:layout_marginTop="15.0dip"
+                            android:text="原价：4000"
+                            android:textColor="@color/main_light_gray"
+                            android:textSize="@dimen/font_middle" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/discount_pic"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50.0dip"
+                        android:layout_gravity="center|right"
+                        android:background="@drawable/discount_one"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <com.erhuoapp.erhuo.view.include.ErhuoSwitcher
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8.0dip"
+                android:visibility="visible">
+
+                <FrameLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                    <HorizontalScrollView
+                        android:id="@+id/scrollview"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none">
+
+                        <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <View
+                                android:id="@+id/single_img_wrapper"
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:background="@color/main_white" />
+
+                            <GridView
+                                android:id="@+id/pics_gallery"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginLeft="5.0dip" />
+                        </FrameLayout>
+                    </HorizontalScrollView>
+                </FrameLayout>
+            </com.erhuoapp.erhuo.view.include.ErhuoSwitcher>
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/goods_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5.0dip"
+                android:layout_weight="1.0"
+                android:singleLine="true"
+                android:text="商品title"
+                android:textColor="@color/main_light_gray"
+                android:textSize="@dimen/font_middle" />
+
+            <include layout="@layout/favourite_stars" />
+
+            <LinearLayout
+                android:id="@+id/discount_price_parent"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|right"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10.0dip"
+                    android:text="￥400"
+                    android:textColor="@color/main_red"
+                    android:textSize="@dimen/font_middle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginRight="5.0dip"
+                    android:text="原价：4000"
+                    android:textColor="@color/main_light_gray"
+                    android:textSize="@dimen/font_middle" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip">
+
+            <ImageView
+                android:id="@+id/is_collect"
+                android:layout_width="41.0dip"
+                android:layout_height="21.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="2.0dip"
+                android:src="@drawable/item_favorite2_bg" />
+
+            <TextView
+                android:id="@+id/collect_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="5.0dip"
+                android:layout_weight="1.0"
+                android:text="收藏人数"
+                android:textColor="@color/main_light_gray"
+                android:textSize="@dimen/font_middle" />
+
+            <include layout="@layout/goods_label" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tx_reason"
+            android:layout_width="fill_parent"
+            android:layout_height="25.0dip"
+            android:layout_gravity="left"
+            android:layout_marginBottom="5.0dip"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginTop="5.0dip"
+            android:singleLine="true"
+            android:text="精选理由：********"
+            android:textColor="@color/main_light_bgcolor"
+            android:textSize="@dimen/font_middlesmall" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/weekly_bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_white"
+    android:orientation="vertical">
+
+    <FrameLayout style="@style/FrameTitleRed">
+
+        <ImageView
+            android:id="@+id/img_return"
+            style="@style/FrameTitleButtonLeft"
+            android:src="@drawable/left_arrow_white" />
+
+        <TextView
+            android:id="@+id/myTitle"
+            style="@style/FrameTitleWhiteText"
+            android:text="@string/weekly_selected"
+            android:textColor="@color/main_white" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@null">
+
+        <com.erhuoapp.erhuo.view.refresh.PullToRefreshListView
+            android:id="@+id/list_weeklyselected_show"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <include
+            android:id="@+id/linearlayout_frame_loading"
+            layout="@layout/frame_loading" />
+
+        <View style="@style/ShadowTitle" />
+    </FrameLayout>
+</LinearLayout>

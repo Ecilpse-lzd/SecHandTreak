@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/item_wallet_img"
+        android:layout_width="80.0dip"
+        android:layout_height="80.0dip"
+        android:scaleType="centerCrop"
+        android:src="@drawable/withdraw_default" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="80.0dip"
+        android:orientation="vertical"
+        android:paddingBottom="5.0dip"
+        android:paddingLeft="8.0dip"
+        android:paddingRight="8.0dip"
+        android:paddingTop="5.0dip">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_wallet_extras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="王尼玛付款"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_middle" />
+
+            <TextView
+                android:id="@+id/item_wallet_price"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|right"
+                android:text="￥0.00"
+                android:textColor="@color/black"
+                android:textSize="@dimen/font_middle" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_wallet_title"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0"
+            android:padding="5.0dip"
+            android:text="test"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/font_small" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_wallet_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="今天"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/font_small" />
+
+            <TextView
+                android:id="@+id/item_wallet_state"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="交易完成"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/font_small" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <FrameLayout style="@style/FrameTitleRed">
+
+        <ImageView
+            android:id="@+id/img_return"
+            style="@style/FrameTitleButtonLeft"
+            android:src="@drawable/left_arrow_white" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/FrameTitleText"
+            android:text="精选商户"
+            android:textColor="@color/main_white" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <com.erhuoapp.erhuo.view.refresh.PullToRefreshListView
+            android:id="@+id/my_refresh_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/main_bgcolor" />
+
+        <include layout="@layout/frame_loading" />
+    </FrameLayout>
+</LinearLayout>

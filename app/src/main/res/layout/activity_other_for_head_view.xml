@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <com.erhuoapp.erhuo.view.custom.MatrixImageView
+            android:id="@+id/goods_sell_head_pic"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/default_avatar" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fr_title"
+        style="@style/FrameTitleWhite"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/img_cancel"
+            style="@style/FrameTitleButtonLeft"
+            android:src="@drawable/left_arrow_gray" />
+
+        <TextView
+            android:id="@+id/to_send_choosed_pic"
+            style="@style/FrameTitleButtonRight"
+            android:text="确定"
+            android:textColor="@color/main_red"
+            android:textSize="@dimen/font_big" />
+    </FrameLayout>
+</FrameLayout>

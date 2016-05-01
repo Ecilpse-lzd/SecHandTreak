@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:orientation="vertical"
+    android:layout_height="fill_parent">
+    <FrameLayout style="@style/FrameTitleGray">
+
+        <ImageView
+            android:id="@+id/ib_login_return"
+            style="@style/FrameTitleButtonLeft"
+            android:src="@drawable/btn_return_red_bg" />
+        <TextView
+            android:id="@+id/tv_register_title"
+            style="@style/FrameTitleRedText"
+            android:textColor="#111"
+            android:text="用户注册和使用协议" />
+    </FrameLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:padding="15.0dip">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="第一条"
+                android:textColor="@color/main_blackgray"
+                android:textSize="@dimen/font_big"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8.0dip"
+                android:text="　　你正在查看的是萌萌的“萝卜商城规则说明”，内容包括萝卜是什么，怎样赚取萝卜，怎样用萝卜换奖品等。如果你不喜欢萝卜，请自行将萝卜脑补成黄瓜、茄子、香蕉。"
+                android:textColor="@color/main_blackgray"
+                android:textSize="@dimen/font_middle" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:text="关于萝卜"
+                android:textColor="@color/main_blackgray"
+                android:textSize="@dimen/font_middle"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:text="　　萝卜是贰货平台的独有积分，你可以使用萝卜兑换各式各样的奖品。萝卜不能赠送不能出售，只能依靠自己勤劳的双手一颗一颗积攒。"
+                android:textColor="@color/main_blackgray"
+                android:textSize="@dimen/font_middle" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:text="关于挖萝卜"
+                android:textColor="@color/main_blackgray"
+                android:textSize="@dimen/font_middle"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:text="　　没错，每天你都可以挖萝卜，这些长在地里面的萝卜都是我们蠢萌的程序猿童鞋种下去的，你要是不挖他们会伤心到痛哭。 　　普通用户每天可以挖两次，认证用户每天可以挖4次（赤果果的歧视有木有…），想要挖4次的去认证，摔！（因为学生证丢失，本文案狗至今未认证成功，泪奔） 　　不论普通用户还是认证用户，想挖萝卜先签到，不签不给挖！种萝卜很辛苦的~"
+                android:textColor="@color/main_blackgray"
+                android:textSize="@dimen/font_middle" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:text="关于目标收成"
+                android:textColor="@color/main_blackgray"
+                android:textSize="@dimen/font_middle"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:text="　　看到没，每日目标收成是222颗，达到目标会有额外的萝卜奖励哦~你问我额外奖多少？呵呵，就不告诉你，你自己去试呀~ 　　某君：“文案君你把目标定这么高，我挖了4次才挖到20几颗萝卜，你这不是逗我？” 　　“二货，没看到下面的任务么！”"
+                android:textColor="@color/main_blackgray"
+                android:textSize="@dimen/font_middle" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:text="关于任务"
+                android:textColor="@color/main_blackgray"
+                android:textSize="@dimen/font_middle"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:text="　　每天有3个每日任务等待你去完成，只要按照任务提示的方式去操作就OK啦，非常的简单。任务奖励的萝卜数量可是很丰厚的哦！当日完成全部每日任务也能获得额外奖励。依据惯例，我还是不会告诉你额外奖励的数量的，打我呀~ 　　对了，邀请一个朋友加入贰货，你们俩都能获得100颗的萝卜奖励（简直就是白送）。别忘了告诉朋友注册的时候填上你的邀请码，不然萝卜奖励就没啦！"
+                android:textColor="@color/main_blackgray"
+                android:textSize="@dimen/font_middle" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:text="关于兑换"
+                android:textColor="@color/main_blackgray"
+                android:textSize="@dimen/font_middle"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3.0dip"
+                android:text="　　没什么好说的，奖品都摆在那，只要有萝卜，想换哪个点哪个，再也不用担心手被剁！"
+                android:textColor="@color/main_blackgray"
+                android:textSize="@dimen/font_middle" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8.0dip"
+                android:text="第二条"
+                android:textColor="@color/main_blackgray"
+                android:textSize="@dimen/font_big"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8.0dip"
+                android:text="　　还看啥规则啊？赶快去赚萝卜啦！"
+                android:textColor="@color/main_blackgray"
+                android:textSize="@dimen/font_middle" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/SingleActivity"
+    android:orientation="vertical">
+
+    <FrameLayout style="@style/FrameTitleRed">
+
+        <ImageView
+            android:id="@+id/search_back"
+            style="@style/FrameTitleButtonLeft"
+            android:src="@drawable/btn_return_white_bg" />
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="3.0dip"
+            android:layout_marginLeft="45.0dip"
+            android:layout_marginRight="60.0dip"
+            android:layout_marginTop="3.0dip"
+            android:background="@color/main_white"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="6.0dip"
+                android:layout_marginLeft="7.0dip"
+                android:layout_marginTop="6.0dip"
+                android:src="@drawable/btn_home_search_gray" />
+
+            <com.erhuoapp.erhuo.view.include.EditDeletable
+                android:id="@+id/search_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:paddingLeft="32.0dip"
+                android:paddingRight="5.0dip"
+                app:hint="搜索贰货"
+                app:textColor="@color/main_gray"
+                app:textColorHint="@color/main_brightgray"
+                app:textSize="@dimen/font_middlesmall" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/search_do"
+            style="@style/FrameTitleRedButtonTextRight"
+            android:text="搜索" />
+    </FrameLayout>
+
+    <View style="@style/ShadowTitle" />
+
+    <HorizontalScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="36.0dip"
+        android:background="@color/main_white"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/search_hot"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="18.0dip"
+                android:layout_marginRight="5.0dip"
+                android:text="热搜"
+                android:textColor="@color/main_blackgray"
+                android:textSize="@dimen/font_bigmiddle" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1.0px"
+        android:background="@color/main_brightgray" />
+
+    <LinearLayout
+        android:id="@+id/search_history"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/main_white">
+
+        <com.erhuoapp.erhuo.view.custom.RoundButton
+            android:id="@+id/search_history_clear"
+            style="@style/PureButtonBigWide"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15.0dip"
+            android:text="清空搜索历史"
+            android:textColor="@color/main_gray"
+            app:roundBackground="@color/main_brightgray" />
+    </FrameLayout>
+</LinearLayout>
