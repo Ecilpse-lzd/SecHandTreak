@@ -21,4 +21,6 @@ public class ReturnType {
     public static final int REFRISH_ERROR_NETWORK = 21;
     public static final int RRFRISH_ERROR_NONE = 22;
     public static final int REFRISH_SUCCESS = 23;
+
+    public static final int GET_REFRISH_SUCCESS = 24;
 }

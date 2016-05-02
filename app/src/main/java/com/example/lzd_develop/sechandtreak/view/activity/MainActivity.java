@@ -10,6 +10,8 @@ import android.widget.LinearLayout;
 
 import com.example.lzd_develop.sechandtreak.BaseApplication;
 import com.example.lzd_develop.sechandtreak.R;
+import com.example.lzd_develop.sechandtreak.doman.OtherCommodity;
+import com.example.lzd_develop.sechandtreak.doman.OtherWantBuy;
 import com.example.lzd_develop.sechandtreak.view.fragment.HomeFragment;
 import com.example.lzd_develop.sechandtreak.view.fragment.MessageFragment;
 import com.example.lzd_develop.sechandtreak.view.fragment.MyFragment;
@@ -38,20 +40,24 @@ public class MainActivity extends BaceActivity {
     LinearLayout llMainMy;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
+        Intent intent = getIntent();
+        OtherCommodity commodity = (OtherCommodity) intent.getSerializableExtra("comms");
+        OtherWantBuy otherWantBuy = (OtherWantBuy) intent.getSerializableExtra("want");
         fm = getSupportFragmentManager();
 
-        initFragments();
+        initFragments(commodity,otherWantBuy);
     }
 
-    private void initFragments()  {
-        fragmentMap.put(FragmentType.home, new HomeFragment());
-        fragmentMap.put(FragmentType.message, new MessageFragment());
+    private void initFragments(OtherCommodity commodity,OtherWantBuy otherWantBuy)  {
+
+        fragmentMap.put(FragmentType.home, new HomeFragment(commodity));
+        fragmentMap.put(FragmentType.message, new MessageFragment(otherWantBuy));
         fragmentMap.put(FragmentType.my, new MyFragment());
         fragmentMap.put(FragmentType.want, new WantToBuyFragment());
         setTabSelection(FragmentType.home);

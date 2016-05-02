@@ -13,6 +13,7 @@ import android.widget.ImageView;
 
 import com.example.lzd_develop.sechandtreak.BaseApplication;
 import com.example.lzd_develop.sechandtreak.R;
+import com.example.lzd_develop.sechandtreak.doman.OtherCommodity;
 import com.example.lzd_develop.sechandtreak.service.ILodaService;
 import com.example.lzd_develop.sechandtreak.service.ReturnType;
 import com.example.lzd_develop.sechandtreak.service.ServiceFectroy;
@@ -20,10 +21,12 @@ import com.example.lzd_develop.sechandtreak.view.adapter.OtherSellAdapter;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import cn.trinea.android.common.util.ListUtils;
 import cn.trinea.android.common.view.DropDownListView;
 
 /**
@@ -38,6 +41,16 @@ public class HomeFragment extends Fragment {
 
     OtherSellAdapter adapter;
     ILodaService lodaService;
+    OtherCommodity otherCommodity;
+
+
+    public HomeFragment(OtherCommodity otherCommodity) {
+        this.otherCommodity = otherCommodity;
+    }
+
+    public HomeFragment() {
+    }
+
 
     @Nullable
     @Override
@@ -45,9 +58,10 @@ public class HomeFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         ButterKnife.bind(this, view);
+
         lodaService = (ILodaService) ServiceFectroy.getService(ServiceFectroy.ServiceType.load, handler);
 
-        adapter = new OtherSellAdapter(getContext());
+        adapter = new OtherSellAdapter(getContext(), otherCommodity.getComm());
         homePull.setAdapter(adapter);
 
         homePull.setOnDropDownListener(new DropDownListView.OnDropDownListener() {
@@ -83,23 +97,58 @@ public class HomeFragment extends Fragment {
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case ReturnType.LOAD_ERROR_NETWORK:
+
                     networkError(msg.what);
+
                     break;
+
                 case ReturnType.LOAD_ERROR_NONE:
                     break;
+
                 case ReturnType.LOAD_SUCCESS:
+
+                    getSuccess(false, ((OtherCommodity) msg.obj).getComm());
+
                     break;
+
                 case ReturnType.REFRISH_ERROR_NETWORK:
+
                     networkError(msg.what);
+
                     break;
-                case ReturnType.REFRISH_SUCCESS:
-                    break;
+
                 case ReturnType.RRFRISH_ERROR_NONE:
                     break;
+
+                case ReturnType.REFRISH_SUCCESS:
+
+                    getSuccess(true, ((OtherCommodity) msg.obj).getComm());
+
+                    break;
+
                 default:
             }
         }
     };
+
+    private void getSuccess(boolean isFrish,List<OtherCommodity.CommBean> list) {
+        if (isFrish) {
+            adapter.refrishItems(list);
+            adapter.notifyDataSetChanged();
+            SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd HH:mm:ss");
+            homePull.onDropDownComplete(getString(R.string.update_at)
+                    + dateFormat.format(new Date()));
+
+        } else {
+            adapter.addItems(list);
+            adapter.notifyDataSetChanged();
+
+            // should call onBottomComplete function of DropDownListView at end of on bottom complete.
+            homePull.onBottomComplete();
+        }
+
+
+    }
 
 
     private void networkError(int msg) {
@@ -116,5 +165,4 @@ public class HomeFragment extends Fragment {
         super.onDestroyView();
         ButterKnife.unbind(this);
     }
-    
 }

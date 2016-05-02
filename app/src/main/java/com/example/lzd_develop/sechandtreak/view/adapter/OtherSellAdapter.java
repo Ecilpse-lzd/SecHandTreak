@@ -10,6 +10,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.lzd_develop.sechandtreak.R;
+import com.example.lzd_develop.sechandtreak.doman.OtherCommodity;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -22,10 +26,36 @@ public class OtherSellAdapter extends BaseAdapter {
 
 
     Context context;
+    List<OtherCommodity.CommBean> list = null;
 
-    public OtherSellAdapter(Context context) {
+
+    public OtherSellAdapter(Context context,List<OtherCommodity.CommBean> list) {
         this.context = context;
+        this.list = list;
         this.inflator = LayoutInflater.from(context);
+    }
+
+
+    public void addItem(OtherCommodity.CommBean commBean) {
+        listIsEmpty();
+        list.add(commBean);
+    }
+
+    public void addItems(List<OtherCommodity.CommBean> list) {
+        listIsEmpty();
+        this.list.addAll(list.size(), list);
+    }
+
+    public void refrishItems (List<OtherCommodity.CommBean> list) {
+        listIsEmpty();
+        this.list.clear();
+        this.list.addAll(list);
+    }
+
+    public void listIsEmpty() {
+        if (list == null) {
+            list = new ArrayList<>();
+        }
     }
 
 
