@@ -2,7 +2,7 @@ package com.example.lzd_develop.sechandtreak.service;
 
 import android.os.Handler;
 
-import com.example.lzd_develop.sechandtreak.service.impl.LoadService;
+import com.example.lzd_develop.sechandtreak.service.impl.LoadCommService;
 import com.example.lzd_develop.sechandtreak.view.activity.BaceActivity;
 import com.example.lzd_develop.sechandtreak.service.impl.LoginService;
 import com.example.lzd_develop.sechandtreak.service.impl.RegisterService;
@@ -41,7 +41,7 @@ public class ServiceFectroy {
             case register:
                 return new RegisterService(handler);
             case load:
-                return new LoadService(handler);
+                return new LoadCommService(handler);
             default:
                 return null;
         }

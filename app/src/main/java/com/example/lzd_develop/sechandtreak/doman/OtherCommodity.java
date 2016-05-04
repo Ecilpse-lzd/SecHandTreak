@@ -24,6 +24,8 @@ public class OtherCommodity implements Serializable {
 
     private List<CommBean> comm;
 
+    private int MSG;
+
     public List<CommBean> getComm() {
         return comm;
     }
@@ -32,6 +34,9 @@ public class OtherCommodity implements Serializable {
         this.comm = comm;
     }
 
+    public int getMSG() {
+        return MSG;
+    }
 
 
     public static class CommBean {

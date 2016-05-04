@@ -103,6 +103,8 @@ public class HomeFragment extends Fragment {
                     break;
 
                 case ReturnType.LOAD_ERROR_NONE:
+                    homePull.onBottomComplete();
+                    homePull.setAutoLoadOnBottom(false);
                     break;
 
                 case ReturnType.LOAD_SUCCESS:
@@ -133,6 +135,7 @@ public class HomeFragment extends Fragment {
 
     private void getSuccess(boolean isFrish,List<OtherCommodity.CommBean> list) {
         if (isFrish) {
+            homePull.setAutoLoadOnBottom(true);
             adapter.refrishItems(list);
             adapter.notifyDataSetChanged();
             SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd HH:mm:ss");

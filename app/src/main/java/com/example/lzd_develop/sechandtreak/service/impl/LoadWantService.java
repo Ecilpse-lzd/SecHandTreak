@@ -1,22 +1,11 @@
 package com.example.lzd_develop.sechandtreak.service.impl;
 
-import android.os.Handler;
-
 import com.example.lzd_develop.sechandtreak.service.ILodaService;
 
 /**
- * Created by lzd-develop on 16-5-1.
+ * Created by lzd-develop on 16-5-4.
  */
-public class LoadService implements ILodaService {
-
-
-
-    Handler handler;
-    public LoadService(Handler handler) {
-        this.handler = handler;
-    }
-
-
+public class LoadWantService implements ILodaService{
     @Override
     public void onLoad(int count) {
 
