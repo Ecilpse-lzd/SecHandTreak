@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@id/menu"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
@@ -122,21 +121,21 @@
                 android:background="@color/main_brightgray" />
         </LinearLayout>
 
-        <com.erhuoapp.erhuo.view.include.ErhuoSwitcher
-            android:id="@id/menu_switcher"
+        <Switch
+            android:id="@+id/menu_switcher"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="36.0dip">
 
             <ListView
-                android:id="@id/menu_classify"
+                android:id="@+id/menu_classify"
                 android:layout_width="fill_parent"
                 android:layout_height="200.0dip"
                 android:background="@color/main_brightgray"
                 android:visibility="gone" />
 
             <LinearLayout
-                android:id="@id/menu_order"
+                android:id="@+id/menu_order"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/main_brightgray"
@@ -228,25 +227,23 @@
                         android:textSize="@dimen/font_small" />
 
                     <LinearLayout
-                        android:id="@id/menu_filter_type"
+                        android:id="@+id/menu_filter_type"
                         android:layout_width="fill_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:orientation="horizontal">
 
-                        <com.erhuoapp.erhuo.view.custom.EdgingButton
+                        <Button
                             android:layout_width="80.0dip"
                             android:layout_height="34.0dip"
                             android:padding="5.0dip"
                             android:text="认证用户"
                             android:textColor="@color/font_brightgray_white_selectable"
                             android:textSize="@dimen/font_middle"
-                            app:edgeColor="@color/font_brightgray_red_selectable"
-                            app:edgeSize="1.0px"
-                            app:roundBackground="@drawable/select_white_red"
-                            app:roundSize="2.0dip" />
 
-                        <com.erhuoapp.erhuo.view.custom.EdgingButton
+                            />
+
+                        <Button
                             android:layout_width="80.0dip"
                             android:layout_height="34.0dip"
                             android:layout_marginLeft="32.0dip"
@@ -254,14 +251,11 @@
                             android:text="同校物品"
                             android:textColor="@color/font_brightgray_white_selectable"
                             android:textSize="@dimen/font_middle"
-                            app:edgeColor="@color/font_brightgray_red_selectable"
-                            app:edgeSize="1.0px"
-                            app:roundBackground="@drawable/select_white_red"
-                            app:roundSize="2.0dip" />
+                           />
                     </LinearLayout>
 
                     <TextView
-                        android:id="@id/menu_filter_label_label"
+                        android:id="@+id/menu_filter_label_label"
                         android:layout_width="fill_parent"
                         android:layout_height="25.0dip"
                         android:gravity="bottom"
@@ -357,7 +351,7 @@
                     android:background="@color/main_brightgray" />
 
                 <LinearLayout
-                    android:id="@id/menu_filter_price"
+                    android:id="@+id/menu_filter_price"
                     android:layout_width="fill_parent"
                     android:layout_height="70.0dip"
                     android:background="@color/main_white"
@@ -379,25 +373,7 @@
                         android:gravity="center"
                         android:orientation="horizontal">
 
-                        <com.erhuoapp.erhuo.view.custom.EdgingFrame
-                            android:layout_width="96.0dip"
-                            android:layout_height="24.0dip"
-                            app:edgeColor="@color/main_brightgray"
-                            app:edgeSize="1.0px"
-                            app:roundSize="0.0dip">
 
-                            <EditText
-                                android:id="@id/menu_filter_price_from"
-                                android:layout_width="fill_parent"
-                                android:layout_height="fill_parent"
-                                android:background="@null"
-                                android:gravity="center"
-                                android:hint="最低价"
-                                android:inputType="number"
-                                android:singleLine="true"
-                                android:textColorHint="@color/main_brightgray"
-                                android:textSize="@dimen/font_middle" />
-                        </com.erhuoapp.erhuo.view.custom.EdgingFrame>
 
                         <View
                             android:layout_width="50.0dip"
@@ -405,25 +381,7 @@
                             android:layout_margin="10.0dip"
                             android:background="@color/main_brightgray" />
 
-                        <com.erhuoapp.erhuo.view.custom.EdgingFrame
-                            android:layout_width="96.0dip"
-                            android:layout_height="24.0dip"
-                            app:edgeColor="@color/main_brightgray"
-                            app:edgeSize="1.0px"
-                            app:roundSize="0.0dip">
 
-                            <EditText
-                                android:id="@id/menu_filter_price_to"
-                                android:layout_width="fill_parent"
-                                android:layout_height="fill_parent"
-                                android:background="@null"
-                                android:gravity="center"
-                                android:hint="最高价"
-                                android:inputType="number"
-                                android:singleLine="true"
-                                android:textColorHint="@color/main_brightgray"
-                                android:textSize="@dimen/font_middle" />
-                        </com.erhuoapp.erhuo.view.custom.EdgingFrame>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -433,23 +391,23 @@
                     android:background="@color/main_brightgray" />
 
                 <LinearLayout
-                    android:id="@id/menu_filter_button"
+                    android:id="@+id/menu_filter_button"
                     android:layout_width="fill_parent"
                     android:layout_height="54.0dip"
                     android:background="@color/main_white"
                     android:gravity="center|right"
                     android:orientation="horizontal">
 
-                    <com.erhuoapp.erhuo.view.custom.RoundButton
+                    <Button
                         android:layout_width="98.0dip"
                         android:layout_height="30.0dip"
                         android:text="重置"
                         android:textColor="@color/main_white"
                         android:textSize="@dimen/font_bigmiddle"
-                        app:roundBackground="@drawable/select_lightred_red"
-                        app:roundSize="2.0dip" />
+                        android:background="@drawable/select_lightred_red"
+                         />
 
-                    <com.erhuoapp.erhuo.view.custom.RoundButton
+                    <Button
                         android:layout_width="98.0dip"
                         android:layout_height="30.0dip"
                         android:layout_marginLeft="18.0dip"
@@ -457,11 +415,11 @@
                         android:text="完成"
                         android:textColor="@color/main_white"
                         android:textSize="@dimen/font_bigmiddle"
-                        app:roundBackground="@color/main_red"
-                        app:roundSize="2.0dip" />
+                        android:background="@color/main_red"
+                         />
                 </LinearLayout>
             </LinearLayout>
-        </com.erhuoapp.erhuo.view.include.ErhuoSwitcher>
+        </Switch>
     </FrameLayout>
 
     <TextView

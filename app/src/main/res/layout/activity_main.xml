@@ -145,6 +145,11 @@
                 android:textSize="@dimen/font_tiny" />
         </LinearLayout>
     </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/btn_gray_pressed"
+        android:layout_above="@id/ll_main_table"
+        android:layout_height="1px"/>
 
     <FrameLayout
         android:id="@+id/fl_main"

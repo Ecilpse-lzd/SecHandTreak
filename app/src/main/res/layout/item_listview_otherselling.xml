@@ -22,14 +22,6 @@
                 android:scaleType="centerCrop"
                 android:src="@drawable/goods_default" />
 
-            <ImageView
-                android:id="@+id/img_have_sold"
-                android:layout_width="96.0dip"
-                android:layout_height="90.0dip"
-                android:layout_marginLeft="15.0dip"
-                android:layout_marginTop="18.0dip"
-                android:src="@drawable/my_favourite_have_sold"
-                android:visibility="invisible" />
         </FrameLayout>
 
         <LinearLayout

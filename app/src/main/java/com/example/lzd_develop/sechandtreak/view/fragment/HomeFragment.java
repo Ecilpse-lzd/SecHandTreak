@@ -59,8 +59,11 @@ public class HomeFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         ButterKnife.bind(this, view);
 
-        lodaService = (ILodaService) ServiceFectroy.getService(ServiceFectroy.ServiceType.load, handler);
+        lodaService = (ILodaService) ServiceFectroy.getService(ServiceFectroy.ServiceType.loadcomm, handler);
 
+        if (otherCommodity == null) {
+            otherCommodity = new OtherCommodity();
+        }
         adapter = new OtherSellAdapter(getContext(), otherCommodity.getComm());
         homePull.setAdapter(adapter);
 
@@ -68,7 +71,8 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onDropDown() {
-                lodaService.onLoad(0);
+                lodaService.onReFrish();
+
             }
         });
 
@@ -77,7 +81,7 @@ public class HomeFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                lodaService.onReFrish();
+                lodaService.onLoad(0);
             }
         });
 
@@ -120,6 +124,9 @@ public class HomeFragment extends Fragment {
                     break;
 
                 case ReturnType.RRFRISH_ERROR_NONE:
+                    SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd HH:mm:ss");
+                    homePull.onDropDownComplete(getString(R.string.update_at)
+                            + dateFormat.format(new Date()));
                     break;
 
                 case ReturnType.REFRISH_SUCCESS:

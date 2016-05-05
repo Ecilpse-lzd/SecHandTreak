@@ -29,7 +29,9 @@ public class LoadCommService implements ILodaService {
 
     @Override
     public void onLoad(int count) {
-        ServiceFectroy.getLiteHttp().executeAsync(new LoadRefrishParam(LoadRefrishParam.LoadOrFrish.load, count).setHttpListener(new HttpListener<OtherCommodity>() {
+        ServiceFectroy.getLiteHttp().executeAsync(
+                new LoadRefrishParam(LoadOrFrish.load.toString(), count)
+                        .setHttpListener(new HttpListener<OtherCommodity>() {
             @Override
             public void onSuccess(OtherCommodity otherCommodity, Response<OtherCommodity> response) {
                 Message msg = new Message();
@@ -50,7 +52,9 @@ public class LoadCommService implements ILodaService {
 
     @Override
     public void onReFrish() {
-        ServiceFectroy.getLiteHttp().executeAsync(new LoadRefrishParam(LoadRefrishParam.LoadOrFrish.frish, 0).setHttpListener(new HttpListener<OtherCommodity>() {
+        ServiceFectroy.getLiteHttp().executeAsync(
+                new LoadRefrishParam(LoadOrFrish.frish.toString(), 0)
+                        .setHttpListener(new HttpListener<OtherCommodity>() {
             @Override
             public void onSuccess(OtherCommodity otherCommodity, Response<OtherCommodity> response) {
                 Message msg = new Message();
@@ -70,16 +74,17 @@ public class LoadCommService implements ILodaService {
 
     @HttpUri(value = URLS.URL_LOAD_AND_REFRISH)
     private static class LoadRefrishParam extends HttpRichParamModel<OtherCommodity> {
-        private LoadOrFrish type;
+        private String type;
         private int page;
 
-        public LoadRefrishParam(LoadOrFrish type, int page) {
+        public LoadRefrishParam(String type, int page) {
             this.type = type;
             this.page = page;
         }
 
-        enum LoadOrFrish {
-            load, frish
-        }
+
+    }
+    enum LoadOrFrish {
+        load, frish
     }
 }

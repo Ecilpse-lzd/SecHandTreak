@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import com.example.lzd_develop.sechandtreak.R;
 import com.example.lzd_develop.sechandtreak.doman.OtherCommodity;
+import com.litesuits.http.data.GsonImpl;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +34,9 @@ public class OtherSellAdapter extends BaseAdapter {
     public OtherSellAdapter(Context context,List<OtherCommodity.CommBean> list) {
         this.context = context;
         this.list = list;
+        if (this.list == null) {
+            this.list = new ArrayList<>();
+        }
         this.inflator = LayoutInflater.from(context);
     }
 
@@ -61,7 +66,7 @@ public class OtherSellAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return 40;
+        return list.size();
     }
 
     @Override
@@ -78,30 +83,29 @@ public class OtherSellAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View item = inflator.inflate(R.layout.item_listview_otherselling, null);
         ViewHolder holder = new ViewHolder(item);
+
+        OtherCommodity.CommBean comm = list.get(position);
+
+        holder.tvGoodsUsername.setText(comm.getSeller());
+        holder.tvGoodsContent.setText(comm.getTitle());
+        holder.tvGoodsPrice.setText(comm.getSecPrice()+"");
+        holder.tvGoodsOriginprice.setText(comm.getFirPrice()+"");
+        //ImageLoader.getInstance().displayImage(comm.getCommpic(),holder.ivGoodsImage);
+//
+
         return item;
     }
 
     static class ViewHolder {
-        @Bind(R.id.iv_goods_image)
-        ImageView ivGoodsImage;
-        @Bind(R.id.img_have_sold)
-        ImageView imgHaveSold;
-        @Bind(R.id.iv_goods_header)
-        ImageView ivGoodsHeader;
-        @Bind(R.id.goodsselling_item_auth)
-        ImageView goodssellingItemAuth;
+
         @Bind(R.id.tv_goods_username)
         TextView tvGoodsUsername;
-        @Bind(R.id.tv_goods_title)
-        TextView tvGoodsTitle;
         @Bind(R.id.tv_goods_content)
         TextView tvGoodsContent;
         @Bind(R.id.tv_goods_price)
         TextView tvGoodsPrice;
         @Bind(R.id.tv_goods_originprice)
         TextView tvGoodsOriginprice;
-        @Bind(R.id.fl_item_sell_clock)
-        FrameLayout flItemSellClock;
 
         ViewHolder(View view) {
             ButterKnife.bind(this, view);

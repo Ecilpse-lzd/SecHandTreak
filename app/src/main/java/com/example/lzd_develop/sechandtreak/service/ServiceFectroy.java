@@ -3,6 +3,7 @@ package com.example.lzd_develop.sechandtreak.service;
 import android.os.Handler;
 
 import com.example.lzd_develop.sechandtreak.service.impl.LoadCommService;
+import com.example.lzd_develop.sechandtreak.service.impl.LoadWantService;
 import com.example.lzd_develop.sechandtreak.view.activity.BaceActivity;
 import com.example.lzd_develop.sechandtreak.service.impl.LoginService;
 import com.example.lzd_develop.sechandtreak.service.impl.RegisterService;
@@ -37,11 +38,12 @@ public class ServiceFectroy {
         switch (serviceType) {
             case login:
                 return new LoginService(handler);
-
             case register:
                 return new RegisterService(handler);
-            case load:
+            case loadcomm:
                 return new LoadCommService(handler);
+            case loadwant:
+                return new LoadWantService(handler);
             default:
                 return null;
         }
@@ -49,6 +51,6 @@ public class ServiceFectroy {
     }
 
     public enum ServiceType{
-        login,register,load
+        login,register,loadcomm,loadwant
     }
 }
