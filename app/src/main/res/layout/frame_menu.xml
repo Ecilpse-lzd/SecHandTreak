@@ -5,7 +5,7 @@
     android:layout_height="fill_parent">
 
     <ImageView
-        android:id="@id/menu_go_top"
+        android:id="@+id/menu_go_top"
         android:layout_width="36.0dip"
         android:layout_height="36.0dip"
         android:layout_gravity="bottom|center|right"
@@ -14,7 +14,7 @@
         android:visibility="invisible" />
 
     <View
-        android:id="@id/menu_black"
+        android:id="@+id/menu_black"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:background="@color/main_alphablack" />
@@ -25,7 +25,7 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:id="@id/menu_top"
+            android:id="@+id/menu_top"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -36,7 +36,7 @@
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:id="@id/menu_item_0"
+                    android:id="@+id/menu_item_0"
                     android:layout_width="0.0dip"
                     android:layout_height="fill_parent"
                     android:layout_weight="1.0"
@@ -64,7 +64,7 @@
                     android:background="@color/main_brightgray" />
 
                 <LinearLayout
-                    android:id="@id/menu_item_1"
+                    android:id="@+id/menu_item_1"
                     android:layout_width="0.0dip"
                     android:layout_height="fill_parent"
                     android:layout_weight="1.0"
@@ -92,7 +92,7 @@
                     android:background="@color/main_brightgray" />
 
                 <LinearLayout
-                    android:id="@id/menu_item_2"
+                    android:id="@+id/menu_item_2"
                     android:layout_width="0.0dip"
                     android:layout_height="fill_parent"
                     android:layout_weight="1.0"

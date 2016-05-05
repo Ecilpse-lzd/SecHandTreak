@@ -1,47 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:listViewAttr="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-
-    <FrameLayout
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
-
-        <cn.trinea.android.common.view.DropDownListView
-            android:id="@+id/buying_pull"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:background="@color/main_white"
-            android:fadingEdgeLength="0.0dip" />
-
-        <FrameLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_marginTop="@dimen/title_height">
-
-            <include layout="@layout/frame_loading" />
-        </FrameLayout>
-    </FrameLayout>
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
 
     <FrameLayout
         android:id="@+id/menu"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/menu_go_top"
-            android:layout_width="36.0dip"
-            android:layout_height="36.0dip"
-            android:layout_gravity="bottom|center|right"
-            android:layout_margin="20.0dip"
-            android:src="@drawable/goods_list_top"
-            android:visibility="invisible" />
 
-        <View
-            android:id="@+id/menu_black"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:background="@color/main_alphablack" />
+        <!--<View-->
+        <!--android:id="@+id/menu_black"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:background="@color/main_alphablack" />-->
 
         <LinearLayout
             android:layout_width="fill_parent"
@@ -69,21 +43,10 @@
                         android:paddingTop="5.0dip">
 
                         <ImageView
-                            android:id="@+id/goodsbuying_search"
-                            android:layout_width="wrap_content"
-                            android:layout_height="fill_parent"
-                            android:paddingLeft="15.0dip"
-                            android:paddingRight="12.0dip"
-                            android:src="@drawable/home_search_bg"
-                            android:visibility="gone" />
+                            android:id="@+id/ib_home_search"
+                            style="@style/FrameTitleButtonRight"
+                            android:src="@drawable/home_search_bg" />
 
-                        <ImageView
-                            android:id="@+id/ib_buying_add"
-                            android:layout_width="wrap_content"
-                            android:layout_height="fill_parent"
-                            android:paddingLeft="12.0dip"
-                            android:paddingRight="15.0dip"
-                            android:src="@drawable/goods_buying_plus" />
                     </LinearLayout>
                 </FrameLayout>
 
@@ -195,6 +158,30 @@
     </FrameLayout>
 
     <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+
+        <cn.trinea.android.common.view.DropDownListView
+            android:id="@+id/buying_pull"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawSelectorOnTop="false"
+            listViewAttr:isAutoLoadOnBottom="true"
+            listViewAttr:isDropDownStyle="true"
+            listViewAttr:isOnBottomStyle="true" />
+
+        <!--<FrameLayout-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:layout_marginTop="@dimen/title_height">-->
+
+        <!--<include layout="@layout/frame_loading" />-->
+        <!--</FrameLayout>-->
+    </LinearLayout>
+
+
+    <LinearLayout
         android:id="@+id/my_guide"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -210,4 +197,4 @@
             android:layout_marginTop="-20.0dip"
             android:src="@drawable/guide_goods_buying" />
     </LinearLayout>
-</FrameLayout>
+</LinearLayout>
