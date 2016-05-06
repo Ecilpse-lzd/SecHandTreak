@@ -2,6 +2,7 @@ package com.example.lzd_develop.sechandtreak.doman;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 /**
@@ -46,7 +47,7 @@ public class OtherWantBuy implements Serializable {
         this.items = items;
     }
 
-    public static class ItemBean {
+    public static class ItemBean implements Comparable<ItemBean>{
         private int itemid;
         private String title;
         private String context;
@@ -100,6 +101,11 @@ public class OtherWantBuy implements Serializable {
 
         public void setSellcount(int sellcount) {
             this.sellcount = sellcount;
+        }
+
+        @Override
+        public int compareTo(ItemBean another) {
+            return (another.getPrice()-price);
         }
     }
 }

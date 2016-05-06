@@ -21,6 +21,9 @@ import com.example.lzd_develop.sechandtreak.view.adapter.OtherWantAdapter;
 import com.litesuits.android.log.Log;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 
@@ -37,8 +40,8 @@ public class WantToBuyFragment extends Fragment {
 
     //    @Bind(R.id.menu_item_0)
 //    LinearLayout menuItem0;
-//    @Bind(R.id.menu_item_1)
-//    LinearLayout menuItem1;
+    @Bind(R.id.menu_item_1)
+    LinearLayout menuItem1;
 //    @Bind(R.id.menu_item_2)
 //    LinearLayout menuItem2;
     @Bind(R.id.buying_pull)
@@ -51,6 +54,8 @@ public class WantToBuyFragment extends Fragment {
 
 
     ILodaService lodaService;
+
+    boolean item1IsDown = true;
 
     public WantToBuyFragment(OtherWantBuy otherWantBuy) {
         this.otherWantBuy = otherWantBuy;
@@ -168,11 +173,64 @@ public class WantToBuyFragment extends Fragment {
             case R.id.menu_item_0:
                 break;
             case R.id.menu_item_1:
+                Comparator comparator;
+                if (item1IsDown) {
+                    item1IsDown = false;
+                    comparator = new ByPriceHei();
+
+
+
+                } else {
+                    item1IsDown = true;
+                    comparator = new ByPriceLow();
+                }
+                menuItem1.setSelected(item1IsDown);
+                List<OtherWantBuy.ItemBean> list = otherWantBuy.getItems();
+                OtherWantBuy.ItemBean[] items = list.toArray(new OtherWantBuy.ItemBean[list.size()]);
+
+                Arrays.sort(items,comparator);
+                list.clear();
+                otherWantAdapter.frish(items);
+
+
                 break;
             case R.id.menu_item_2:
                 break;
         }
     }
+
+    static class ByPriceHei implements Comparator<OtherWantBuy.ItemBean>{
+
+        @Override
+        public int compare(OtherWantBuy.ItemBean lhs, OtherWantBuy.ItemBean rhs) {
+            int w =  lhs.getPrice() - rhs.getPrice();
+            if (w < 0) {
+                return -1;
+            } else if (w == 0) {
+                return 0;
+            } else {
+                return 1;
+            }
+
+        }
+    }
+    static class ByPriceLow implements Comparator<OtherWantBuy.ItemBean>{
+
+        @Override
+        public int compare(OtherWantBuy.ItemBean lhs, OtherWantBuy.ItemBean rhs) {
+            int w =  lhs.getPrice() - rhs.getPrice();
+            if (w < 0) {
+                return 1;
+            } else if (w == 0) {
+                return 0;
+            } else {
+                return -1;
+            }
+
+        }
+    }
+
+    //short
 
     @Override
     public void onDestroyView() {

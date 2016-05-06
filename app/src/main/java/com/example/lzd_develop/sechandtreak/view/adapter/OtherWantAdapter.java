@@ -12,6 +12,7 @@ import com.example.lzd_develop.sechandtreak.R;
 import com.example.lzd_develop.sechandtreak.doman.OtherWantBuy;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import butterknife.Bind;
@@ -48,6 +49,14 @@ public class OtherWantAdapter extends BaseAdapter {
         empty();
         this.list.clear();
         this.list.addAll(list);
+        notifyDataSetChanged();
+    }
+
+    public void frish(OtherWantBuy.ItemBean[] items) {
+        empty();
+        this.list.clear();
+
+        this.list.addAll(Arrays.asList(items));
         notifyDataSetChanged();
     }
 
