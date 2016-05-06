@@ -72,7 +72,7 @@ public class LoadCommService implements ILodaService {
         }));
     }
 
-    @HttpUri(value = URLS.URL_LOAD_AND_REFRISH)
+    @HttpUri(value = URLS.URL_LOAD_AND_REFRISH_COMM)
     private static class LoadRefrishParam extends HttpRichParamModel<OtherCommodity> {
         private String type;
         private int page;
@@ -84,7 +84,5 @@ public class LoadCommService implements ILodaService {
 
 
     }
-    enum LoadOrFrish {
-        load, frish
-    }
+
 }

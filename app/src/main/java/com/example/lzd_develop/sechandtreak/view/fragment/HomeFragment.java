@@ -124,9 +124,8 @@ public class HomeFragment extends Fragment {
                     break;
 
                 case ReturnType.RRFRISH_ERROR_NONE:
-                    SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd HH:mm:ss");
-                    homePull.onDropDownComplete(getString(R.string.update_at)
-                            + dateFormat.format(new Date()));
+                    BaseApplication.getToastor().showSingletonToast("暂无更新内容");
+                    homePull.onDropDownComplete();
                     break;
 
                 case ReturnType.REFRISH_SUCCESS:
@@ -144,14 +143,13 @@ public class HomeFragment extends Fragment {
         if (isFrish) {
             homePull.setAutoLoadOnBottom(true);
             adapter.refrishItems(list);
-            adapter.notifyDataSetChanged();
+
             SimpleDateFormat dateFormat = new SimpleDateFormat("MM-dd HH:mm:ss");
             homePull.onDropDownComplete(getString(R.string.update_at)
                     + dateFormat.format(new Date()));
 
         } else {
             adapter.addItems(list);
-            adapter.notifyDataSetChanged();
 
             // should call onBottomComplete function of DropDownListView at end of on bottom complete.
             homePull.onBottomComplete();

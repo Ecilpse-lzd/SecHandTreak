@@ -49,12 +49,14 @@ public class OtherSellAdapter extends BaseAdapter {
     public void addItems(List<OtherCommodity.CommBean> list) {
         listIsEmpty();
         this.list.addAll(list.size(), list);
+        notifyDataSetChanged();
     }
 
     public void refrishItems (List<OtherCommodity.CommBean> list) {
         listIsEmpty();
         this.list.clear();
         this.list.addAll(list);
+        notifyDataSetChanged();
     }
 
     public void listIsEmpty() {

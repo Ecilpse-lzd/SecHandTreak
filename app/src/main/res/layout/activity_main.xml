@@ -6,6 +6,8 @@
     android:orientation="vertical">
 
 
+
+
     <LinearLayout
         android:id="@+id/ll_main_table"
         android:layout_width="fill_parent"
@@ -145,17 +147,19 @@
                 android:textSize="@dimen/font_tiny" />
         </LinearLayout>
     </LinearLayout>
+
     <View
+        android:id="@+id/line"
         android:layout_width="match_parent"
-        android:background="@color/btn_gray_pressed"
-        android:layout_above="@id/ll_main_table"
-        android:layout_height="1px"/>
+        android:layout_height="1px"
+        android:layout_above="@+id/ll_main_table"
+        android:background="@color/main_light_black" />
 
     <FrameLayout
         android:id="@+id/fl_main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/ll_main_table">
+        android:layout_above="@+id/line">
 
     </FrameLayout>
 

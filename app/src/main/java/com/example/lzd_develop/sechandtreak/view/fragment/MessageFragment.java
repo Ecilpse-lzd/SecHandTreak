@@ -16,14 +16,12 @@ import com.example.lzd_develop.sechandtreak.doman.OtherWantBuy;
  */
 public class MessageFragment extends Fragment {
 
-    OtherWantBuy otherWantBuy = null;
+
 
     public MessageFragment() {
     }
 
-    public MessageFragment(OtherWantBuy otherWantBuy) {
-        this.otherWantBuy = otherWantBuy;
-    }
+
 
 
     @Nullable

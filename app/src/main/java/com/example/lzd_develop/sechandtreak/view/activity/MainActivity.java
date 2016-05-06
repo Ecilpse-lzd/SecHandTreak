@@ -57,9 +57,9 @@ public class MainActivity extends BaceActivity {
     private void initFragments(OtherCommodity commodity,OtherWantBuy otherWantBuy)  {
 
         fragmentMap.put(FragmentType.home, new HomeFragment(commodity));
-        fragmentMap.put(FragmentType.message, new MessageFragment(otherWantBuy));
+        fragmentMap.put(FragmentType.message, new MessageFragment());
         fragmentMap.put(FragmentType.my, new MyFragment());
-        fragmentMap.put(FragmentType.want, new WantToBuyFragment());
+        fragmentMap.put(FragmentType.want, new WantToBuyFragment(otherWantBuy));
         setTabSelection(FragmentType.home);
     }
 

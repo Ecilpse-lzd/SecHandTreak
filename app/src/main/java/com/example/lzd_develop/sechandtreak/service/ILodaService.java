@@ -7,4 +7,8 @@ public interface ILodaService extends IService {
     public void onLoad(int count);
 
     public void onReFrish();
+
+    enum LoadOrFrish {
+        load, frish
+    }
 }

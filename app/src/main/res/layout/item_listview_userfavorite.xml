@@ -139,7 +139,7 @@
                 </LinearLayout>
 
                 <ImageView
-                    android:id="@id/tv_goods_delete"
+                    android:id="@+id/tv_goods_delete"
                     android:layout_width="30.0dip"
                     android:layout_height="30.0dip"
                     android:padding="8.0dip"
