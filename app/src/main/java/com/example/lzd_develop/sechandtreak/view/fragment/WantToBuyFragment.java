@@ -178,8 +178,6 @@ public class WantToBuyFragment extends Fragment {
                     item1IsDown = false;
                     comparator = new ByPriceHei();
 
-
-
                 } else {
                     item1IsDown = true;
                     comparator = new ByPriceLow();
