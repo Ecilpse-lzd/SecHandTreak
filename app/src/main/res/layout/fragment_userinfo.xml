@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/content_wrapper"
     style="@style/SingleActivity"
     android:orientation="vertical">
@@ -52,13 +51,13 @@
                             android:layout_marginBottom="5.0dip"
                             android:background="@drawable/circle_red_active">
 
-                            <com.erhuoapp.erhuo.view.custom.RoundImageView
+                            <ImageView
                                 android:id="@+id/iv_userinfo_header"
                                 android:layout_width="fill_parent"
                                 android:layout_height="fill_parent"
                                 android:layout_margin="1.0dip"
                                 android:src="@drawable/header_default"
-                                app:roundSize="@dimen/round_header_middle" />
+                                 />
                         </FrameLayout>
 
                         <ImageView
@@ -367,5 +366,5 @@
         </LinearLayout>
     </ScrollView>
 
-    <include layout="@layout/frame_loading" />
+    <!--<include layout="@layout/frame_loading" />-->
 </FrameLayout>

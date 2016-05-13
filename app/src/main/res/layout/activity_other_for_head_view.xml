@@ -8,7 +8,7 @@
         android:layout_height="fill_parent"
         android:orientation="vertical">
 
-        <com.erhuoapp.erhuo.view.custom.MatrixImageView
+        <ImageView
             android:id="@+id/goods_sell_head_pic"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"

@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:gravity="center" android:layout_gravity="right" android:orientation="vertical" android:layout_width="50.0dip" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <com.erhuoapp.erhuo.view.custom.RoundButton android:layout_width="5.0dip" android:layout_height="5.0dip" app:roundSize="2.5dip" app:roundBackground="@color/main_gray" />
-    <com.erhuoapp.erhuo.view.custom.RoundButton android:layout_width="5.0dip" android:layout_height="5.0dip" android:layout_marginTop="2.0dip" app:roundSize="2.5dip" app:roundBackground="@color/main_gray" />
-    <com.erhuoapp.erhuo.view.custom.RoundButton android:layout_width="5.0dip" android:layout_height="5.0dip" android:layout_marginTop="2.0dip" app:roundSize="2.5dip" app:roundBackground="@color/main_gray" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="50.0dip"
+    android:layout_height="fill_parent"
+    android:layout_gravity="right"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="5.0dip"
+        android:layout_height="5.0dip"
+        android:background="@color/main_gray" />
+
+    <Button
+        android:layout_width="5.0dip"
+        android:layout_height="5.0dip"
+        android:layout_marginTop="2.0dip"
+        android:background="@color/main_gray" />
+
+    <Button
+        android:layout_width="5.0dip"
+        android:layout_height="5.0dip"
+        android:layout_marginTop="2.0dip"
+        android:background="@color/main_gray" />
 </LinearLayout>

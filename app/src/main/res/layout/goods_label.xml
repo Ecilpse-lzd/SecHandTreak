@@ -7,9 +7,10 @@
     android:gravity="center_horizontal"
     android:orientation="horizontal">
 
-    <com.erhuoapp.erhuo.view.include.ErhuoSwitcher
+    <LinearLayout
         android:id="@+id/sellinginfo_free_bargin"
         android:layout_width="wrap_content"
+        android:orientation="vertical"
         android:layout_height="wrap_content">
 
         <LinearLayout
@@ -28,7 +29,7 @@
             android:orientation="horizontal"
             android:padding="2.0dip"
             android:visibility="gone" />
-    </com.erhuoapp.erhuo.view.include.ErhuoSwitcher>
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/sellinginfo_new"

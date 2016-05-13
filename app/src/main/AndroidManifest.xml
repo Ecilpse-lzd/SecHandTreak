@@ -17,24 +17,28 @@
         android:name=".BaseApplication"
         android:theme="@style/AppTheme">
         <activity android:name=".view.activity.MainActivity">
+
+        </activity>
+        <activity android:name=".view.activity.LoginActivity">
+
+
+        </activity>
+        <activity android:name=".view.activity.RegisterActivity">
+
+        </activity>
+        <activity android:name=".view.activity.ProtocolActivity"/>
+        <activity android:name=".view.activity.ShowCommActivity">
+
+        </activity>
+
+        <activity android:name=".view.activity.TextActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.activity.LoginActivity">
 
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
-        </activity>
-        <activity android:name=".view.activity.RegisterActivity">
-
-        </activity>
-        <activity android:name=".view.activity.ProtocolActivity"/>
     </application>
 
 </manifest>

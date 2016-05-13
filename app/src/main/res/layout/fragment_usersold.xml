@@ -4,7 +4,7 @@
     android:layout_height="fill_parent"
     android:background="@color/main_bgcolor">
 
-    <com.erhuoapp.erhuo.view.refresh.PullToRefreshListView
+    <ListView
         android:id="@+id/lv_userinfo_sold"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
