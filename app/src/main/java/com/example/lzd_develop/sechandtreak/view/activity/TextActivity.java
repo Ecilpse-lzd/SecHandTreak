@@ -12,7 +12,7 @@ public class TextActivity extends BaceActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.test_activity);
+        setContentView(R.layout.activity_goods_sell_info);
 
     }
 }
