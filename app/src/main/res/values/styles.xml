@@ -202,7 +202,7 @@
     </style>
     <style name="FrameTitleWhite" parent="@style/FrameTitle">
         <item name="android:tag">white</item>
-        <item name="android:background">@color/main_title_white</item>
+        <item name="android:background">@color/tm_title</item>
     </style>
     <style name="FrameTitleWhiteButtonTextLeft" parent="@style/FrameTitleButtonLeft">
         <item name="android:textSize">@dimen/font_middle</item>

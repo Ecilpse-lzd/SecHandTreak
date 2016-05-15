@@ -3,14 +3,22 @@ package com.example.lzd_develop.sechandtreak.view.activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
+import com.example.lzd_develop.sechandtreak.BaseApplication;
 import com.example.lzd_develop.sechandtreak.R;
+import com.example.lzd_develop.sechandtreak.utils.DensityUtil;
 import com.example.lzd_develop.sechandtreak.view.adapter.ImagePageAdapter;
 import com.example.lzd_develop.sechandtreak.view.fragment.ImagePageFragment;
+import com.example.lzd_develop.sechandtreak.view.widget.TitleBar;
+import com.example.lzd_develop.sechandtreak.view.widget.WScrollView;
 import com.viewpagerindicator.CirclePageIndicator;
 
 import butterknife.Bind;
@@ -82,8 +90,14 @@ public class ShowCommActivity extends BaceActivity {
     LinearLayout goodssellingWeekly;
     @Bind(R.id.turtor_guide_more)
     LinearLayout turtorGuideMore;
-
+    @Bind(R.id.goods_info_scroll)
+    WScrollView goodsInfoScoll;
+    @Bind(R.id.goods_title_fl)
+    TitleBar goodsTitle;
     ImagePageAdapter imagePageAdapter;
+
+
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -94,6 +108,8 @@ public class ShowCommActivity extends BaceActivity {
         imagePageAdapter = new ImagePageAdapter(getSupportFragmentManager());
         goodsImagePager.setAdapter(imagePageAdapter);
         goodsImageIndicator.setViewPager(goodsImagePager);
+
+        goodsTitle.setScrollView(goodsInfoScoll);
 
 
     }

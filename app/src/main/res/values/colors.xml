@@ -144,7 +144,7 @@
     <color name="main_verydeepalphabgcolor">#c0f0f0f0</color>
     <color name="main_verydeepalphawhite">#d0ffffff</color>
     <color name="main_veryshallowalphablack">#20000000</color>
-    <color name="main_white">#ffffffff</color>
+    <color name="main_white">#f2f2f2</color>
     <color name="main_yellow">#ffffe612</color>
     <color name="maroon">#ff800000</color>
     <color name="mediumaquamarine">#ff66cdaa</color>
@@ -222,6 +222,7 @@
     <color name="white">#ffffffff</color>
     <color name="whitesmoke">#fff5f5f5</color>
     <color name="yellow">#ffffff00</color>
+    <color name="tm_title">#ffffff</color>
 
 
     <!-- drop down list header font color -->
