@@ -134,7 +134,6 @@
                         android:layout_width="40.0dip"
                         android:layout_height="40.0dip"
                         android:layout_alignParentRight="true"
-                        android:layout_marginRight="1dp"
                         android:src="@drawable/discount_one" />
                 </RelativeLayout>
 

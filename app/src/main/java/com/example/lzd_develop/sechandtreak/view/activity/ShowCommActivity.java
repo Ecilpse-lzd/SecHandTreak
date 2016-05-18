@@ -110,19 +110,14 @@ public class ShowCommActivity extends BaceActivity {
     ImageView isLoading;
     @Bind(R.id.textview_frame_loading)
     TextView tvFromFoading;
-    @Bind(R.id.loading_options)
-    Button loadindOption;
     @Bind(R.id.linearlayout_frame_loading)
     LinearLayout lyFromeLoading;
     @Bind(R.id.goods_load_success)
     RelativeLayout goodsLoadSuccess;
 
-    ImagePageAdapter imagePageAdapter;
+    private ImagePageAdapter imagePageAdapter;
 
-
-
-    ILoadGoodsInfoService service;
-
+    private ILoadGoodsInfoService service;
     private int goodsId;
 
 
@@ -135,7 +130,6 @@ public class ShowCommActivity extends BaceActivity {
         Intent intent = getIntent();
         goodsId = intent.getIntExtra("goodsid", 1);
         if (goodsId == -1) {
-            //TODO 当goodsID = -1 时弹出无商品界面
             setVisi(showType.isLoadError);
             return;
         }
@@ -156,7 +150,7 @@ public class ShowCommActivity extends BaceActivity {
                 break;
 
             case isLoadError:
-                lyFromeLoading.setVisibility(View.VISIBLE);
+                lyFromeLoading.setVisibility(View.GONE);
                 isLoadError.setVisibility(View.VISIBLE);
                 tvFromFoading.setVisibility(View.VISIBLE);
                 tvFromFoading.setText("加载失败了");
@@ -171,10 +165,7 @@ public class ShowCommActivity extends BaceActivity {
         }
     }
 
-    enum showType {
-        isLoading,isLoadError,isLoadSeuccess
 
-    }
 
     Handler handler = new Handler() {
         @Override
@@ -210,6 +201,7 @@ public class ShowCommActivity extends BaceActivity {
         tvGoodsUsername.setText(info.getSeller());
         tvGoodsPrice.setText(info.getPrice() + "");
         goodssellinginfoOprice.setText(info.getPriceOld() + "");
+        showGoodssellingDiscount(info.getPrice(), info.getPriceOld());
 
         goodssellingBrowse.setText("浏览次数：" + info.getReadCount());
         tvGoodsName.setText(info.getGoodsTitle());
@@ -226,6 +218,102 @@ public class ShowCommActivity extends BaceActivity {
         }
     }
 
+    private enum showType {
+        isLoading,isLoadError,isLoadSeuccess
+
+    }
+
+    private void showGoodssellingDiscount(int price, int priceOld) {
+        float w = ((float) price / (float) priceOld)*100;
+        int m = (int) (w / 10);
+        int n = (int) (w % 10);
+        int res = 0;
+        Log.d("goodes", ">>>>>>>>>price: " +price+">>>>>>>>>priceOld: " +priceOld+">>>>>>>>>m: " +m+ ">>>>>>>>>n: "+n + ">>>>>>>>>w: " +w);
+        switch (m) {
+            case 1:
+                if (n == 0) {
+                    res = R.drawable.discount_one;
+                } else {
+                    res = R.drawable.discount_one_half;
+                }
+
+                break;
+            case 2:
+                if (n == 0) {
+                    res = R.drawable.discount_two;
+                } else {
+                    res = R.drawable.discount_two_half;
+                }
+
+                break;
+            case 3:
+                if (n == 0) {
+                    res = R.drawable.discount_three;
+                } else {
+                    res = R.drawable.discount_three_half;
+                }
+
+                break;
+            case 4:
+                if (n == 0) {
+                    res = R.drawable.discount_four;
+                } else {
+                    res = R.drawable.discount_four_half;
+
+                }
+
+                break;
+            case 5:
+                if (n == 0) {
+                    res = R.drawable.discount_five;
+                } else {
+                    res = R.drawable.discount_five_half;
+
+                }
+
+                break;
+            case 6:
+                if (n == 0) {
+                    res = R.drawable.discount_six;
+                } else {
+
+                    res = R.drawable.discount_six_half;
+                }
+
+                break;
+            case 7:
+                if (n == 0) {
+                    res = R.drawable.discount_seven;
+                } else {
+
+                    res = R.drawable.discount_seven_half;
+                }
+
+                break;
+            case 8:
+                if (n == 0) {
+                    res = R.drawable.discount_eight;
+                } else {
+
+                    res = R.drawable.discount_eight_half;
+                }
+
+                break;
+            case 9:
+                if (n == 0) {
+                    res = R.drawable.discount_nine;
+                } else {
+                    res = R.drawable.discount_nine_half;
+
+                }
+
+                break;
+        }
+        if (res != 0) {
+            goodssellingDiscount.setImageResource(res);
+        }
+
+    }
 
 }
 
