@@ -1,0 +1,19 @@
+{
+    "goodsId":1,//商品id
+	"goodsTitle":"标题",
+	"picCount":1,
+  	"picURlS": [
+      			"picURLhttp","http"
+
+  	],
+    "sellerId":2,//卖家id
+    "seller":"卖家昵称",
+    "sellerPic":"卖家头像",
+    "isAuthenticate":true,//是否认证
+    "price":"商品价格",
+    "AddedTime":"上架时间",
+    "goodsDescription":"商品描述(HTML)",
+    "address":"卖家地址",
+    "isChoice":true,//是否精选
+    "choiseCount":"精选理由"
+}

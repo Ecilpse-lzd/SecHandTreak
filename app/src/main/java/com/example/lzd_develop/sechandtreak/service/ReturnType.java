@@ -23,4 +23,10 @@ public class ReturnType {
     public static final int REFRISH_SUCCESS = 23;
 
     public static final int GET_REFRISH_SUCCESS = 24;
+
+    public static final int LOAD_GOODS_INFO_SUCCESS = 25;
+    public static final int LOAD_GOODS_INFO_NETWORK = 26;
+    public static final int LOAD_GOODS_INFO_SELLED = 27;
+    public static final int LOAD_GOODS_INFO_DOWN = 28;
+
 }

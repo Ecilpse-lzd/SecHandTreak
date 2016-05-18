@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import com.example.lzd_develop.sechandtreak.R;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -21,12 +23,16 @@ public class ImagePageFragment extends Fragment {
     @Bind(R.id.imageView2)
     ImageView pageImageView;
 
-    public ImagePageFragment() {
+    private String picURL;
+
+
+
+    private ImagePageFragment(String picURL) {
+        this.picURL = picURL;
     }
 
-    public static ImagePageFragment newInstance(String content) {
-        ImagePageFragment fragment = new ImagePageFragment();
-        return fragment;
+    public static ImagePageFragment newInstance(String picURL) {
+         return new ImagePageFragment(picURL);
     }
 
     @Nullable
@@ -35,6 +41,13 @@ public class ImagePageFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.item_image_page, container, false);
         ButterKnife.bind(this, view);
+        DisplayImageOptions options=new DisplayImageOptions.Builder()
+                .showImageOnLoading(R.drawable.signin_local_gallry)
+                .showImageOnFail(R.drawable.signin_local_gallry)
+                .cacheInMemory(true)
+                .cacheOnDisk(true)
+                .build();
+        ImageLoader.getInstance().displayImage(picURL, pageImageView,options);
         return view;
     }
 
