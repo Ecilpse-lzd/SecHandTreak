@@ -113,6 +113,10 @@ public class MainActivity extends BaceActivity {
         }
     }
 
+    interface getMsg{
+        public void get();
+    }
+
     private enum FragmentType {
         home, message, my, want
     }

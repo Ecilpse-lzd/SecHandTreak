@@ -14,7 +14,7 @@
     <dimen name="font_hugelarge">19.0dip</dimen>
     <dimen name="font_large">18.0dip</dimen>
     <dimen name="font_largebig">17.0dip</dimen>
-    <dimen name="font_middle">14.0dip</dimen>
+    <dimen name="font_middle">16sp</dimen>
     <dimen name="font_middlesmall">13.0dip</dimen>
     <dimen name="font_s_tinysmall">9.0dip</dimen>
     <dimen name="font_small">12.0dip</dimen>

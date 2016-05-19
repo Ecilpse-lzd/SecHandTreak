@@ -39,8 +39,8 @@ import butterknife.ButterKnife;
 public class ShowCommActivity extends BaceActivity {
 
 
-    @Bind(R.id.ib_goods_collect)//关注按钮
-            ImageView ibGoodsCollect;
+    @Bind(R.id.ib_goods_collect)
+    ImageView ibGoodsCollect;//关注按钮
     @Bind(R.id.tv_goods_collectnum)//关注人数
             TextView tvGoodsCollectnum;
     @Bind(R.id.ll_goods_collect)//关注数的布局
@@ -97,7 +97,7 @@ public class ShowCommActivity extends BaceActivity {
     @Bind(R.id.goodsselling_weekly)
     LinearLayout goodssellingWeekly;
     @Bind(R.id.turtor_guide_more)//更多
-    LinearLayout turtorGuideMore;
+            LinearLayout turtorGuideMore;
     @Bind(R.id.goods_info_scroll)
     WScrollView goodsInfoScoll;
     @Bind(R.id.goods_title_fl)
@@ -128,7 +128,8 @@ public class ShowCommActivity extends BaceActivity {
         ButterKnife.bind(this);
         setVisi(showType.isLoading);
         Intent intent = getIntent();
-        goodsId = intent.getIntExtra("goodsid", 1);
+        goodsId = intent.getIntExtra("goodsid", -1);
+        Log.d("goodsId>>>>>>>>>:   ", goodsId + "");
         if (goodsId == -1) {
             setVisi(showType.isLoadError);
             return;
@@ -166,7 +167,6 @@ public class ShowCommActivity extends BaceActivity {
     }
 
 
-
     Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -199,8 +199,8 @@ public class ShowCommActivity extends BaceActivity {
 
         //TODO 界面加载成功设置值
         tvGoodsUsername.setText(info.getSeller());
-        tvGoodsPrice.setText(info.getPrice() + "");
-        goodssellinginfoOprice.setText(info.getPriceOld() + "");
+        tvGoodsPrice.setText("￥" + info.getPrice() + "");
+        goodssellinginfoOprice.setText("原价:" + info.getPriceOld());
         showGoodssellingDiscount(info.getPrice(), info.getPriceOld());
 
         goodssellingBrowse.setText("浏览次数：" + info.getReadCount());
@@ -219,16 +219,16 @@ public class ShowCommActivity extends BaceActivity {
     }
 
     private enum showType {
-        isLoading,isLoadError,isLoadSeuccess
+        isLoading, isLoadError, isLoadSeuccess
 
     }
 
     private void showGoodssellingDiscount(int price, int priceOld) {
-        float w = ((float) price / (float) priceOld)*100;
+        float w = ((float) price / (float) priceOld) * 100;
         int m = (int) (w / 10);
         int n = (int) (w % 10);
         int res = 0;
-        Log.d("goodes", ">>>>>>>>>price: " +price+">>>>>>>>>priceOld: " +priceOld+">>>>>>>>>m: " +m+ ">>>>>>>>>n: "+n + ">>>>>>>>>w: " +w);
+        Log.d("goodes", ">>>>>>>>>price: " + price + ">>>>>>>>>priceOld: " + priceOld + ">>>>>>>>>m: " + m + ">>>>>>>>>n: " + n + ">>>>>>>>>w: " + w);
         switch (m) {
             case 1:
                 if (n == 0) {
@@ -306,36 +306,16 @@ public class ShowCommActivity extends BaceActivity {
                     res = R.drawable.discount_nine_half;
 
                 }
-
                 break;
         }
+
         if (res != 0) {
             goodssellingDiscount.setImageResource(res);
+        } else {
+            goodssellingDiscount.setVisibility(View.GONE);
+
         }
 
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

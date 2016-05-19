@@ -123,25 +123,3 @@ public class LoginActivity extends BaceActivity {
 
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

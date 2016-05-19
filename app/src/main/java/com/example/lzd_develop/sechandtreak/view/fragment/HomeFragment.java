@@ -1,5 +1,6 @@
 package com.example.lzd_develop.sechandtreak.view.fragment;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
@@ -9,7 +10,9 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.example.lzd_develop.sechandtreak.BaseApplication;
 import com.example.lzd_develop.sechandtreak.R;
@@ -17,6 +20,7 @@ import com.example.lzd_develop.sechandtreak.doman.OtherCommodity;
 import com.example.lzd_develop.sechandtreak.service.ILodaService;
 import com.example.lzd_develop.sechandtreak.service.ReturnType;
 import com.example.lzd_develop.sechandtreak.service.ServiceFectroy;
+import com.example.lzd_develop.sechandtreak.view.activity.ShowCommActivity;
 import com.example.lzd_develop.sechandtreak.view.adapter.OtherSellAdapter;
 
 import java.text.SimpleDateFormat;
@@ -38,6 +42,8 @@ public class HomeFragment extends Fragment {
     ImageView ibHomeSearch;
     @Bind(R.id.home_pull)
     DropDownListView homePull;
+    @Bind(R.id.linearlayout_frame_loading)
+    LinearLayout llFrameLoading;
 
     OtherSellAdapter adapter;
     ILodaService lodaService;
@@ -54,7 +60,7 @@ public class HomeFragment extends Fragment {
 
     @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(final LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         ButterKnife.bind(this, view);
@@ -63,6 +69,10 @@ public class HomeFragment extends Fragment {
 
         if (otherCommodity == null) {
             otherCommodity = new OtherCommodity();
+
+
+        } else {
+            llFrameLoading.setVisibility(View.GONE);
         }
         adapter = new OtherSellAdapter(getContext(), otherCommodity.getComm());
         homePull.setAdapter(adapter);
@@ -85,6 +95,16 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        homePull.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getContext(), ShowCommActivity.class);
+                intent.putExtra("goodsid", otherCommodity.getComm().get(position).getCommId());
+                startActivity(intent);
+
+            }
+        });
+
 
         return view;
     }
@@ -103,7 +123,6 @@ public class HomeFragment extends Fragment {
                 case ReturnType.LOAD_ERROR_NETWORK:
 
                     networkError(msg.what);
-
                     break;
 
                 case ReturnType.LOAD_ERROR_NONE:
@@ -139,7 +158,7 @@ public class HomeFragment extends Fragment {
         }
     };
 
-    private void getSuccess(boolean isFrish,List<OtherCommodity.CommBean> list) {
+    private void getSuccess(boolean isFrish, List<OtherCommodity.CommBean> list) {
         if (isFrish) {
             homePull.setAutoLoadOnBottom(true);
             adapter.refrishItems(list);

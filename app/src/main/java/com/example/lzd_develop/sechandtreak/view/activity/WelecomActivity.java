@@ -6,9 +6,12 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 
+import com.example.lzd_develop.sechandtreak.R;
 import com.example.lzd_develop.sechandtreak.doman.OtherCommodity;
 import com.example.lzd_develop.sechandtreak.doman.OtherWantBuy;
+import com.example.lzd_develop.sechandtreak.service.ILodaService;
 import com.example.lzd_develop.sechandtreak.service.ReturnType;
+import com.example.lzd_develop.sechandtreak.service.ServiceFectroy;
 
 /**
  * Created by lzd-develop on 16-5-1.
@@ -25,6 +28,12 @@ public class WelecomActivity extends BaceActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_login);
+        ILodaService serviceComm = (ILodaService) ServiceFectroy.getService(ServiceFectroy.ServiceType.loadcomm, handler);
+       // ILodaService serviceWant = (ILodaService) ServiceFectroy.getService(ServiceFectroy.ServiceType.loadwant, handler);
+        serviceComm.onReFrish();
+        //serviceWant.onReFrish();
+
 
     }
 
@@ -46,9 +55,9 @@ public class WelecomActivity extends BaceActivity {
                     }
 
                     if (otherCommodity != null && otherWantBuy != null) {
-                        handler.sendEmptyMessage(ReturnType.GET_REFRISH_SUCCESS);
-                    }
 
+                    }
+                    handler.sendEmptyMessage(ReturnType.GET_REFRISH_SUCCESS);
                     break;
                 case ReturnType.RRFRISH_ERROR_NONE:
                     break;
@@ -56,7 +65,7 @@ public class WelecomActivity extends BaceActivity {
 
                     Intent intent = new Intent(WelecomActivity.this, MainActivity.class);
                     intent.putExtra("comms", otherCommodity);
-                    intent.putExtra("want", otherWantBuy);
+                    //intent.putExtra("want", otherWantBuy);
                     startActivity(intent);
                     finish();
                     break;

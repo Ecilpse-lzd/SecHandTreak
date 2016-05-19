@@ -13,6 +13,9 @@ import java.util.List;
 public class OtherCommodity implements Serializable {
 
 
+    public OtherCommodity() {
+    }
+
     /**
      * commId : 商品id
      * title : 商品标题
@@ -22,6 +25,7 @@ public class OtherCommodity implements Serializable {
      * firPrice : 原价
      * secPrice : 二手价格
      */
+
 
     private List<CommBean> comm;
 
@@ -43,7 +47,7 @@ public class OtherCommodity implements Serializable {
     }
 
 
-    public static class CommBean {
+    public static class CommBean implements Serializable {
         private int commId;
         private String title;
         private String seller;

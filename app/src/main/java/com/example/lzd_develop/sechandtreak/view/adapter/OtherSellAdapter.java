@@ -92,6 +92,7 @@ public class OtherSellAdapter extends BaseAdapter {
         holder.tvGoodsContent.setText(comm.getTitle());
         holder.tvGoodsPrice.setText(comm.getSecPrice()+"");
         holder.tvGoodsOriginprice.setText(comm.getFirPrice()+"");
+        holder.goodsId = comm.getCommId();
         //ImageLoader.getInstance().displayImage(comm.getCommpic(),holder.ivGoodsImage);
 //
 
@@ -109,8 +110,18 @@ public class OtherSellAdapter extends BaseAdapter {
         @Bind(R.id.tv_goods_originprice)
         TextView tvGoodsOriginprice;
 
+        private int goodsId;
+
         ViewHolder(View view) {
             ButterKnife.bind(this, view);
+        }
+
+        public int getGoodsId() {
+            return goodsId;
+        }
+
+        public void setGoodsId(int goodsId) {
+            this.goodsId = goodsId;
         }
     }
 }
