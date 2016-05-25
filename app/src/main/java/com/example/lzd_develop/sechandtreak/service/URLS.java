@@ -11,5 +11,5 @@ public class URLS {
     public static final String URL_REGISTER = URL + "/register";
     public static final String URL_LOAD_AND_REFRISH_COMM = URL + "/loadcomm";
     public static final String URL_LOAD_AND_REFRISH_WANT = URL + "/loadwant";
-    public static final String URL_LOAD_GOODS_INFO = URL + "/LoadGoodsInfo";
+    public static final String URL_LOAD_GOODS_INFO = URL + "/loadinfo";
 }

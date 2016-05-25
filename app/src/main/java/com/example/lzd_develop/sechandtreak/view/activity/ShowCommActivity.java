@@ -20,7 +20,7 @@ import android.widget.TextView;
 import com.example.lzd_develop.sechandtreak.BaseApplication;
 import com.example.lzd_develop.sechandtreak.R;
 import com.example.lzd_develop.sechandtreak.doman.GoodsInfo;
-import com.example.lzd_develop.sechandtreak.service.ILoadGoodsInfoService;
+import com.example.lzd_develop.sechandtreak.service.ILoadInfoService;
 import com.example.lzd_develop.sechandtreak.service.ReturnType;
 import com.example.lzd_develop.sechandtreak.service.ServiceFectroy;
 import com.example.lzd_develop.sechandtreak.utils.DensityUtil;
@@ -28,8 +28,12 @@ import com.example.lzd_develop.sechandtreak.view.adapter.ImagePageAdapter;
 import com.example.lzd_develop.sechandtreak.view.fragment.ImagePageFragment;
 import com.example.lzd_develop.sechandtreak.view.widget.TitleBar;
 import com.example.lzd_develop.sechandtreak.view.widget.WScrollView;
+import com.makeramen.roundedimageview.RoundedImageView;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
 import com.viewpagerindicator.CirclePageIndicator;
 
+import at.markushi.ui.CircleButton;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
@@ -62,7 +66,7 @@ public class ShowCommActivity extends BaceActivity {
     @Bind(R.id.goods_image_indicator)
     CirclePageIndicator goodsImageIndicator;
     @Bind(R.id.iv_goods_header)//卖家头像
-            ImageView ivGoodsHeader;
+            RoundedImageView ivGoodsHeader;
     @Bind(R.id.iv_goods_auth)//是否认证
             ImageView ivGoodsAuth;
     @Bind(R.id.tv_goods_username)
@@ -103,7 +107,7 @@ public class ShowCommActivity extends BaceActivity {
     @Bind(R.id.goods_title_fl)
     TitleBar goodsTitle;
     @Bind(R.id.goods_bt_back)
-    Button goodsBtBack;
+    CircleButton goodsBtBack;
     @Bind(R.id.is_load_error)
     ImageView isLoadError;
     @Bind(R.id.is_loading)
@@ -117,7 +121,7 @@ public class ShowCommActivity extends BaceActivity {
 
     private ImagePageAdapter imagePageAdapter;
 
-    private ILoadGoodsInfoService service;
+    private ILoadInfoService service;
     private int goodsId;
 
 
@@ -129,14 +133,13 @@ public class ShowCommActivity extends BaceActivity {
         setVisi(showType.isLoading);
         Intent intent = getIntent();
         goodsId = intent.getIntExtra("goodsid", -1);
-        Log.d("goodsId>>>>>>>>>:   ", goodsId + "");
         if (goodsId == -1) {
             setVisi(showType.isLoadError);
             return;
         }
 
-        service = (ILoadGoodsInfoService) ServiceFectroy.getService(ServiceFectroy.ServiceType.loadgoodsinfo, handler);
-        service.onLoadInfo(goodsId, ILoadGoodsInfoService.goodsType.sell);
+        service = (ILoadInfoService) ServiceFectroy.getService(ServiceFectroy.ServiceType.loadinfo, handler);
+        service.onLoadGoodsInfo(goodsId, ILoadInfoService.goodsType.sell);
 
     }
 
@@ -201,7 +204,14 @@ public class ShowCommActivity extends BaceActivity {
         tvGoodsUsername.setText(info.getSeller());
         tvGoodsPrice.setText("￥" + info.getPrice() + "");
         goodssellinginfoOprice.setText("原价:" + info.getPriceOld());
-        showGoodssellingDiscount(info.getPrice(), info.getPriceOld());
+
+        DisplayImageOptions options=new DisplayImageOptions.Builder()
+                .showImageOnLoading(R.drawable.signin_local_gallry)
+                .showImageOnFail(R.drawable.signin_local_gallry)
+                .cacheInMemory(true)
+                .cacheOnDisk(true)
+                .build();
+        ImageLoader.getInstance().displayImage(info.getSellerPic(), ivGoodsHeader, options);
 
         goodssellingBrowse.setText("浏览次数：" + info.getReadCount());
         tvGoodsName.setText(info.getGoodsTitle());
@@ -216,6 +226,8 @@ public class ShowCommActivity extends BaceActivity {
             goodssellingReason.setText(info.getChoiseCount());
 
         }
+
+        showGoodssellingDiscount(info.getPrice(), info.getPriceOld());
     }
 
     private enum showType {

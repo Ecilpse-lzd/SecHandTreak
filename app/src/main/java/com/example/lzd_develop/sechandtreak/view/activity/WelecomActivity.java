@@ -30,9 +30,9 @@ public class WelecomActivity extends BaceActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ILodaService serviceComm = (ILodaService) ServiceFectroy.getService(ServiceFectroy.ServiceType.loadcomm, handler);
-       // ILodaService serviceWant = (ILodaService) ServiceFectroy.getService(ServiceFectroy.ServiceType.loadwant, handler);
+        ILodaService serviceWant = (ILodaService) ServiceFectroy.getService(ServiceFectroy.ServiceType.loadwant, handler);
         serviceComm.onReFrish();
-        //serviceWant.onReFrish();
+        serviceWant.onReFrish();
 
 
     }
@@ -65,7 +65,7 @@ public class WelecomActivity extends BaceActivity {
 
                     Intent intent = new Intent(WelecomActivity.this, MainActivity.class);
                     intent.putExtra("comms", otherCommodity);
-                    //intent.putExtra("want", otherWantBuy);
+                    intent.putExtra("want", otherWantBuy);
                     startActivity(intent);
                     finish();
                     break;

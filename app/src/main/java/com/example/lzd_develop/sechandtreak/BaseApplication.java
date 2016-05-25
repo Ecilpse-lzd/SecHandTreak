@@ -56,6 +56,7 @@ public class BaseApplication extends Application {
                 .diskCacheSize(50 * 1024 * 1024)
                 .diskCacheFileCount(100)
                 .diskCache(new UnlimitedDiskCache(cacheDir))
+//              TODO: 16-5-20  发布时删除
                 .writeDebugLogs()
                 .build();
 

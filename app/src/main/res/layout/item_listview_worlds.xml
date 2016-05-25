@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/worlds_people"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="4dp"
+        android:textSize="15sp"
+        android:text="我要卖"
+        android:layout_width="match_parent"
+        android:layout_height="21dp" />
+    <TextView
+        android:id="@+id/worlds_world"
+        android:text="卖家描述"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="4dp"
+        android:textSize="13sp"
+        android:layout_width="match_parent"
+        android:layout_height="19dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp" />
+
+</LinearLayout>

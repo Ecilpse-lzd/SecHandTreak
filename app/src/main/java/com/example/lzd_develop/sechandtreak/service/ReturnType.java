@@ -29,4 +29,12 @@ public class ReturnType {
     public static final int LOAD_GOODS_INFO_SELLED = 27;
     public static final int LOAD_GOODS_INFO_DOWN = 28;
 
+    public static final int LOAD_WANT_INFO_SUCCESS = 29;
+
+    public static final int LOAD_WANT_INFO_NETWORK = 30;
+
+    public static final int LOAD_WANT_INFO_DOWN = 31;//加载失败
+
+    public static final int LOAD_WANT_INFO_SELLED = 32;
+
 }

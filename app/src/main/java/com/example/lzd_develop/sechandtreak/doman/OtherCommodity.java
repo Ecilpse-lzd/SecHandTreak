@@ -51,6 +51,7 @@ public class OtherCommodity implements Serializable {
         private int commId;
         private String title;
         private String seller;
+        private String sellerPic;
         private int sellerId;
         private String commpic;
         private int firPrice;
@@ -110,6 +111,14 @@ public class OtherCommodity implements Serializable {
 
         public void setSecPrice(int secPrice) {
             this.secPrice = secPrice;
+        }
+
+        public String getSellerPic() {
+            return sellerPic;
+        }
+
+        public void setSellerPic(String sellerPic) {
+            this.sellerPic = sellerPic;
         }
     }
 }

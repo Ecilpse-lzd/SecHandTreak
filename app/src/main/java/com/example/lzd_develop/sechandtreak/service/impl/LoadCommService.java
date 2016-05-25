@@ -32,22 +32,22 @@ public class LoadCommService implements ILodaService {
         ServiceFectroy.getLiteHttp().executeAsync(
                 new LoadRefrishParam(LoadOrFrish.load.toString(), count)
                         .setHttpListener(new HttpListener<OtherCommodity>() {
-            @Override
-            public void onSuccess(OtherCommodity otherCommodity, Response<OtherCommodity> response) {
-                Message msg = new Message();
-                msg.what = otherCommodity.getMSG();
-                msg.obj = otherCommodity;
-                handler.sendMessage(msg);
-            }
+                            @Override
+                            public void onSuccess(OtherCommodity otherCommodity, Response<OtherCommodity> response) {
+                                Message msg = new Message();
+                                msg.what = otherCommodity.getMSG();
+                                msg.obj = otherCommodity;
+                                handler.sendMessage(msg);
+                            }
 
-            @Override
-            public void onFailure(HttpException e, Response<OtherCommodity> response) {
-                Message msg = new Message();
-                msg.what = ReturnType.LOAD_ERROR_NETWORK;
+                            @Override
+                            public void onFailure(HttpException e, Response<OtherCommodity> response) {
+                                Message msg = new Message();
+                                msg.what = ReturnType.LOAD_ERROR_NETWORK;
 
-                handler.sendMessage(msg);
-            }
-        }));
+                                handler.sendMessage(msg);
+                            }
+                        }));
     }
 
     @Override
@@ -55,21 +55,21 @@ public class LoadCommService implements ILodaService {
         ServiceFectroy.getLiteHttp().executeAsync(
                 new LoadRefrishParam(LoadOrFrish.frish.toString(), 0)
                         .setHttpListener(new HttpListener<OtherCommodity>() {
-            @Override
-            public void onSuccess(OtherCommodity otherCommodity, Response<OtherCommodity> response) {
-                Message msg = new Message();
-                msg.what = otherCommodity.getMSG();
-                msg.obj = otherCommodity;
-                handler.sendMessage(msg);
-            }
+                            @Override
+                            public void onSuccess(OtherCommodity otherCommodity, Response<OtherCommodity> response) {
+                                Message msg = new Message();
+                                msg.what = otherCommodity.getMSG();
+                                msg.obj = otherCommodity;
+                                handler.sendMessage(msg);
+                            }
 
-            @Override
-            public void onFailure(HttpException e, Response<OtherCommodity> response) {
-                Message msg = new Message();
-                msg.what = ReturnType.REFRISH_ERROR_NETWORK;
-                handler.sendMessage(msg);
-            }
-        }));
+                            @Override
+                            public void onFailure(HttpException e, Response<OtherCommodity> response) {
+                                Message msg = new Message();
+                                msg.what = ReturnType.REFRISH_ERROR_NETWORK;
+                                handler.sendMessage(msg);
+                            }
+                        }));
     }
 
     @HttpUri(value = URLS.URL_LOAD_AND_REFRISH_COMM)

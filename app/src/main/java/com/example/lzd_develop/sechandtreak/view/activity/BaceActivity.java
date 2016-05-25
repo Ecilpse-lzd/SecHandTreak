@@ -22,5 +22,4 @@ public class BaceActivity extends AppCompatActivity {
     public static Context getContext() {
         return context;
     }
-
 }

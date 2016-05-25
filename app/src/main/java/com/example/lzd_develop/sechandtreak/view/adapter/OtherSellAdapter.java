@@ -5,13 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.lzd_develop.sechandtreak.R;
 import com.example.lzd_develop.sechandtreak.doman.OtherCommodity;
-import com.litesuits.http.data.GsonImpl;
+import com.makeramen.roundedimageview.RoundedImageView;
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.util.ArrayList;
@@ -93,9 +93,14 @@ public class OtherSellAdapter extends BaseAdapter {
         holder.tvGoodsPrice.setText(comm.getSecPrice()+"");
         holder.tvGoodsOriginprice.setText(comm.getFirPrice()+"");
         holder.goodsId = comm.getCommId();
-        //ImageLoader.getInstance().displayImage(comm.getCommpic(),holder.ivGoodsImage);
-//
-
+            DisplayImageOptions options=new DisplayImageOptions.Builder()
+                    .showImageOnLoading(R.drawable.signin_local_gallry)
+                    .showImageOnFail(R.drawable.signin_local_gallry)
+                    .cacheInMemory(true)
+                    .cacheOnDisk(true)
+                    .build();
+        ImageLoader.getInstance().displayImage(comm.getCommpic(),holder.ivGoodsImage,options);
+        ImageLoader.getInstance().displayImage(comm.getSellerPic(), holder.goodsSellerPic, options);
         return item;
     }
 
@@ -109,6 +114,12 @@ public class OtherSellAdapter extends BaseAdapter {
         TextView tvGoodsPrice;
         @Bind(R.id.tv_goods_originprice)
         TextView tvGoodsOriginprice;
+        @Bind(R.id.iv_goods_image)
+        ImageView ivGoodsImage;
+        @Bind(R.id.iv_goods_header)
+        RoundedImageView goodsSellerPic;
+
+
 
         private int goodsId;
 

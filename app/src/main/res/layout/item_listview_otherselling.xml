@@ -51,12 +51,14 @@
                         android:src="@color/main_red"
                         />
 
-                    <ImageView
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/iv_goods_header"
                         android:layout_width="30.0dip"
                         android:layout_height="30.0dip"
                         android:layout_margin="1.0dip"
                         android:src="@drawable/header_default"
+                        app:riv_oval="true"
                         />
 
                     <ImageView

@@ -1,5 +1,6 @@
 package com.example.lzd_develop.sechandtreak.view.fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -8,6 +9,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -17,6 +19,7 @@ import com.example.lzd_develop.sechandtreak.doman.OtherWantBuy;
 import com.example.lzd_develop.sechandtreak.service.ILodaService;
 import com.example.lzd_develop.sechandtreak.service.ReturnType;
 import com.example.lzd_develop.sechandtreak.service.ServiceFectroy;
+import com.example.lzd_develop.sechandtreak.view.activity.ShowWantActivity;
 import com.example.lzd_develop.sechandtreak.view.adapter.OtherWantAdapter;
 import com.litesuits.android.log.Log;
 
@@ -64,6 +67,9 @@ public class WantToBuyFragment extends Fragment {
         }
     }
 
+    public WantToBuyFragment() {
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -89,6 +95,16 @@ public class WantToBuyFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 lodaService.onLoad(0);
+            }
+        });
+
+        buyingPull.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                otherWantBuy.getItems().get(position);
+                Intent intent = new Intent(getContext(), ShowWantActivity.class);
+                intent.putExtra("buyId", otherWantBuy.getItems().get(position).getItemid());
+                startActivity(intent);
             }
         });
         return view;

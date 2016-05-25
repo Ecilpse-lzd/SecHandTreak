@@ -47,7 +47,7 @@ public class OtherWantBuy implements Serializable {
         this.items = items;
     }
 
-    public static class ItemBean implements Comparable<ItemBean>{
+    public static class ItemBean implements Comparable<ItemBean>,Serializable{
         private int itemid;
         private String title;
         private String context;

@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by lzd-develop on 16-5-15.
  */
-public class GoodsInfo {
+public class GoodsInfo extends Info{
 
 
     /**
