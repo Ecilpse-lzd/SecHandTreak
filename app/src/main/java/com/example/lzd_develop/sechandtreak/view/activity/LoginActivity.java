@@ -17,7 +17,7 @@ import com.example.lzd_develop.sechandtreak.doman.User;
 import com.example.lzd_develop.sechandtreak.service.ILoginService;
 import com.example.lzd_develop.sechandtreak.service.ReturnType;
 import com.example.lzd_develop.sechandtreak.service.ServiceFectroy;
-import com.example.lzd_develop.sechandtreak.utils.UIUTILS;
+import com.example.lzd_develop.sechandtreak.utils.ViewUtils;
 import com.litesuits.common.assist.Toastor;
 
 import butterknife.Bind;
@@ -78,7 +78,7 @@ public class LoginActivity extends BaceActivity {
                 startActivity(intent);
                 break;
             case R.id.is_show_password:
-                UIUTILS.showPassword(etLoginPassword);
+                ViewUtils.showPassword(etLoginPassword);
                 break;
             case R.id.ib_login_return:
                 finish();

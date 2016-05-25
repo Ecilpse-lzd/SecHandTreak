@@ -19,7 +19,7 @@ import com.example.lzd_develop.sechandtreak.service.ILoginService;
 import com.example.lzd_develop.sechandtreak.service.IRegisterService;
 import com.example.lzd_develop.sechandtreak.service.ReturnType;
 import com.example.lzd_develop.sechandtreak.service.ServiceFectroy;
-import com.example.lzd_develop.sechandtreak.utils.UIUTILS;
+import com.example.lzd_develop.sechandtreak.utils.ViewUtils;
 import com.litesuits.common.assist.Toastor;
 
 import butterknife.Bind;
@@ -95,7 +95,7 @@ public class RegisterActivity extends BaceActivity {
 
                 break;
             case R.id.is_register_show_password:
-                UIUTILS.showPassword(etRegisterPassword1);
+                ViewUtils.showPassword(etRegisterPassword1);
                 break;
         }
     }

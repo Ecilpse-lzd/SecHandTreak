@@ -2,13 +2,28 @@ package com.example.lzd_develop.sechandtreak.utils;
 
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
 /**
- * Created by lzd-develop on 16-5-25.
+ * Created by lzd-develop on 16-4-25.
  */
-public class ViewUtil {
+public class ViewUtils {
+    public static void showPassword(EditText editText) {
+        if (editText.getInputType() == 128) {
+            editText.setInputType(129);
+        } else if (editText.getInputType() == 129) {
+            editText.setInputType(128);
+        }
+    }
+
+    public static void buttonOnClickable(View view) {
+
+            view.setClickable(!view.isClickable());
+
+
+    }
 
     //ScrollView嵌套ListView只显示一行
     public static void setListViewHeightBasedOnChildren(ListView listView) {

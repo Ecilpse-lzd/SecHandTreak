@@ -13,7 +13,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -22,7 +21,7 @@ import com.example.lzd_develop.sechandtreak.doman.WantInfo;
 import com.example.lzd_develop.sechandtreak.service.ILoadInfoService;
 import com.example.lzd_develop.sechandtreak.service.ReturnType;
 import com.example.lzd_develop.sechandtreak.service.ServiceFectroy;
-import com.example.lzd_develop.sechandtreak.utils.ViewUtil;
+import com.example.lzd_develop.sechandtreak.utils.ViewUtils;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -123,7 +122,7 @@ public class ShowWantActivity extends BaceActivity {
 
         tvGoodsTime.setText(info.getWantTime());
         buyinginfoCommentList.setAdapter(new WorldsAdapter(info.getWantWords()));
-        ViewUtil.setListViewHeightBasedOnChildren(buyinginfoCommentList);
+        ViewUtils.setListViewHeightBasedOnChildren(buyinginfoCommentList);
 
         tvGoodsCommentnum.setText(info.getWantWords().size()+"");
 
