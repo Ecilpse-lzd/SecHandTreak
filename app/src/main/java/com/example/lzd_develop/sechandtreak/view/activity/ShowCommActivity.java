@@ -6,26 +6,21 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.view.ViewPager;
+import android.text.Html;
 import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
-import com.example.lzd_develop.sechandtreak.BaseApplication;
 import com.example.lzd_develop.sechandtreak.R;
 import com.example.lzd_develop.sechandtreak.doman.GoodsInfo;
 import com.example.lzd_develop.sechandtreak.service.ILoadInfoService;
 import com.example.lzd_develop.sechandtreak.service.ReturnType;
 import com.example.lzd_develop.sechandtreak.service.ServiceFectroy;
-import com.example.lzd_develop.sechandtreak.utils.DensityUtil;
 import com.example.lzd_develop.sechandtreak.view.adapter.ImagePageAdapter;
-import com.example.lzd_develop.sechandtreak.view.fragment.ImagePageFragment;
+import com.example.lzd_develop.sechandtreak.view.showType;
 import com.example.lzd_develop.sechandtreak.view.widget.TitleBar;
 import com.example.lzd_develop.sechandtreak.view.widget.WScrollView;
 import com.makeramen.roundedimageview.RoundedImageView;
@@ -36,6 +31,7 @@ import com.viewpagerindicator.CirclePageIndicator;
 import at.markushi.ui.CircleButton;
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by lzd-develop on 16-5-10.
@@ -143,7 +139,25 @@ public class ShowCommActivity extends BaceActivity {
 
     }
 
+    @OnClick({R.id.goods_bt_back, R.id.btn_goods_order, R.id.iv_goods_chat2})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.goods_bt_back:
+                finish();
+                break;
+            case R.id.btn_goods_order:
+                //购买流程
+                break;
+            case R.id.iv_goods_chat2:
+                //聊一聊
+                break;
+
+        }
+    }
+
+
     private void setVisi(showType type) {
+
         switch (type) {
             case isLoading:
                 lyFromeLoading.setVisibility(View.VISIBLE);
@@ -205,7 +219,7 @@ public class ShowCommActivity extends BaceActivity {
         tvGoodsPrice.setText("￥" + info.getPrice() + "");
         goodssellinginfoOprice.setText("原价:" + info.getPriceOld());
 
-        DisplayImageOptions options=new DisplayImageOptions.Builder()
+        DisplayImageOptions options = new DisplayImageOptions.Builder()
                 .showImageOnLoading(R.drawable.signin_local_gallry)
                 .showImageOnFail(R.drawable.signin_local_gallry)
                 .cacheInMemory(true)
@@ -216,7 +230,8 @@ public class ShowCommActivity extends BaceActivity {
         goodssellingBrowse.setText("浏览次数：" + info.getReadCount());
         tvGoodsName.setText(info.getGoodsTitle());
         //TODO 添加HTML显示
-        tvGoodsContent.setText(info.getGoodsDescription());
+        tvGoodsContent.setText(Html.fromHtml(info.getGoodsDescription()));
+
         goodssellinginfoTime.setText(info.getAddedTime());
 
         goodssellinginfoDist.setText(info.getAddress());
@@ -230,10 +245,6 @@ public class ShowCommActivity extends BaceActivity {
         showGoodssellingDiscount(info.getPrice(), info.getPriceOld());
     }
 
-    private enum showType {
-        isLoading, isLoadError, isLoadSeuccess
-
-    }
 
     private void showGoodssellingDiscount(int price, int priceOld) {
         float w = ((float) price / (float) priceOld) * 100;

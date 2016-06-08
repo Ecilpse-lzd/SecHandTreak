@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--TODO 主界面添加按钮点击时自下而上的弹出-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+    <View
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="match_parent"/>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/want_release_add_bt_goods"
+                android:layout_width="80dp"
+                app:riv_oval="true"
+                android:src="@drawable/chat_image_normal"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="50dp" />
+            <TextView
+                android:text="我要卖"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:gravity="center_horizontal"
+                android:textSize="19sp"
+                android:layout_centerVertical="true"
+                android:layout_below="@id/want_release_add_bt_goods"
+                android:layout_alignLeft="@+id/want_release_add_bt_goods"
+
+                android:layout_alignRight="@+id/want_release_add_bt_goods"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/want_release_add_bt_wantto"
+                android:layout_width="80dp"
+                android:src="@drawable/chat_image_normal"
+                app:riv_oval="true"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="50dp" />
+            <TextView
+                android:gravity="center_horizontal"
+                android:text="我要买"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:textSize="19sp"
+                android:layout_below="@+id/want_release_add_bt_wantto"
+                android:layout_alignLeft="@+id/want_release_add_bt_wantto"
+
+                android:layout_alignRight="@+id/want_release_add_bt_wantto"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="55.0dip">
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

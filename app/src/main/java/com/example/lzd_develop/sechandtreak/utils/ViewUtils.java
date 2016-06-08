@@ -18,12 +18,6 @@ public class ViewUtils {
         }
     }
 
-    public static void buttonOnClickable(View view) {
-
-            view.setClickable(!view.isClickable());
-
-
-    }
 
     //ScrollView嵌套ListView只显示一行
     public static void setListViewHeightBasedOnChildren(ListView listView) {

@@ -42,6 +42,10 @@
 
         </activity>
         <activity android:name=".view.activity.ShowWantActivity" />
+        <activity android:name=".view.activity.WantReleaseActivity"
+            android:theme="@style/add_want_release">
+
+        </activity>
 
     </application>
 

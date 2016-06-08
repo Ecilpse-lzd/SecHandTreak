@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+
     <RelativeLayout
         android:id="@+id/goods_load_success"
         android:layout_width="match_parent"
@@ -420,23 +422,29 @@
 
         </com.example.lzd_develop.sechandtreak.view.widget.WScrollView>
 
-        <com.example.lzd_develop.sechandtreak.view.widget.TitleBar
-            android:id="@+id/goods_title_fl"
-            style="@style/FrameTitleWhite">
-
-            <at.markushi.ui.CircleButton
-                android:id="@+id/goods_bt_back"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="5dp"
-                android:src="@drawable/back"
-                app:cb_pressedRingWidth="0dp"
-                app:cb_color="#63000000"
-                 />
-        </com.example.lzd_develop.sechandtreak.view.widget.TitleBar>
     </RelativeLayout>
 
-    <include layout="@layout/frame_loading" />
+    <com.example.lzd_develop.sechandtreak.view.widget.TitleBar
+        android:id="@+id/goods_title_fl"
+        style="@style/FrameTitleWhite">
+
+        <at.markushi.ui.CircleButton
+            android:id="@+id/goods_bt_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/btn_return_gray_bg"
+            app:cb_pressedRingWidth="0dp"
+            app:cb_color="#63000000"
+            />
+    </com.example.lzd_develop.sechandtreak.view.widget.TitleBar>
+
+
+    <include
+        android:layout_below="@id/goods_title_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        layout="@layout/frame_loading" />
 
 
 </RelativeLayout>

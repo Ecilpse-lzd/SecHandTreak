@@ -689,4 +689,13 @@
         <item name="android:windowEnterAnimation">@anim/umeng_socialize_shareboard_animation_in</item>
         <item name="android:windowExitAnimation">@anim/umeng_socialize_shareboard_animation_out</item>
     </style>
+    
+    <!--TODO 界面加载动画-->
+    <style name="add_want_release" parent="@android:style/Animation.Activity" >
+    <!--<style name="add_want_release" parent="Theme.AppCompat.DayNight.NoActionBar" >-->
+        <item name="android:activityOpenEnterAnimation" >@anim/fade_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/fade_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/fade_out</item>
+    </style>
 </resources>

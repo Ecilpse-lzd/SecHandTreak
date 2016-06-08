@@ -89,7 +89,7 @@ public class MainActivity extends BaceActivity {
     }
 
 
-    @OnClick({R.id.ll_main_home, R.id.ll_main_want, R.id.ll_main_msg, R.id.ll_main_my})
+    @OnClick({R.id.ll_main_home, R.id.ll_main_want, R.id.ll_main_msg, R.id.ll_main_my,R.id.ll_main_add})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.ll_main_home:
@@ -109,6 +109,18 @@ public class MainActivity extends BaceActivity {
                 break;
             case R.id.ll_main_my:
                 setTabSelection(FragmentType.my);
+                break;
+            case R.id.ll_main_add:
+                //TODO 调试用,登陆流程完成后去掉叹号
+                if (!BaseApplication.isLogin()) {
+
+                    Intent intent = new Intent(this, WantReleaseActivity.class);
+                    startActivity(intent);
+
+                } else {
+                    shouldLogin();
+
+                }
                 break;
         }
     }

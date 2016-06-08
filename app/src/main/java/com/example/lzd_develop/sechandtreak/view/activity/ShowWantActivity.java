@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -22,6 +23,7 @@ import com.example.lzd_develop.sechandtreak.service.ILoadInfoService;
 import com.example.lzd_develop.sechandtreak.service.ReturnType;
 import com.example.lzd_develop.sechandtreak.service.ServiceFectroy;
 import com.example.lzd_develop.sechandtreak.utils.ViewUtils;
+import com.example.lzd_develop.sechandtreak.view.showType;
 import com.makeramen.roundedimageview.RoundedImageView;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
@@ -31,6 +33,7 @@ import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 /**
  * Created by lzd-develop on 16-5-10.
@@ -69,6 +72,16 @@ public class ShowWantActivity extends BaceActivity {
     EditText etGoodsCommentcontent;
     @Bind(R.id.btn_goods_comment)
     TextView btnGoodsComment;
+    @Bind(R.id.fl_want_frome)
+    LinearLayout flWantFrom;
+    @Bind(R.id.linearlayout_frame_loading)
+    LinearLayout llFrameLoading;
+    @Bind(R.id.is_loading)
+    ImageView isLoading;
+    @Bind(R.id.is_load_error)
+    ImageView isLoadError;
+    @Bind(R.id.textview_frame_loading)
+    TextView tvFrameLoading;
 
 
 
@@ -79,9 +92,13 @@ public class ShowWantActivity extends BaceActivity {
         setContentView(R.layout.activity_goodsbuyinginfo);
         ButterKnife.bind(this);
         Intent intent = getIntent();
+
+        setVisi(showType.isLoading);
+
         //TODO 完成时改成 -1
         int buyId = intent.getIntExtra("buyId", -1);
         if (buyId == -1) {
+            setVisi(showType.isLoadError);
             return;
         }
         service = (ILoadInfoService) ServiceFectroy.getService(ServiceFectroy.ServiceType.loadinfo, handler);
@@ -93,18 +110,51 @@ public class ShowWantActivity extends BaceActivity {
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case ReturnType.LOAD_WANT_INFO_SUCCESS:
+                    setVisi(showType.isLoadSeuccess);
                     loadSuccess((WantInfo) msg.obj);
                     break;
                 case ReturnType.LOAD_WANT_INFO_NETWORK:
+                    setVisi(showType.isLoadError);
                     break;
                 case ReturnType.LOAD_WANT_INFO_SELLED:
+                    setVisi(showType.isLoadError);
                     break;
                 case ReturnType.LOAD_WANT_INFO_DOWN:
+                    setVisi(showType.isLoadError);
                     break;
             }
 
         }
     };
+
+
+    private void setVisi(showType type) {
+        switch (type) {
+            case isLoading:
+                llFrameLoading.setVisibility(View.VISIBLE);
+                isLoading.setVisibility(View.VISIBLE);
+                isLoadError.setVisibility(View.GONE);
+                tvFrameLoading.setVisibility(View.VISIBLE);
+
+                break;
+
+            case isLoadError:
+
+                llFrameLoading.setVisibility(View.VISIBLE);
+                isLoading.setVisibility(View.GONE);
+                isLoadError.setVisibility(View.VISIBLE);
+                tvFrameLoading.setVisibility(View.VISIBLE);
+                tvFrameLoading.setText("加载失败了");
+
+                break;
+            case isLoadSeuccess:
+                llFrameLoading.setVisibility(View.GONE);
+                flWantFrom.setVisibility(View.VISIBLE);
+
+                break;
+
+        }
+    }
 
     private void loadSuccess(WantInfo info) {
         tvGoodsUsername.setText(info.getWantWriter());
@@ -126,6 +176,12 @@ public class ShowWantActivity extends BaceActivity {
 
         tvGoodsCommentnum.setText(info.getWantWords().size()+"");
 
+    }
+
+    @OnClick(R.id.ib_goods_return)
+    void onClice(View view) {
+        finish();
+        
     }
 
 

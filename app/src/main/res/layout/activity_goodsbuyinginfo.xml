@@ -21,11 +21,14 @@
             layout="@layout/title_more" />
     </FrameLayout>
 
+
     <FrameLayout
+
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
         <LinearLayout
+            android:id="@+id/fl_want_frome"
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:orientation="vertical">
@@ -257,6 +260,7 @@
             </FrameLayout>
         </LinearLayout>
 
-        <!--<include layout="@layout/frame_loading" />-->
+        <include layout="@layout/frame_loading" />
+
     </FrameLayout>
 </LinearLayout>

@@ -1,3 +1,3 @@
-include ':app'
+include ':app', ':testKnife', ':knife', ':utillibrary'
 include ':trineaandroidcommon'
 include ':ViewPagerIndicator'

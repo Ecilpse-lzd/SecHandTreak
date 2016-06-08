@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.erhuoapp.erhuo.view.custom.CustomFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<!--TODO 发布商品界面-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/fl_selling"
     style="@style/SingleActivity"
@@ -44,7 +46,7 @@
                 android:layout_height="fill_parent"
                 android:orientation="vertical">
 
-                <com.erhuoapp.erhuo.view.custom.CustomScrollView
+                <ScrollView
                     android:id="@+id/my_sell_goods_scrollview"
                     android:layout_width="fill_parent"
                     android:layout_height="0.0dip"
@@ -603,7 +605,7 @@
 
                         <View style="@style/ShadowItem" />
                     </LinearLayout>
-                </com.erhuoapp.erhuo.view.custom.CustomScrollView>
+                </ScrollView>
 
                 <FrameLayout style="@style/FrameBottom">
 
@@ -638,4 +640,4 @@
 
         <include layout="@layout/activity_dialog_confirm" />
     </FrameLayout>
-</com.erhuoapp.erhuo.view.custom.CustomFrameLayout>
+</FrameLayout>

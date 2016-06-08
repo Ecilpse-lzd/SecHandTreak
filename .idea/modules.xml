@@ -5,7 +5,10 @@
       <module fileurl="file://$PROJECT_DIR$/SecHandTreak.iml" filepath="$PROJECT_DIR$/SecHandTreak.iml" />
       <module fileurl="file://$PROJECT_DIR$/ViewPagerIndicator/ViewPagerIndicator.iml" filepath="$PROJECT_DIR$/ViewPagerIndicator/ViewPagerIndicator.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/knife/knife.iml" filepath="$PROJECT_DIR$/knife/knife.iml" />
+      <module fileurl="file://$PROJECT_DIR$/testKnife/testKnife.iml" filepath="$PROJECT_DIR$/testKnife/testKnife.iml" />
       <module fileurl="file://$PROJECT_DIR$/trineaandroidcommon/trineaandroidcommon.iml" filepath="$PROJECT_DIR$/trineaandroidcommon/trineaandroidcommon.iml" />
+      <module fileurl="file://$PROJECT_DIR$/utillibrary/utillibrary.iml" filepath="$PROJECT_DIR$/utillibrary/utillibrary.iml" />
     </modules>
   </component>
 </project>
