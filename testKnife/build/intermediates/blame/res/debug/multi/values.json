@@ -1,0 +1,484 @@
+[
+    {
+        "outputFile": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/build/intermediates/res/merged/debug/values/values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 44,
+                    "endOffset": 95
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values/colors.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 44,
+                        "endOffset": 97
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 100,
+                    "endColumn": 44,
+                    "endOffset": 140
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values/colors.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 102,
+                        "endColumn": 44,
+                        "endOffset": 142
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 4,
+                    "startColumn": 4,
+                    "startOffset": 145,
+                    "endColumn": 44,
+                    "endOffset": 185
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values/colors.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 147,
+                        "endColumn": 44,
+                        "endOffset": 187
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 795,
+                    "endColumn": 46,
+                    "endOffset": 837
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values/dimens.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 101,
+                        "endColumn": 46,
+                        "endOffset": 143
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 7,
+                    "startColumn": 4,
+                    "startOffset": 842,
+                    "endColumn": 43,
+                    "endOffset": 881
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values/dimens.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endColumn": 43,
+                        "endOffset": 96
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 8,
+                    "startColumn": 4,
+                    "startOffset": 886,
+                    "endColumn": 45,
+                    "endOffset": 927
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values/dimens.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 197,
+                        "endColumn": 45,
+                        "endOffset": 238
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 932,
+                    "endColumn": 48,
+                    "endOffset": 976
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values/dimens.xml",
+                    "position": {
+                        "startLine": 6,
+                        "startColumn": 4,
+                        "startOffset": 148,
+                        "endColumn": 48,
+                        "endOffset": 192
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 10,
+                    "startColumn": 4,
+                    "startOffset": 981,
+                    "endColumn": 46,
+                    "endOffset": 1023
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 35,
+                        "endColumn": 46,
+                        "endOffset": 77
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 11,
+                    "startColumn": 4,
+                    "startOffset": 1028,
+                    "endColumn": 67,
+                    "endOffset": 1091
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 82,
+                        "endColumn": 67,
+                        "endOffset": 145
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 12,
+                    "startColumn": 4,
+                    "startOffset": 1096,
+                    "endColumn": 55,
+                    "endOffset": 1147
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 480,
+                        "endColumn": 55,
+                        "endOffset": 531
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 13,
+                    "startColumn": 4,
+                    "startOffset": 1152,
+                    "endColumn": 47,
+                    "endOffset": 1195
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 14,
+                        "startColumn": 4,
+                        "startOffset": 432,
+                        "endColumn": 47,
+                        "endOffset": 475
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 14,
+                    "startColumn": 4,
+                    "startOffset": 1200,
+                    "endColumn": 55,
+                    "endOffset": 1251
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 13,
+                        "startColumn": 4,
+                        "startOffset": 376,
+                        "endColumn": 55,
+                        "endOffset": 427
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 15,
+                    "startColumn": 4,
+                    "startOffset": 1256,
+                    "endColumn": 52,
+                    "endOffset": 1304
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 323,
+                        "endColumn": 52,
+                        "endOffset": 371
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 16,
+                    "startColumn": 4,
+                    "startOffset": 1309,
+                    "endColumn": 46,
+                    "endOffset": 1351
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 9,
+                        "startColumn": 4,
+                        "startOffset": 255,
+                        "endColumn": 46,
+                        "endOffset": 297
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 17,
+                    "startColumn": 4,
+                    "startOffset": 1356,
+                    "endColumn": 42,
+                    "endOffset": 1394
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 212,
+                        "endColumn": 42,
+                        "endOffset": 250
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 18,
+                    "startColumn": 4,
+                    "startOffset": 1399,
+                    "endColumn": 42,
+                    "endOffset": 1437
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 169,
+                        "endColumn": 42,
+                        "endOffset": 207
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 19,
+                    "startColumn": 4,
+                    "startOffset": 1442,
+                    "endColumn": 43,
+                    "endOffset": 1481
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 18,
+                        "startColumn": 4,
+                        "startOffset": 556,
+                        "endColumn": 43,
+                        "endOffset": 595
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1486,
+                    "endColumn": 47,
+                    "endOffset": 1529
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 22,
+                        "startColumn": 4,
+                        "startOffset": 764,
+                        "endColumn": 47,
+                        "endOffset": 807
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 21,
+                    "startColumn": 4,
+                    "startOffset": 1534,
+                    "endColumn": 59,
+                    "endOffset": 1589
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 25,
+                        "startColumn": 4,
+                        "startOffset": 916,
+                        "endColumn": 59,
+                        "endOffset": 971
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 22,
+                    "startColumn": 4,
+                    "startOffset": 1594,
+                    "endColumn": 57,
+                    "endOffset": 1647
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 24,
+                        "startColumn": 4,
+                        "startOffset": 858,
+                        "endColumn": 57,
+                        "endOffset": 911
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 23,
+                    "startColumn": 4,
+                    "startOffset": 1652,
+                    "endColumn": 47,
+                    "endOffset": 1695
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 600,
+                        "endColumn": 47,
+                        "endOffset": 643
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 24,
+                    "startColumn": 4,
+                    "startOffset": 1700,
+                    "endColumn": 45,
+                    "endOffset": 1741
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 23,
+                        "startColumn": 4,
+                        "startOffset": 812,
+                        "endColumn": 45,
+                        "endOffset": 853
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 25,
+                    "startColumn": 4,
+                    "startOffset": 1746,
+                    "endColumn": 61,
+                    "endOffset": 1803
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 21,
+                        "startColumn": 4,
+                        "startOffset": 702,
+                        "endColumn": 61,
+                        "endOffset": 759
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 26,
+                    "startColumn": 4,
+                    "startOffset": 1808,
+                    "endColumn": 53,
+                    "endOffset": 1857
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values/strings.xml",
+                    "position": {
+                        "startLine": 20,
+                        "startColumn": 4,
+                        "startOffset": 648,
+                        "endColumn": 53,
+                        "endOffset": 697
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 27,
+                    "startColumn": 4,
+                    "startOffset": 1862,
+                    "endLine": 29,
+                    "endColumn": 12,
+                    "endOffset": 1977
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values/styles.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 17,
+                        "endLine": 4,
+                        "endColumn": 12,
+                        "endOffset": 132
+                    }
+                }
+            }
+        ]
+    }
+]

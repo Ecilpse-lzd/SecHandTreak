@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="arm64-v8a,armeabi-v7a,armeabi"
+    api-level="23"
+    density="xxhdpi"
+    format="7"
+    timestamp="2797197955937" >
+
+    <task
+        name="javac"
+        duration="105" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="193" />
+    <task
+        name="verifier"
+        duration="8" />
+
+    <artifact
+        location="/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/build/outputs/apk/testKnife-debug.apk"
+        type="MAIN" />
+
+    <build timestamp="2797197955937" >
+        <artifact
+            location="/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/build/outputs/apk/testKnife-debug.apk"
+            type="MAIN" />
+    </build>
+
+</instant-run>

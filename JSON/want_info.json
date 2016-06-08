@@ -1,0 +1,18 @@
+{
+    "wantId":12,
+    "wantTime":"1994年8月6日",
+    "wantTitle":"求购标题",
+    "wantContent":"求购内容",
+    "wanterId":456,//求购者ID
+    "wanterIsVerification":true,//求购者是否认证
+    "wanterPic":"求购者头像",
+    "wantPrice":99400,//求购价格,
+    "wantWords":[
+        {
+            "worldId":156,//留言id
+            "worldWriterID":1566,//评论员ID
+            "worldWriter":"留言作者",
+            "worldContent":"留言内容"
+        }
+    ]
+}

@@ -1,0 +1,49 @@
+[
+    {
+        "outputFile": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/build/intermediates/res/merged/debug/values-v21/values-v21.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endLine": 8,
+                    "endColumn": 12,
+                    "endOffset": 496
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values-v21/styles.xml",
+                    "position": {
+                        "startLine": 4,
+                        "startColumn": 4,
+                        "startOffset": 57,
+                        "endLine": 10,
+                        "endColumn": 12,
+                        "endOffset": 498
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 9,
+                    "startColumn": 4,
+                    "startOffset": 501,
+                    "endLine": 13,
+                    "endColumn": 12,
+                    "endOffset": 806
+                },
+                "from": {
+                    "file": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/values-v21/styles.xml",
+                    "position": {
+                        "startLine": 12,
+                        "startColumn": 4,
+                        "startOffset": 504,
+                        "endLine": 16,
+                        "endColumn": 12,
+                        "endOffset": 809
+                    }
+                }
+            }
+        ]
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_format_bold.png",
+        "source": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/drawable-mdpi/ic_format_bold.png"
+    },
+    {
+        "merged": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_insert_link.png",
+        "source": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/drawable-mdpi/ic_insert_link.png"
+    },
+    {
+        "merged": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_format_italic.png",
+        "source": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/drawable-mdpi/ic_format_italic.png"
+    },
+    {
+        "merged": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_format_strikethrough.png",
+        "source": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/drawable-mdpi/ic_format_strikethrough.png"
+    },
+    {
+        "merged": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_format_quote.png",
+        "source": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/drawable-mdpi/ic_format_quote.png"
+    },
+    {
+        "merged": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_format_underline.png",
+        "source": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/drawable-mdpi/ic_format_underline.png"
+    },
+    {
+        "merged": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_action_redo.png",
+        "source": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/drawable-mdpi/ic_action_redo.png"
+    },
+    {
+        "merged": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_action_undo.png",
+        "source": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/drawable-mdpi/ic_action_undo.png"
+    },
+    {
+        "merged": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_format_clear.png",
+        "source": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/drawable-mdpi/ic_format_clear.png"
+    },
+    {
+        "merged": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/build/intermediates/res/merged/debug/drawable-mdpi-v4/ic_format_bullet.png",
+        "source": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/drawable-mdpi/ic_format_bullet.png"
+    }
+]

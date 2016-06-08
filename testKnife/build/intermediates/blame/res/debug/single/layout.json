@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/build/intermediates/res/merged/debug/layout/dialog_link.xml",
+        "source": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/layout/dialog_link.xml"
+    }
+]
