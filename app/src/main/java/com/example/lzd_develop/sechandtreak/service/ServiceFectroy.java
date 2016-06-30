@@ -5,7 +5,7 @@ import android.os.Handler;
 import com.example.lzd_develop.sechandtreak.service.impl.LoadCommService;
 import com.example.lzd_develop.sechandtreak.service.impl.LoadInfoService;
 import com.example.lzd_develop.sechandtreak.service.impl.LoadWantService;
-import com.example.lzd_develop.sechandtreak.view.activity.BaceActivity;
+import com.example.lzd_develop.sechandtreak.view.activity.BaseActivity;
 import com.example.lzd_develop.sechandtreak.service.impl.LoginService;
 import com.example.lzd_develop.sechandtreak.service.impl.RegisterService;
 import com.litesuits.http.HttpConfig;
@@ -22,7 +22,7 @@ public class ServiceFectroy {
 
     public static synchronized LiteHttp getLiteHttp() {
         if (liteHttp == null) {
-            HttpConfig config = new HttpConfig(BaceActivity.getContext())
+            HttpConfig config = new HttpConfig(BaseActivity.getContext())
                     .setDebugged(true)
                     .setDetectNetwork(true)              // detect network before connect
                     .setDefaultHttpMethod(HttpMethods.Post)

@@ -28,12 +28,12 @@
         "source": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/drawable-xxxhdpi/ic_format_bullet.png"
     },
     {
-        "merged": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/ic_format_bold.png",
-        "source": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/drawable-xxxhdpi/ic_format_bold.png"
-    },
-    {
         "merged": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/ic_action_redo.png",
         "source": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/drawable-xxxhdpi/ic_action_redo.png"
+    },
+    {
+        "merged": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/ic_format_bold.png",
+        "source": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/src/main/res/drawable-xxxhdpi/ic_format_bold.png"
     },
     {
         "merged": "/home/lzd-develop/development/WorkSpace/android/SecHandTreak/testKnife/build/intermediates/res/merged/debug/drawable-xxxhdpi-v4/ic_insert_link.png",

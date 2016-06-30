@@ -24,7 +24,7 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MainActivity extends BaceActivity {
+public class MainActivity extends BaseActivity {
 
     FragmentManager fm = null;
 
@@ -40,7 +40,6 @@ public class MainActivity extends BaceActivity {
     LinearLayout llMainMy;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,10 +50,10 @@ public class MainActivity extends BaceActivity {
         OtherWantBuy otherWantBuy = (OtherWantBuy) intent.getSerializableExtra("want");
         fm = getSupportFragmentManager();
 
-        initFragments(commodity,otherWantBuy);
+        initFragments(commodity, otherWantBuy);
     }
 
-    private void initFragments(OtherCommodity commodity,OtherWantBuy otherWantBuy)  {
+    private void initFragments(OtherCommodity commodity, OtherWantBuy otherWantBuy) {
 
         fragmentMap.put(FragmentType.home, new HomeFragment(commodity));
         fragmentMap.put(FragmentType.message, new MessageFragment());
@@ -75,8 +74,8 @@ public class MainActivity extends BaceActivity {
         FragmentTransaction fragmentTransaction = fm.beginTransaction();
         hideFragments(fragmentTransaction);
         if (fm.findFragmentByTag(type.toString()) == null) {
-            fragmentTransaction.add(R.id.fl_main,fragmentMap.get(type), type.toString()).show(fragmentMap.get(type));
-        }else {
+            fragmentTransaction.add(R.id.fl_main, fragmentMap.get(type), type.toString()).show(fragmentMap.get(type));
+        } else {
             fragmentTransaction.show(fragmentMap.get(type));
         }
         fragmentTransaction.commit();
@@ -89,7 +88,7 @@ public class MainActivity extends BaceActivity {
     }
 
 
-    @OnClick({R.id.ll_main_home, R.id.ll_main_want, R.id.ll_main_msg, R.id.ll_main_my,R.id.ll_main_add})
+    @OnClick({R.id.ll_main_home, R.id.ll_main_want, R.id.ll_main_msg, R.id.ll_main_my, R.id.ll_main_add})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.ll_main_home:
@@ -115,6 +114,7 @@ public class MainActivity extends BaceActivity {
                 if (!BaseApplication.isLogin()) {
 
                     Intent intent = new Intent(this, WantReleaseActivity.class);
+                    //overridePendingTransition(R.anim.fade_out, R.anim.fade_in);
                     startActivity(intent);
 
                 } else {
@@ -125,7 +125,7 @@ public class MainActivity extends BaceActivity {
         }
     }
 
-    interface getMsg{
+    interface getMsg {
         public void get();
     }
 

@@ -10,11 +10,11 @@
 
         <ImageView
             android:id="@+id/char_logo_erhuo"
-            android:layout_width="40.0dip"
-            android:layout_height="26.0dip"
+            android:layout_width="180.0dip"
+            android:layout_height="56.0dip"
             android:layout_gravity="center"
             android:gravity="center"
-            android:src="@drawable/logo_register" />
+            android:src="@drawable/home_title_test" />
 
         <ImageView
             android:id="@+id/ib_home_search"

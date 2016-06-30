@@ -7,6 +7,8 @@
         <item name="edgeColor">@color/lightgray</item>
         <item name="edgeSize">0.5dip</item>
     </style>
+
+
     <style name="AddressEditLabel">
         <item name="android:textSize">@dimen/font_bigmiddle</item>
         <item name="android:textColor">@color/main_blackgray</item>
@@ -69,6 +71,7 @@
         <item name="android:windowAnimationStyle">@style/AnimFade</item>
     </style>
     <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar" />
+
     <style name="DialogBackground">
         <item name="android:background">@color/main_deepalphablack</item>
         <item name="android:visibility">gone</item>
@@ -689,13 +692,5 @@
         <item name="android:windowEnterAnimation">@anim/umeng_socialize_shareboard_animation_in</item>
         <item name="android:windowExitAnimation">@anim/umeng_socialize_shareboard_animation_out</item>
     </style>
-    
-    <!--TODO 界面加载动画-->
-    <style name="add_want_release" parent="@android:style/Animation.Activity" >
-    <!--<style name="add_want_release" parent="Theme.AppCompat.DayNight.NoActionBar" >-->
-        <item name="android:activityOpenEnterAnimation" >@anim/fade_in</item>
-        <item name="android:activityOpenExitAnimation">@anim/fade_out</item>
-        <item name="android:activityCloseEnterAnimation">@anim/fade_in</item>
-        <item name="android:activityCloseExitAnimation">@anim/fade_out</item>
-    </style>
+
 </resources>

@@ -39,10 +39,10 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="62.0dip"
-                android:layout_height="42.0dip"
+                android:layout_width="182.0dip"
+                android:layout_height="60.0dip"
                 android:layout_gravity="center_horizontal"
-                android:src="@drawable/erhuo_login" />
+                android:src="@drawable/title" />
 
             <LinearLayout
                 android:id="@+id/ll_login_form"

@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -38,7 +37,7 @@ import butterknife.OnClick;
 /**
  * Created by lzd-develop on 16-5-10.
  */
-public class ShowWantActivity extends BaceActivity {
+public class ShowWantActivity extends BaseActivity {
     ILoadInfoService service;
     @Bind(R.id.ib_goods_return)
     ImageView ibGoodsReturn;

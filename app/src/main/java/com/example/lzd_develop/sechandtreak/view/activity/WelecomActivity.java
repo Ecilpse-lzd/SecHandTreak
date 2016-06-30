@@ -16,7 +16,7 @@ import com.example.lzd_develop.sechandtreak.service.ServiceFectroy;
 /**
  * Created by lzd-develop on 16-5-1.
  */
-public class WelecomActivity extends BaceActivity {
+public class WelecomActivity extends BaseActivity {
 
     OtherCommodity otherCommodity = null;
     OtherWantBuy otherWantBuy = null;

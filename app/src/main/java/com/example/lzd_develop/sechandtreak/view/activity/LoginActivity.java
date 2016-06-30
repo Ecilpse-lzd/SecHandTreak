@@ -18,7 +18,6 @@ import com.example.lzd_develop.sechandtreak.service.ILoginService;
 import com.example.lzd_develop.sechandtreak.service.ReturnType;
 import com.example.lzd_develop.sechandtreak.service.ServiceFectroy;
 import com.example.lzd_develop.sechandtreak.utils.ViewUtils;
-import com.litesuits.common.assist.Toastor;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -27,7 +26,7 @@ import butterknife.OnClick;
 /**
  * Created by lzd-develop on 16-4-24.
  */
-public class LoginActivity extends BaceActivity {
+public class LoginActivity extends BaseActivity {
     @Bind(R.id.et_login_name)
     EditText etLoginName;
     @Bind(R.id.et_login_password)

@@ -6,7 +6,7 @@ import android.support.annotation.Nullable;
 /**
  * Created by lzd-develop on 16-5-27.
  */
-public class EnterGoods extends BaceActivity {
+public class EnterGoods extends BaseActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

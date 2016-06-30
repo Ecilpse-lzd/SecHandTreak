@@ -14,7 +14,7 @@ import butterknife.OnClick;
  * 使用条约
  * Created by lzd-develop on 16-4-26.
  */
-public class ProtocolActivity extends BaceActivity {
+public class ProtocolActivity extends BaseActivity {
     @Bind(R.id.ib_login_return)
     ImageView ibLoginReturn;
 

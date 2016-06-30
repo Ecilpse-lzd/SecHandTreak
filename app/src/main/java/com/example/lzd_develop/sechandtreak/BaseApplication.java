@@ -31,8 +31,6 @@ public class BaseApplication extends Application {
 
     private static boolean isLogin = false;
 
-
-
     private static Toastor toastor;
 
     @Override

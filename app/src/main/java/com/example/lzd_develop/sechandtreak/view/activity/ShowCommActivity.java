@@ -36,7 +36,7 @@ import butterknife.OnClick;
 /**
  * Created by lzd-develop on 16-5-10.
  */
-public class ShowCommActivity extends BaceActivity {
+public class ShowCommActivity extends BaseActivity {
 
 
     @Bind(R.id.ib_goods_collect)

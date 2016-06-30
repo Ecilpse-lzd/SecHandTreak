@@ -11,11 +11,11 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
+        android:name=".BaseApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:name=".BaseApplication"
         android:theme="@style/AppTheme">
         <activity android:name=".view.activity.WelecomActivity">
             <intent-filter>
@@ -34,7 +34,7 @@
         <activity android:name=".view.activity.RegisterActivity">
 
         </activity>
-        <activity android:name=".view.activity.ProtocolActivity"/>
+        <activity android:name=".view.activity.ProtocolActivity" />
         <activity android:name=".view.activity.ShowCommActivity">
 
         </activity>
@@ -42,10 +42,7 @@
 
         </activity>
         <activity android:name=".view.activity.ShowWantActivity" />
-        <activity android:name=".view.activity.WantReleaseActivity"
-            android:theme="@style/add_want_release">
-
-        </activity>
+        <activity android:name=".view.activity.WantReleaseActivity" />
 
     </application>
 

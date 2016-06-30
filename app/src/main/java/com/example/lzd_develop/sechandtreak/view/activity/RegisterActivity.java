@@ -29,7 +29,7 @@ import butterknife.OnClick;
 /**
  * Created by lzd-develop on 16-4-25.
  */
-public class RegisterActivity extends BaceActivity {
+public class RegisterActivity extends BaseActivity {
     @Bind(R.id.ib_register_return)
     ImageView ibRegisterReturn;
     @Bind(R.id.et_register_name)
